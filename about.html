@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About & Contact — NoteWise</title>
+  <meta name="description" content="Learn more about NoteWise, the academic curator for BCA students. Contact us for support or inquiries.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="navbar__logo">Notewise</a>
+    <div class="navbar__links">
+      <a href="semesters.html" class="navbar__link">Semesters</a>
+      <a href="certifications.html" class="navbar__link">Certifications</a>
+    </div>
+    <div class="navbar__actions">
+      <a href="about.html" class="btn-signin hide-mobile">About Us</a>
+      <button class="hamburger hide-desktop" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="semesters.html">Semesters</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="about.html" class="active">About</a>
+  </div>
+
+  <main class="pt-navbar">
+    
+    <!-- Hero / About Section -->
+    <section class="section">
+      <div class="container" style="max-width: 800px;">
+        <div class="reveal" style="text-align: center; margin-bottom: 4rem;">
+          <h1 class="display-lg text-gradient" style="margin-bottom: 1.5rem;">The Academic Curator</h1>
+          <p class="body-lg text-on-surface-variant" style="margin: 0 auto;">
+            Notewise was born from a simple observation: BCA students waste countless hours searching for reliable study materials instead of actually studying.
+          </p>
+        </div>
+
+        <div class="reveal" style="margin-bottom: 4rem;">
+          <h2 class="headline-md" style="margin-bottom: 1rem;">Our Mission</h2>
+          <p class="body-md text-on-surface-variant">
+            We curate, organize, and present high-quality academic resources with the dignity they deserve. We believe that a cluttered digital environment leads to a cluttered mind. By applying principles of organic minimalism to educational resources, we aim to provide a serene, premium learning experience entirely for free.
+          </p>
+        </div>
+
+        <div class="grid grid-2 gap-6 stagger" style="margin-bottom: 6rem;" id="about-stats-grid">
+          <div class="card reveal" style="padding: 2rem; text-align: center;">
+            <div style="font-size: 3rem; font-weight: 900; color: var(--primary); margin-bottom: 0.5rem; line-height: 1;">5,000+</div>
+            <div class="label-sm text-outline">Curated Documents</div>
+          </div>
+          <div class="card reveal" style="padding: 2rem; text-align: center;">
+            <div style="font-size: 3rem; font-weight: 900; color: var(--primary); margin-bottom: 0.5rem; line-height: 1;">24/7</div>
+            <div class="label-sm text-outline">Platform Availability</div>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="reveal" style="margin-bottom: 6rem;">
+          <h2 class="headline-md" style="margin-bottom: 2rem;">Frequently Asked Questions</h2>
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            
+            <div class="accordion-item">
+              <div class="accordion-header">
+                Is Notewise really free?
+                <span class="material-symbols-outlined">expand_more</span>
+              </div>
+              <div class="accordion-body">
+                <p>Yes. All academic notes, previous year questions, and syllabus mappings are 100% free for BCA students. We believe education should be accessible to everyone.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">
+                Can I contribute my own notes?
+                <span class="material-symbols-outlined">expand_more</span>
+              </div>
+              <div class="accordion-body">
+                <p>Currently, we operate on a strict curation model. A team of academic reviewers vets all materials before they are published to maintain quality. However, you can use the contact form below to suggest potential additions to the archive.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">
+                How frequently are PYQs updated?
+                <span class="material-symbols-outlined">expand_more</span>
+              </div>
+              <div class="accordion-body">
+                <p>We update our Previous Year Questions database at the end of every semester (typically January and July).</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="reveal" id="contact">
+          <div style="background: var(--surface-container-low); padding: 3rem; border-radius: var(--radius-2xl);">
+            <h2 class="headline-md" style="margin-bottom: 0.5rem;">Get in Touch</h2>
+            <p class="body-sm text-on-surface-variant" style="margin-bottom: 2rem;">Have a question or found an error in our resources? Let us know.</p>
+            
+            <form action="#" method="get" style="display: flex; flex-direction: column; gap: 1.5rem;">
+              <div class="display: flex; gap: 1.5rem;" id="contact-name-email">
+                <div class="form-group" style="flex: 1;">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" class="form-input" placeholder="Enter your name">
+                </div>
+                <div class="form-group" style="flex: 1;">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-input" placeholder="Enter your email">
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label">Subject</label>
+                <select class="form-input select-dropdown" style="padding: 0.875rem 1rem;">
+                  <option>General Inquiry</option>
+                  <option>Report Resource Error</option>
+                  <option>Suggest Content</option>
+                  <option>Technical Issue</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Message</label>
+                <textarea class="form-input" placeholder="How can we help you?"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="align-self: flex-start; margin-top: 1rem;">Send Message</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="footer__inner" style="flex-direction: row; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+      <div>
+        <p class="footer__copy" style="margin: 0;">© 2024 Notewise Curator. All rights reserved.</p>
+      </div>
+      <div class="footer__links">
+        <a href="#" class="footer__link">Privacy Policy</a>
+        <a href="#" class="footer__link">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bottom Nav (Mobile) -->
+  <nav class="bottom-nav hide-desktop" id="bottom-nav">
+    <a href="index.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined">home</span>
+      <span>Home</span>
+    </a>
+    <a href="semesters.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined">menu_book</span>
+      <span>Learn</span>
+    </a>
+    <a href="certifications.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined">verified</span>
+      <span>Certs</span>
+    </a>
+    <a href="about.html" class="bottom-nav__item active">
+      <span class="material-symbols-outlined icon-filled">person</span>
+      <span>Profile</span>
+    </a>
+  </nav>
+
+  <script src="js/main.js"></script>
+  <script>
+    function adjustContactForm() {
+      const w = window.innerWidth;
+      const row = document.getElementById('contact-name-email');
+      const stats = document.getElementById('about-stats-grid');
+      
+      if (row) {
+         if (w < 768) {
+           row.style.display = 'flex';
+           row.style.flexDirection = 'column';
+         } else {
+           row.style.display = 'flex';
+           row.style.flexDirection = 'row';
+         }
+      }
+
+      if (stats) {
+        if (w < 768) {
+          stats.classList.remove('grid-2');
+          stats.classList.add('grid-1');
+        } else {
+          stats.classList.remove('grid-1');
+          stats.classList.add('grid-2');
+        }
+      }
+    }
+    
+    adjustContactForm();
+    window.addEventListener('resize', adjustContactForm);
+  </script>
+</body>
+</html>

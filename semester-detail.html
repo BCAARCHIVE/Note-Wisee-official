@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semester 1: Foundation of Computing — NoteWise</title>
+  <meta name="description" content="Lecture notes, materials, and resources for Semester 1 BCA students.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="navbar__logo">Notewise</a>
+    <div class="navbar__links">
+      <a href="semesters.html" class="navbar__link active">Semesters</a>
+      <a href="certifications.html" class="navbar__link">Certifications</a>
+    </div>
+    <div class="navbar__actions">
+      <a href="about.html" class="btn-signin hide-mobile">About Us</a>
+      <button class="hamburger hide-desktop" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="semesters.html" class="active">Semesters</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <main class="pt-navbar" style="padding-top: 6rem;">
+    <div class="container" style="max-width: 900px;">
+      
+      <!-- Header Area -->
+      <div class="reveal" style="background: linear-gradient(135deg, var(--surface-container-low), var(--background)); border-radius: var(--radius-3xl); padding: 3rem; margin-bottom: 3rem; position: relative; overflow: hidden; border: 1px solid rgba(81, 67, 74, 0.1);">
+        <div style="position: absolute; top: -50%; right: -20%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255, 174, 223, 0.1) 0%, transparent 70%);"></div>
+        
+        <div class="breadcrumb">
+          <a href="semesters.html">Semesters</a>
+          <span class="material-symbols-outlined" style="font-size: 1rem;">chevron_right</span>
+          <span>Semester 1</span>
+        </div>
+        
+        <h1 class="display-md" style="margin-top: 1rem;">Semester 1: Foundation of Computing</h1>
+      </div>
+
+      <!-- Controls -->
+      <div class="reveal flex flex-wrap gap-4" style="margin-bottom: 2rem;">
+        <div class="search-bar" style="flex: 1; min-width: 250px;">
+          <span class="material-symbols-outlined">search</span>
+          <input type="text" placeholder="Search notes..." data-search="#notes-list .note-item">
+        </div>
+        <select class="select-dropdown" data-sort="#notes-list" style="min-width: 200px;">
+          <option value="subject">Sort by: Subject</option>
+          <option value="recent">Sort by: Most Recent</option>
+          <option value="name">Sort by: Name (A-Z)</option>
+        </select>
+      </div>
+
+      <!-- Notes List -->
+      <div id="notes-list" class="grid grid-1 gap-4 stagger" style="margin-bottom: 5rem;">
+        
+        <div class="note-item reveal" data-subject="Math" data-name="Discrete Mathematics - Unit 1">
+          <div class="note-item__icon">
+            <span>PDF</span>
+          </div>
+          <div class="note-item__info">
+            <h3 class="note-item__title" data-sort-key="Discrete Mathematics - Unit 1">Discrete Mathematics - Unit 1</h3>
+            <span class="note-item__tag">Math</span>
+          </div>
+          <div class="note-item__actions">
+            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+            <a href="#" class="note-item__action" aria-label="View Details"><span class="material-symbols-outlined">description</span></a>
+          </div>
+        </div>
+
+        <div class="note-item reveal" data-subject="CS" data-name="Data Structures & Algorithms - Lecture Notes">
+          <div class="note-item__icon">
+            <span>PDF</span>
+          </div>
+          <div class="note-item__info">
+            <h3 class="note-item__title" data-sort-key="Data Structures & Algorithms - Lecture Notes">Data Structures & Algorithms - Lecture Notes</h3>
+            <span class="note-item__tag">CS</span>
+          </div>
+          <div class="note-item__actions">
+            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+            <a href="#" class="note-item__action" aria-label="View Details"><span class="material-symbols-outlined">description</span></a>
+          </div>
+        </div>
+
+        <div class="note-item reveal" data-subject="CS" data-name="Data Structures & Algorithms - Unit 1">
+          <div class="note-item__icon">
+            <span>PDF</span>
+          </div>
+          <div class="note-item__info">
+            <h3 class="note-item__title" data-sort-key="Data Structures & Algorithms - Unit 1">Data Structures & Algorithms - Unit 1</h3>
+            <span class="note-item__tag">CS</span>
+          </div>
+          <div class="note-item__actions">
+            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+            <a href="#" class="note-item__action" aria-label="View Details"><span class="material-symbols-outlined">description</span></a>
+          </div>
+        </div>
+
+        <div class="note-item reveal" data-subject="CS" data-name="Introduction to Programming - Lab Manual">
+          <div class="note-item__icon">
+            <span>PDF</span>
+          </div>
+          <div class="note-item__info">
+            <h3 class="note-item__title" data-sort-key="Introduction to Programming - Lab Manual">Introduction to Programming - Lab Manual</h3>
+            <span class="note-item__tag">CS</span>
+          </div>
+          <div class="note-item__actions">
+            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+            <a href="#" class="note-item__action" aria-label="View Details"><span class="material-symbols-outlined">description</span></a>
+          </div>
+        </div>
+
+        <div class="note-item reveal" data-subject="Hardware" data-name="Computer Organization - Chapter 2">
+          <div class="note-item__icon">
+            <span>PDF</span>
+          </div>
+          <div class="note-item__info">
+            <h3 class="note-item__title" data-sort-key="Computer Organization - Chapter 2">Computer Organization - Chapter 2</h3>
+            <span class="note-item__tag" style="background: rgba(121, 40, 83, 0.3);">Hardware</span>
+          </div>
+          <div class="note-item__actions">
+            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+            <a href="#" class="note-item__action" aria-label="View Details"><span class="material-symbols-outlined">description</span></a>
+          </div>
+        </div>
+        
+        <div class="note-item reveal" data-subject="Hardware" data-name="Computer Organization - Chapter 3">
+          <div class="note-item__icon">
+            <span>PDF</span>
+          </div>
+          <div class="note-item__info">
+            <h3 class="note-item__title" data-sort-key="Computer Organization - Chapter 3">Computer Organization - Chapter 3</h3>
+            <span class="note-item__tag" style="background: rgba(121, 40, 83, 0.3);">Hardware</span>
+          </div>
+          <div class="note-item__actions">
+            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+            <a href="#" class="note-item__action" aria-label="View Details"><span class="material-symbols-outlined">description</span></a>
+          </div>
+        </div>
+        
+        <div class="note-item reveal" data-subject="Hardware" data-name="Computer Organization - Unit 1">
+          <div class="note-item__icon">
+            <span>PDF</span>
+          </div>
+          <div class="note-item__info">
+            <h3 class="note-item__title" data-sort-key="Computer Organization - Unit 1">Computer Organization - Unit 1</h3>
+            <span class="note-item__tag" style="background: rgba(121, 40, 83, 0.3);">Hardware</span>
+          </div>
+          <div class="note-item__actions">
+            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+            <a href="#" class="note-item__action" aria-label="View Details"><span class="material-symbols-outlined">description</span></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="footer__inner" style="flex-direction: row; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+      <div>
+        <p class="footer__copy" style="margin: 0; text-transform: uppercase;">© 2024 Notewise Curator. All rights reserved.</p>
+      </div>
+      <div class="footer__links">
+        <a href="#" class="footer__link" style="text-transform: uppercase;">Privacy Policy</a>
+        <a href="#" class="footer__link" style="text-transform: uppercase;">Terms of Service</a>
+        <a href="about.html#contact" class="footer__link" style="text-transform: uppercase;">Contact Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bottom Nav (Mobile) -->
+  <nav class="bottom-nav hide-desktop" id="bottom-nav">
+    <a href="index.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined">home</span>
+      <span>Home</span>
+    </a>
+    <a href="semesters.html" class="bottom-nav__item active">
+      <span class="material-symbols-outlined icon-filled">menu_book</span>
+      <span>Learn</span>
+    </a>
+    <a href="#" class="bottom-nav__item">
+      <span class="material-symbols-outlined">search</span>
+      <span>Search</span>
+    </a>
+    <a href="certifications.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined">verified</span>
+      <span>Certs</span>
+    </a>
+  </nav>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

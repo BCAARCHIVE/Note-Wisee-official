@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoteWise — Your Gateway to BCA Success</title>
+  <meta name="description" content="A curated sanctuary of academic excellence. Access premium BCA resources, previous year questions, and interactive roadmaps designed for the modern scholar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="navbar__logo">Notewise</a>
+
+    <div class="navbar__links">
+      <a href="semesters.html" class="navbar__link">Semesters</a>
+      <a href="certifications.html" class="navbar__link">Certifications</a>
+    </div>
+
+    <div class="navbar__actions">
+      <a href="about.html" class="btn-signin hide-mobile">About Us</a>
+      <button class="hamburger hide-desktop" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html" class="active">Home</a>
+    <a href="semesters.html">Semesters</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="pt-navbar">
+
+    <!-- HERO SECTION -->
+    <section class="hero hero-gradient" id="hero" style="padding-bottom: 4rem;">
+      <div class="container">
+        <div class="hero__content" style="display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center;">
+          
+          <!-- Left: Text Content -->
+          <div class="reveal">
+            <div class="chip chip--primary" style="margin-bottom: 1.5rem;">
+              <span class="material-symbols-outlined" style="font-size: 0.875rem; margin-right: 0.375rem;">verified</span>
+              Academic Curator 2026
+            </div>
+
+            <h1 class="display-lg" style="margin-bottom: 1.5rem;">
+              Your Gateway to<br>
+              <span class="text-gradient">BCA Success</span>
+            </h1>
+
+            <p class="body-lg text-on-surface-variant" style="max-width: 36rem; margin-bottom: 2rem;">
+              A curated sanctuary of academic excellence. Access premium BCA resources, previous year questions, and interactive roadmaps designed for the modern scholar.
+            </p>
+
+            <div class="flex gap-4 flex-wrap">
+              <a href="semesters.html" class="btn btn-primary">
+                Explore Resources
+              </a>
+              <!-- <a href="#" class="btn btn-secondary">
+                View Syllabus
+              </a> -->
+            </div>
+          </div>
+
+          <!-- Right: Feature Card (desktop) -->
+          <div class="reveal-right hide-mobile" id="hero-feature-card" style="position: relative;">
+            <div style="background: linear-gradient(135deg, var(--primary-container), var(--surface-container-high)); border-radius: var(--radius-2xl); padding: 2rem; position: relative; overflow: hidden;">
+              <div style="position: absolute; top: 0; right: 0; width: 60%; height: 100%; background: radial-gradient(circle at top right, rgba(255, 174, 223, 0.08), transparent); pointer-events: none;"></div>
+              <div class="label-sm text-primary" style="margin-bottom: 0.75rem;">Premium Academic Space</div>
+              <div style="font-size: 1.5rem; font-weight: 800; color: var(--on-surface); margin-bottom: 1.5rem; letter-spacing: -0.02em;">Curated Learning<br>Environment</div>
+              <div style="background: var(--surface-container-low); border-radius: var(--radius-xl); padding: 1rem 1.25rem; display: flex; align-items: center; gap: 0.75rem;">
+                <span class="material-symbols-outlined text-primary">groups</span>
+                <div>
+                  <div style="font-size: 0.875rem; font-weight: 700; color: var(--on-surface);">Live Support</div>
+                  <div style="font-size: 0.75rem; color: var(--on-surface-variant);">24/7 Community Access</div>
+                </div>
+              </div>
+              <p style="margin-top: 1rem; font-size: 0.75rem; color: var(--on-surface-variant); line-height: 1.6;">
+                Connect with 500+ BCA students across the country in our exclusive study circles.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- STRUCTURED LEARNING SECTION -->
+    <section class="section" id="semesters-preview">
+      <div class="container">
+        <div class="section__header reveal" style="flex-direction: row; justify-content: space-between; align-items: flex-end;">
+          <div>
+            <h2 class="headline-lg" style="margin-bottom: 0.5rem;">Structured <em class="text-gradient" style="font-style: italic;">Learning.</em></h2>
+            <p class="body-md text-on-surface-variant" style="max-width: 28rem;">
+              Navigate through your academic journey with our semester-specific curated content bundles.
+            </p>
+          </div>
+          <a href="#" class="btn-ghost hide-mobile" style="white-space: nowrap;">
+            Request New Material →
+          </a>
+        </div>
+
+        <!-- Semester Bento Grid -->
+        <div class="grid gap-6 stagger" id="semester-grid" style="grid-template-columns: repeat(3, 1fr);">
+          
+          <!-- Semester 1 (Large) -->
+          <a href="semester-detail.html" class="card reveal" style="grid-column: span 1; grid-row: span 2; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 360px; position: relative; overflow: hidden;"
+             id="sem1-card">
+            <div style="position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: radial-gradient(circle at top right, rgba(106, 30, 85, 0.12), transparent); pointer-events: none;"></div>
+            <div>
+              <div class="chip chip--primary" style="margin-bottom: 1rem;">Current Focus</div>
+              <h3 class="headline-md" style="margin-bottom: 0.5rem;">Semester 1</h3>
+              <p class="body-sm text-on-surface-variant">Foundation of Computing, C Programming, and Mathematical Structures.</p>
+            </div>
+            <div class="flex gap-3 mt-6">
+              <span class="chip chip--beginner">12+ Modules</span>
+              <span class="chip chip--beginner">45+ PYQs</span>
+            </div>
+          </a>
+
+          <!-- Semester 2 -->
+          <a href="semester-detail.html" class="card reveal" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 170px;"
+             id="sem2-card">
+            <span class="material-symbols-outlined text-primary" style="font-size: 2rem;">filter_2</span>
+            <div>
+              <h3 class="headline-sm" style="margin-bottom: 0.25rem;">Semester 2</h3>
+              <p class="body-sm text-on-surface-variant">Data Structures & Logic Design.</p>
+            </div>
+          </a>
+
+          <!-- Semester 3 -->
+          <a href="semester-detail.html" class="card reveal" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 170px;"
+             id="sem3-card">
+            <span class="material-symbols-outlined text-primary" style="font-size: 2rem;">code</span>
+            <div>
+              <h3 class="headline-sm" style="margin-bottom: 0.25rem;">Semester 3</h3>
+              <p class="body-sm text-on-surface-variant">Java & OS Architecture.</p>
+            </div>
+          </a>
+
+          <!-- Semester 4 -->
+          <a href="semester-detail.html" class="card reveal" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 170px;"
+             id="sem4-card">
+            <span class="material-symbols-outlined text-primary" style="font-size: 2rem;">cloud</span>
+            <div>
+              <h3 class="headline-sm" style="margin-bottom: 0.25rem;">Semester 4</h3>
+              <p class="body-sm text-on-surface-variant">Networks & Web Technologies.</p>
+            </div>
+          </a>
+
+          <!-- Semester 5 -->
+          <a href="semester-detail.html" class="card reveal" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 170px;"
+             id="sem5-card">
+            <span class="material-symbols-outlined text-primary" style="font-size: 2rem;">psychology</span>
+            <div>
+              <h3 class="headline-sm" style="margin-bottom: 0.25rem;">Semester 5</h3>
+              <p class="body-sm text-on-surface-variant">Software Eng & AI Ethics.</p>
+            </div>
+          </a>
+
+          <!-- Semester 6 (Full width) -->
+          <a href="semester-detail.html" class="card reveal" style="grid-column: span 3; padding: 2rem; display: flex; align-items: center; justify-content: space-between; min-height: 100px;"
+             id="sem6-card">
+            <div>
+              <h3 class="headline-sm" style="margin-bottom: 0.25rem;">Semester 6</h3>
+              <p class="body-sm text-on-surface-variant">Capstone Projects & Internship Preparation.</p>
+            </div>
+            <span class="material-symbols-outlined text-primary" style="font-size: 2.5rem; background: var(--primary-container); border-radius: var(--radius-full); padding: 0.75rem;">school</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHIVE SEARCH SECTION -->
+    <section class="section" id="archive-search" style="background: var(--surface-container-low); padding: 5rem 0;">
+      <div class="container" style="text-align: center;">
+        <div class="reveal">
+          <h2 class="headline-lg" style="margin-bottom: 0.5rem;">Archive <em class="text-gradient" style="font-style: italic;">Search</em></h2>
+          <p class="body-md text-on-surface-variant" style="margin-bottom: 0.5rem; max-width: 28rem; margin-left: auto; margin-right: auto;">
+            Instant access to over 5,000+ hand-picked academic materials.<br>Type any subject or topic to begin.
+          </p>
+        </div>
+
+        <div class="reveal" style="max-width: 36rem; margin: 2.5rem auto;">
+          <div class="search-bar" style="padding: 1rem 1.5rem;">
+            <span class="material-symbols-outlined">search</span>
+            <input type="text" placeholder="e.g., Data Structures PDF, 2023 C Programming Paper...">
+            <button class="btn-primary" style="padding: 0.5rem 1.5rem; border-radius: var(--radius-full); font-size: 0.75rem;">Search</button>
+          </div>
+        </div>
+
+        <!-- Feature Cards Row -->
+        <div class="grid grid-1 gap-6 stagger" style="margin-top: 3rem;" id="feature-cards-grid">
+          <!-- Academic Notes -->
+          <div class="card reveal" style="padding: 2rem; text-align: left;">
+            <span class="material-symbols-outlined text-primary" style="font-size: 2rem; margin-bottom: 1rem; display: block;">description</span>
+            <h3 class="headline-sm" style="margin-bottom: 0.5rem;">Academic Notes</h3>
+            <p class="body-sm text-on-surface-variant">Comprehensive lecture notes distilled into readable, visually-rich PDF formats for easy studying.</p>
+          </div>
+
+          <!-- Previous Papers -->
+          <div class="card reveal" style="padding: 2rem; text-align: left;">
+            <span class="material-symbols-outlined text-primary" style="font-size: 2rem; margin-bottom: 1rem; display: block;">history_edu</span>
+            <h3 class="headline-sm" style="margin-bottom: 0.5rem;">Previous Papers</h3>
+            <p class="body-sm text-on-surface-variant">A decade of question papers categorized by university, subject, and difficulty level.</p>
+          </div>
+
+          <!-- Success Roadmaps -->
+          <div class="card reveal" style="padding: 2rem; text-align: left;">
+            <span class="material-symbols-outlined text-primary" style="font-size: 2rem; margin-bottom: 1rem; display: block;">route</span>
+            <h3 class="headline-sm" style="margin-bottom: 0.5rem;">Success Roadmaps</h3>
+            <p class="body-sm text-on-surface-variant">Step-by-step guides for mastering difficult subjects and preparing for technical interviews.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="footer__inner" style="flex-direction: column; gap: 2rem;">
+      <div style="display: flex; flex-direction: column; gap: 2rem;" class="footer-top-grid">
+        <div>
+          <div class="footer__brand">Notewise</div>
+          <p class="footer__copy"> 2024 Notewise BCA Resources. The Academic Curator.</p>
+        </div>
+        <div style="display: flex; gap: 3rem; flex-wrap: wrap;">
+          <div>
+            <div class="label-sm" style="color: var(--on-surface-variant); margin-bottom: 0.75rem;">Navigate</div>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <a href="about.html" class="footer__link">About Us</a>
+              <a href="#" class="footer__link">Roadmaps</a>
+              <a href="about.html#contact" class="footer__link">Contact</a>
+            </div>
+          </div>
+          <div>
+            <div class="label-sm" style="color: var(--on-surface-variant); margin-bottom: 0.75rem;">Legal</div>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <a href="#" class="footer__link">Privacy Policy</a>
+              <a href="#" class="footer__link">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+        <a href="#" class="footer__social-icon"><span class="material-symbols-outlined" style="font-size: 1.125rem;">code</span></a>
+        <a href="#" class="footer__social-icon"><span class="material-symbols-outlined" style="font-size: 1.125rem;">mail</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bottom Nav (Mobile) -->
+  <nav class="bottom-nav hide-desktop" id="bottom-nav">
+    <a href="index.html" class="bottom-nav__item active">
+      <span class="material-symbols-outlined icon-filled">home</span>
+      <span>Home</span>
+    </a>
+    <a href="semesters.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined">menu_book</span>
+      <span>Learn</span>
+    </a>
+    <a href="#" class="bottom-nav__item">
+      <span class="material-symbols-outlined">search</span>
+      <span>Search</span>
+    </a>
+    <a href="certifications.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined">verified</span>
+      <span>Certs</span>
+    </a>
+  </nav>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Home-specific: responsive grid adjustments
+    function adjustGrids() {
+      const w = window.innerWidth;
+      const semGrid = document.getElementById('semester-grid');
+      const featureGrid = document.getElementById('feature-cards-grid');
+      const devGrid = document.getElementById('dev-tools-grid');
+      const heroContent = document.querySelector('.hero__content, .hero .container > div');
+      const sem6 = document.getElementById('sem6-card');
+
+      if (semGrid) {
+        if (w < 768) {
+          semGrid.style.gridTemplateColumns = '1fr';
+          document.querySelectorAll('#semester-grid > *').forEach(el => {
+            el.style.gridColumn = 'span 1';
+            el.style.gridRow = 'span 1';
+          });
+        } else {
+          semGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
+          const sem1 = document.getElementById('sem1-card');
+          if (sem1) { sem1.style.gridColumn = 'span 1'; sem1.style.gridRow = 'span 2'; }
+          if (sem6) sem6.style.gridColumn = 'span 3';
+        }
+      }
+
+      if (featureGrid) {
+        featureGrid.style.gridTemplateColumns = w >= 768 ? 'repeat(3, 1fr)' : '1fr';
+      }
+
+      if (devGrid) {
+        devGrid.style.gridTemplateColumns = w >= 768 ? '1fr 1fr' : '1fr';
+      }
+
+      if (heroContent) {
+        heroContent.style.gridTemplateColumns = w >= 1024 ? '1.2fr 0.8fr' : '1fr';
+      }
+    }
+
+    // Footer grid
+    function adjustFooter() {
+      const ft = document.querySelector('.footer-top-grid');
+      if (ft) {
+        ft.style.flexDirection = window.innerWidth >= 768 ? 'row' : 'column';
+        ft.style.justifyContent = 'space-between';
+      }
+    }
+
+    adjustGrids();
+    adjustFooter();
+    window.addEventListener('resize', () => { adjustGrids(); adjustFooter(); });
+  </script>
+</body>
+</html>
