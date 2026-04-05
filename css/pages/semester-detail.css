@@ -1,0 +1,92 @@
+/* ===== semester-detail.html Page Specific Styles ===== */
+
+/* Main Layout */
+.sem-detail-main {
+  padding-top: 6rem;
+}
+
+.sem-detail-container {
+  max-width: 900px;
+}
+
+/* Header Area */
+.sem-detail-header {
+  background: linear-gradient(135deg, var(--surface-container-low), var(--background));
+  border-radius: var(--radius-3xl);
+  padding: 3rem;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(81, 67, 74, 0.1);
+}
+
+.sem-detail-header-glow {
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 174, 223, 0.1) 0%, transparent 70%);
+}
+
+.sem-detail-header .breadcrumb .breadcrumb-icon {
+  font-size: 1rem;
+}
+
+.sem-detail-header .sem-detail-title {
+  margin-top: 1rem;
+}
+
+/* Controls */
+.sem-detail-controls {
+  margin-bottom: 2rem;
+}
+
+.sem-detail-search {
+  flex: 1;
+  min-width: 250px;
+}
+
+.sem-detail-sort {
+  min-width: 200px;
+}
+
+/* Notes List */
+.sem-detail-notes {
+  margin-bottom: 5rem;
+}
+
+/* Note Item Tag - Hardware variant */
+.note-item__tag--hardware {
+  background: rgba(121, 40, 83, 0.3);
+}
+
+/* Footer */
+.sem-detail-footer .footer__inner {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sem-detail-footer .sem-detail-copy {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.sem-detail-footer .sem-detail-link {
+  text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .sem-detail-controls {
+    flex-direction: column;
+  }
+  
+  .sem-detail-footer .footer__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}

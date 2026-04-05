@@ -9,133 +9,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <style>
-    .cert-card {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      background: var(--surface-container-low);
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      transition: background var(--transition-slow), transform var(--transition-base), box-shadow var(--transition-slow);
-      height: 100%;
-    }
-    
-    .cert-card:hover {
-      background: var(--surface-container-high);
-      box-shadow: var(--shadow-ambient);
-      transform: translateY(-4px);
-    }
-    
-    .cert-card__body {
-      padding: 2rem;
-      flex: 1;
-    }
-    
-    .cert-card__header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 1.5rem;
-    }
-    
-    .cert-card__icon-wrap {
-      width: 4rem;
-      height: 4rem;
-      background: var(--surface-container-highest);
-      border-radius: var(--radius-2xl);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform var(--transition-base);
-    }
-    
-    .cert-card:hover .cert-card__icon-wrap {
-      transform: scale(1.1);
-    }
-    
-    .cert-card__icon-wrap .material-symbols-outlined {
-      color: var(--primary);
-      font-size: 2.5rem;
-    }
-    
-    .cert-card__footer {
-      padding: 1.5rem 2rem 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      margin-top: auto;
-    }
-    
-    .rust-card {
-      display: flex;
-      flex-direction: row;
-      background: var(--surface-container-low);
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      transition: background var(--transition-slow), transform var(--transition-base), box-shadow var(--transition-slow);
-    }
-    
-    .rust-card:hover {
-      background: var(--surface-container-high);
-      box-shadow: var(--shadow-ambient);
-      transform: translateY(-4px);
-    }
-    
-    .rust-card__left {
-      padding: 2.5rem;
-      flex: 1;
-    }
-    
-    .rust-card__right {
-      padding: 2.5rem;
-      background: rgba(53, 52, 56, 0.5);
-      border-left: 1px solid rgba(81, 67, 74, 0.1);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 18rem;
-    }
-    
-    .stat-circle {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    
-    .stat-circle__num {
-      font-size: 2.5rem;
-      font-weight: 900;
-      color: var(--primary);
-      line-height: 1;
-    }
-    
-    .stat-circle__label {
-      font-size: 0.625rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--outline);
-      margin-top: 0.5rem;
-    }
-
-    @media (max-width: 1023px) {
-      .rust-card {
-        flex-direction: column;
-      }
-      .rust-card__right {
-        width: 100%;
-        border-left: none;
-        border-top: 1px solid rgba(81, 67, 74, 0.1);
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/pages/certifications.css">
 </head>
 <body>
 
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
-    <a href="index.html" class="navbar__logo">Notewise</a>
+    <a href="../index.html" class="navbar__logo">
+      <img src="../images/notewise title.png" alt="Notewise Title" style="height: 32px; width: auto;">
+    </a>
     <div class="navbar__links">
       <a href="semesters.html" class="navbar__link">Semesters</a>
       <a href="certifications.html" class="navbar__link active">Certifications</a>
@@ -150,7 +33,7 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobile-menu">
-    <a href="index.html">Home</a>
+    <a href="../index.html">Home</a>
     <a href="semesters.html">Semesters</a>
     <a href="certifications.html" class="active">Certifications</a>
     <a href="about.html">About</a>
@@ -159,19 +42,19 @@
   <main class="pt-navbar">
     
     <!-- Hero Section -->
-    <section class="hero hero-gradient" style="padding-bottom: 3rem; padding-top: 6rem;">
+    <section class="hero hero-gradient cert-hero">
       <div class="container">
         <div class="reveal">
-          <div class="label-lg text-primary" style="margin-bottom: 1.5rem;">Academic Curriculum</div>
-          <h1 class="display-md" style="margin-bottom: 1.5rem; max-width: 48rem;">
+          <div class="label-lg text-primary cert-hero-label">Academic Curriculum</div>
+          <h1 class="display-md cert-hero-title">
             Master the Core:<br>
             <span class="text-gradient">Programming Languages</span>
           </h1>
-          <p class="body-lg text-on-surface-variant" style="max-width: 42rem; margin-bottom: 2rem;">
+          <p class="body-lg text-on-surface-variant cert-hero-text">
             An curated archival collection of professional-grade certifications. Validate your technical proficiency through rigorous assessments designed for the modern scholar.
           </p>
-          <div class="chip chip--surface" style="padding: 0.5rem 1rem; border: none; background: var(--surface-container-highest);">
-            <span class="material-symbols-outlined text-primary" style="font-size: 1rem; margin-right: 0.5rem;">verified</span>
+          <div class="chip chip--surface cert-chip">
+            <span class="material-symbols-outlined text-primary cert-chip-icon">verified</span>
             12 Certifications Available
           </div>
         </div>
@@ -179,9 +62,9 @@
     </section>
 
     <!-- Certifications Grid -->
-    <section class="section" style="padding-top: 0; padding-bottom: 6rem;">
+    <section class="section certs-section">
       <div class="container">
-        <div class="grid stagger" style="grid-template-columns: repeat(3, 1fr);" id="cert-grid">
+        <div class="grid stagger" id="cert-grid">
           
           <!-- Python -->
           <div class="cert-card reveal">
@@ -192,7 +75,7 @@
                 </div>
                 <div class="chip chip--beginner">Beginner</div>
               </div>
-              <h3 class="headline-md" style="margin-bottom: 0.5rem;">Python Archival Master</h3>
+              <h3 class="headline-md cert-card-title">Python Archival Master</h3>
               <p class="body-md text-on-surface-variant line-clamp-2">Master data structures, algorithmic efficiency, and the elegant syntax of the snake language.</p>
             </div>
             <div class="cert-card__footer">
@@ -214,7 +97,7 @@
                 </div>
                 <div class="chip chip--advanced">Advanced</div>
               </div>
-              <h3 class="headline-md" style="margin-bottom: 0.5rem;">C++ Systems Architect</h3>
+              <h3 class="headline-md cert-card-title">C++ Systems Architect</h3>
               <p class="body-md text-on-surface-variant line-clamp-2">Deep dive into memory management, pointer arithmetic, and high-performance system design.</p>
             </div>
             <div class="cert-card__footer">
@@ -236,7 +119,7 @@
                 </div>
                 <div class="chip chip--intermediate">Intermediate</div>
               </div>
-              <h3 class="headline-md" style="margin-bottom: 0.5rem;">Java Enterprise Core</h3>
+              <h3 class="headline-md cert-card-title">Java Enterprise Core</h3>
               <p class="body-md text-on-surface-variant line-clamp-2">The standard for enterprise software. Focus on OOP principles, JVM tuning, and scalable patterns.</p>
             </div>
             <div class="cert-card__footer">
@@ -250,18 +133,18 @@
           </div>
 
           <!-- Rust (Double width span) -->
-          <div class="rust-card reveal" style="grid-column: span 2;" id="rust-card">
+          <div class="cert-card reveal">
             <div class="rust-card__left">
-              <div class="cert-card__header" style="margin-bottom: 2rem;">
+              <div class="cert-card__header rust-header">
                 <div class="cert-card__icon-wrap">
                   <span class="material-symbols-outlined icon-filled">shield_with_heart</span>
                 </div>
                 <div class="chip chip--advanced">Advanced</div>
               </div>
-              <h3 class="display-sm" style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2;">Rust Memory Safety &<br>Concurrency</h3>
-              <p class="body-lg text-on-surface-variant" style="max-width: 28rem;">Learn the borrow checker, ownership rules, and how to write fearless concurrent applications without data races.</p>
+              <h3 class="display-sm rust-title">Rust Memory Safety &<br>Concurrency</h3>
+              <p class="body-lg text-on-surface-variant rust-text">Learn the borrow checker, ownership rules, and how to write fearless concurrent applications without data races.</p>
               
-              <div class="flex gap-3 flex-wrap" style="margin-top: 2rem;">
+              <div class="flex gap-3 flex-wrap rust-tags">
                 <span class="chip chip--surface">Zero-Cost Abstractions</span>
                 <span class="chip chip--surface">Safe Concurrency</span>
               </div>
@@ -272,7 +155,7 @@
                 <div class="stat-circle__num">100%</div>
                 <div class="stat-circle__label">Accuracy Required</div>
               </div>
-              <a href="#" class="btn-filled" style="width: 100%; text-align: center;">Enroll Now</a>
+              <a href="#" class="btn-filled rust-btn">Enroll Now</a>
             </div>
           </div>
 
@@ -285,7 +168,7 @@
                 </div>
                 <div class="chip chip--beginner">Beginner</div>
               </div>
-              <h3 class="headline-md" style="margin-bottom: 0.5rem;">Swift iOS Development</h3>
+              <h3 class="headline-md cert-card-title">Swift iOS Development</h3>
               <p class="body-md text-on-surface-variant line-clamp-2">Crafting premium mobile experiences through SwiftUI and modern declarative patterns.</p>
             </div>
             <div class="cert-card__footer">
@@ -299,7 +182,7 @@
           </div>
 
           <!-- View all button area -->
-          <div class="reveal flex justify-center w-full mt-8" style="grid-column: 1 / -1;">
+          <div class="reveal flex justify-center w-full view-all-area">
              <a href="cert-list.html" class="btn btn-secondary">View Complete Directory</a>
           </div>
 
@@ -310,10 +193,10 @@
   </main>
 
   <!-- Footer -->
-  <footer class="footer" id="footer" style="margin-top: 0;">
-    <div class="footer__inner" style="flex-direction: row; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+  <footer class="footer cert-footer" id="footer">
+    <div class="footer__inner">
       <div>
-        <p class="footer__copy" style="margin: 0;">© 2024 Notewise Crimson Scholar Edition. Curating excellence with dignity.</p>
+        <p class="footer__copy footer-copy-reset">© 2024 Notewise Crimson Scholar Edition. Curating excellence with dignity.</p>
       </div>
       <div class="footer__links">
         <a href="#" class="footer__link">Privacy Policy</a>
@@ -326,7 +209,7 @@
 
   <!-- Bottom Nav (Mobile) -->
   <nav class="bottom-nav hide-desktop" id="bottom-nav">
-    <a href="index.html" class="bottom-nav__item">
+    <a href="../index.html" class="bottom-nav__item">
       <span class="material-symbols-outlined">home</span>
       <span>Home</span>
     </a>
@@ -344,28 +227,7 @@
     </a>
   </nav>
 
-  <script src="js/main.js"></script>
-  <script>
-    function adjustGrid() {
-      const w = window.innerWidth;
-      const grid = document.getElementById('cert-grid');
-      const rustCard = document.getElementById('rust-card');
-      if (!grid) return;
-      
-      if (w < 768) {
-        grid.style.gridTemplateColumns = '1fr';
-        if(rustCard) rustCard.style.gridColumn = 'span 1';
-      } else if (w < 1024) {
-        grid.style.gridTemplateColumns = 'repeat(2, 1fr)';
-        if(rustCard) rustCard.style.gridColumn = 'span 2';
-      } else {
-        grid.style.gridTemplateColumns = 'repeat(3, 1fr)';
-        if(rustCard) rustCard.style.gridColumn = 'span 2';
-      }
-    }
-    
-    adjustGrid();
-    window.addEventListener('resize', adjustGrid);
-  </script>
+  <script src="../js/main.js"></script>
+  <script src="../js/pages/certifications.js"></script>
 </body>
 </html>

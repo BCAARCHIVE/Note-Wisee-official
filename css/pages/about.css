@@ -1,0 +1,124 @@
+/* Container */
+.about-container {
+  max-width: 800px;
+}
+
+/* Hero / About Section */
+.about-hero {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.about-hero-title {
+  margin-bottom: 1.5rem;
+}
+
+.about-hero-text {
+  margin: 0 auto;
+}
+
+/* Mission Section */
+.about-mission {
+  margin-bottom: 4rem;
+}
+
+.about-mission-title {
+  margin-bottom: 1rem;
+}
+
+/* Stats Grid */
+.about-stats {
+  margin-bottom: 6rem;
+}
+
+.stat-card {
+  padding: 2rem;
+  text-align: center;
+}
+
+.stat-card__num {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+/* FAQ Section */
+.about-faq {
+  margin-bottom: 6rem;
+}
+
+.about-faq-title {
+  margin-bottom: 2rem;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Contact Section */
+.about-contact {
+  background: var(--surface-container-low);
+  padding: 3rem;
+  border-radius: var(--radius-2xl);
+}
+
+.about-contact-title {
+  margin-bottom: 0.5rem;
+}
+
+.about-contact-text {
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.form-group-half {
+  flex: 1;
+}
+
+.form-select {
+  padding: 0.875rem 1rem;
+}
+
+.contact-submit {
+  align-self: flex-start;
+  margin-top: 1rem;
+}
+
+/* Footer */
+.about-footer .footer__inner {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-copy-reset {
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .form-row {
+    flex-direction: column;
+  }
+  
+  .about-footer .footer__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}

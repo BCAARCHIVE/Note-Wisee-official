@@ -9,155 +9,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <style>
-    .category-btn {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-      background: var(--surface-container-low);
-      border-radius: var(--radius-xl);
-      border: 1px solid rgba(81, 67, 74, 0.1);
-      transition: all var(--transition-base);
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-      text-align: center;
-    }
-    
-    .category-btn:hover {
-      background: var(--surface-container-high);
-      transform: scale(1.02);
-      box-shadow: var(--shadow-ambient);
-    }
-    
-    .category-btn__bg-icon {
-      position: absolute;
-      top: 0;
-      right: 0;
-      padding: 0.5rem;
-      opacity: 0.1;
-      font-size: 4rem;
-      transition: opacity var(--transition-base);
-    }
-    
-    .category-btn:hover .category-btn__bg-icon {
-      opacity: 0.2;
-    }
-    
-    .category-btn__icon-wrap {
-      width: 4rem;
-      height: 4rem;
-      background: var(--background);
-      border-radius: var(--radius-full);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1rem;
-      transition: background var(--transition-base);
-    }
-    
-    .category-btn:hover .category-btn__icon-wrap {
-      background: var(--primary);
-    }
-    
-    .category-btn__icon-wrap .material-symbols-outlined {
-      color: var(--primary);
-      font-size: 1.875rem;
-      transition: color var(--transition-base);
-    }
-    
-    .category-btn:hover .category-btn__icon-wrap .material-symbols-outlined {
-      color: var(--on-primary);
-    }
-    
-    .category-btn__title {
-      font-size: 1.125rem;
-      font-weight: 700;
-      color: var(--on-surface);
-      margin-bottom: 0.25rem;
-      transition: color var(--transition-base);
-    }
-    
-    .category-btn:hover .category-btn__title {
-      color: var(--primary-fixed);
-    }
-    
-    .category-btn__label {
-      font-size: 0.625rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--on-surface-variant);
-      transition: color var(--transition-base);
-    }
-    
-    .category-btn:hover .category-btn__label {
-      color: var(--primary);
-    }
-
-    .concept-card {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 2rem;
-      background: rgba(53, 52, 56, 0.4);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(81, 67, 74, 0.2);
-      border-radius: var(--radius-xl);
-      transition: all var(--transition-base);
-      cursor: pointer;
-    }
-    
-    .concept-card:hover {
-      background: rgba(106, 30, 85, 0.2);
-      transform: scale(1.02);
-      box-shadow: var(--shadow-crimson-glow);
-    }
-    
-    .concept-card .material-symbols-outlined {
-      color: var(--primary);
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-      transition: transform var(--transition-base);
-    }
-    
-    .concept-card:hover .material-symbols-outlined {
-      transform: scale(1.1);
-    }
-    
-    .concept-card__title {
-      font-size: 1.125rem;
-      font-weight: 700;
-      color: var(--on-surface);
-      line-height: 1.2;
-      transition: color var(--transition-base);
-    }
-    
-    .concept-card:hover .concept-card__title {
-      color: var(--primary);
-    }
-    
-    .concept-card__line {
-      margin-top: 1rem;
-      width: 100%;
-      height: 1px;
-      background: rgba(81, 67, 74, 0.2);
-      transition: background var(--transition-base);
-    }
-    
-    .concept-card:hover .concept-card__line {
-      background: rgba(255, 174, 223, 0.4);
-    }
-  </style>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/pages/cert-list.css">
 </head>
 <body>
 
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
-    <a href="index.html" class="navbar__logo">Notewise</a>
+    <a href="../index.html" class="navbar__logo">
+      <img src="../images/notewise title.png" alt="Notewise Title" style="height: 32px; width: auto;">
+    </a>
     <div class="navbar__links">
       <a href="semesters.html" class="navbar__link">Semesters</a>
       <a href="certifications.html" class="navbar__link active">Certifications</a>
@@ -172,7 +33,7 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobile-menu">
-    <a href="index.html">Home</a>
+    <a href="../index.html">Home</a>
     <a href="semesters.html">Semesters</a>
     <a href="certifications.html" class="active">Certifications</a>
     <a href="about.html">About</a>
@@ -181,33 +42,33 @@
   <main class="pt-navbar">
     
     <!-- Heavy Hero Section -->
-    <section class="hero" style="min-height: 600px; display: flex; align-items: center; justify-content: center; position: relative;">
-      <div style="position: absolute; inset: 0; z-index: 0;">
-        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7Ca0_WwRaGpDRV3bN8Q5F6g3h8EpEC1tQiecH-JvCHFigntA29E5hOrU_FdD-sxtSMoSh-riSffXGe62MJjKMvbKD5dNZ4b1A_u68LD-JbL2dKw9lAlyUiU8uihw6F2A17BUipzkmeOGLTzRaz2d7WGqs7LYw-FapviSoioBNifEICIedTEXqPr22C81lXa635ku86Ea9gFqCe7odcs1_nXoUtPkGDx56awafZ8DuNWaMGWDCN6Wqq2y5LB5m87oddfcNGY3pMNM" alt="Background" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.4; filter: grayscale(1);">
-        <div style="position: absolute; inset: 0; background: linear-gradient(to top, var(--background), transparent);"></div>
-        <div style="position: absolute; inset: 0; background: linear-gradient(to right, var(--background), transparent);"></div>
+    <section class="hero cert-list-hero">
+      <div class="cert-list-hero__bg">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7Ca0_WwRaGpDRV3bN8Q5F6g3h8EpEC1tQiecH-JvCHFigntA29E5hOrU_FdD-sxtSMoSh-riSffXGe62MJjKMvbKD5dNZ4b1A_u68LD-JbL2dKw9lAlyUiU8uihw6F2A17BUipzkmeOGLTzRaz2d7WGqs7LYw-FapviSoioBNifEICIedTEXqPr22C81lXa635ku86Ea9gFqCe7odcs1_nXoUtPkGDx56awafZ8DuNWaMGWDCN6Wqq2y5LB5m87oddfcNGY3pMNM" alt="Background" class="cert-list-hero__img">
+        <div class="cert-list-hero__overlay-top"></div>
+        <div class="cert-list-hero__overlay-right"></div>
       </div>
       
-      <div class="container relative reveal" style="z-index: 10; text-align: center; max-width: 56rem;">
-        <div class="chip chip--primary" style="margin-bottom: 1.5rem;">Elevate Your Credentials</div>
-        <h1 class="display-lg" style="margin-bottom: 1.5rem; text-transform: uppercase;">
+      <div class="container relative reveal cert-list-hero__content">
+        <div class="chip chip--primary cert-list-hero__chip">Elevate Your Credentials</div>
+        <h1 class="display-lg cert-list-hero__title">
           Certifications
         </h1>
-        <p class="body-lg text-on-surface-variant font-light" style="margin: 0 auto; max-width: 42rem;">
+        <p class="body-lg text-on-surface-variant font-light cert-list-hero__text">
           Validate your expertise with industry-aligned academic assessments. From foundational logic to advanced engineering.
         </p>
       </div>
     </section>
 
     <!-- Content Area -->
-    <section class="section" style="padding-top: 0; padding-bottom: 6rem; position: relative; z-index: 20; transform: translateY(-3rem);">
+    <section class="section cert-list-content">
       <div class="container space-y-28">
 
         <!-- Category 1 -->
-        <div class="reveal" style="margin-bottom: 6rem;">
-          <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 3rem;">
-            <div style="width: 3rem; height: 4px; background: var(--primary);"></div>
-            <h2 class="display-sm" style="font-size: 2.5rem; font-weight: 900; letter-spacing: -0.02em;">Programming Languages</h2>
+        <div class="reveal category-section">
+          <div class="category-header">
+            <div class="category-header__line"></div>
+            <h2 class="display-sm section-heading">Programming Languages</h2>
             <p class="body-md text-on-surface-variant max-w-md">Master the syntax and paradigms of the world's most powerful coding environments.</p>
           </div>
           
@@ -265,39 +126,39 @@
         </div>
 
         <!-- Category 2 -->
-        <div class="reveal" style="margin-bottom: 8rem;">
-          <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 3rem; align-items: flex-end; text-align: right;">
-            <div style="width: 3rem; height: 4px; background: var(--primary);"></div>
-            <h2 class="display-sm" style="font-size: 2.5rem; font-weight: 900; letter-spacing: -0.02em;">Computer Science Concepts</h2>
+        <div class="reveal category-section category-section-alt">
+          <div class="category-header category-header--right">
+            <div class="category-header__line"></div>
+            <h2 class="display-sm section-heading">Computer Science Concepts</h2>
             <p class="body-md text-on-surface-variant max-w-md">The theoretical backbone of software engineering and digital architecture.</p>
           </div>
           
           <div class="grid grid-5 stagger" id="cs-grid">
-            <button class="concept-card reveal" style="align-items: center; text-align: center;">
+            <button class="concept-card reveal concept-card--centered">
               <span class="material-symbols-outlined">account_tree</span>
               <span class="concept-card__title">Data<br>Structures</span>
               <div class="concept-card__line"></div>
             </button>
 
-            <button class="concept-card reveal" style="align-items: center; text-align: center;">
+            <button class="concept-card reveal concept-card--centered">
               <span class="material-symbols-outlined">functions</span>
               <span class="concept-card__title">Algorithms</span>
               <div class="concept-card__line"></div>
             </button>
 
-            <button class="concept-card reveal" style="align-items: center; text-align: center;">
+            <button class="concept-card reveal concept-card--centered">
               <span class="material-symbols-outlined">developer_board</span>
               <span class="concept-card__title">Operating<br>Systems</span>
               <div class="concept-card__line"></div>
             </button>
 
-            <button class="concept-card reveal" style="align-items: center; text-align: center;">
+            <button class="concept-card reveal concept-card--centered">
               <span class="material-symbols-outlined">hub</span>
               <span class="concept-card__title">Networking</span>
               <div class="concept-card__line"></div>
             </button>
 
-            <button class="concept-card reveal" style="align-items: center; text-align: center;">
+            <button class="concept-card reveal concept-card--centered">
               <span class="material-symbols-outlined">layers</span>
               <span class="concept-card__title">DBMS</span>
               <div class="concept-card__line"></div>
@@ -307,20 +168,20 @@
 
         <!-- COMPACT CERTIFICATION INDEX SECTION -->
         <div class="reveal">
-          <h2 class="display-sm" style="font-size: 2.5rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1rem;">
+          <h2 class="display-sm cert-index-header">
             Compact <span class="text-gradient">Certification Index</span>
           </h2>
-          <p class="body-lg text-on-surface-variant" style="margin-bottom: 3rem; max-width: 42rem;">
+          <p class="body-lg text-on-surface-variant cert-index-desc">
             An efficient, curated index of professional-grade certifications. Quickly find and start your next challenge.
           </p>
           
           <!-- Controls -->
-          <div class="flex gap-4" style="margin-bottom: 2rem; flex-wrap: wrap;">
-            <div class="search-bar" style="flex: 1; min-width: 250px;">
+          <div class="flex gap-4 cert-index-controls">
+            <div class="search-bar cert-search">
               <span class="material-symbols-outlined">search</span>
               <input type="text" placeholder="Search certifications..." data-search="#cert-index-list .cert-list-item">
             </div>
-            <select class="select-dropdown" style="min-width: 200px;">
+            <select class="select-dropdown cert-filter">
               <option value="all">Filter by Difficulty</option>
               <option value="beginner">Beginner</option>
               <option value="intermediate">Intermediate</option>
@@ -340,7 +201,7 @@
               <a href="#" class="cert-list-item__start">Start</a>
             </div>
 
-            <div class="cert-list-item reveal" style="background: rgba(147, 0, 10, 0.1); border: 1px solid rgba(147, 0, 10, 0.2);">
+            <div class="cert-list-item reveal cert-list-item--advanced">
               <div class="cert-list-item__icon">
                 <span class="material-symbols-outlined icon-filled">memory</span>
               </div>
@@ -358,7 +219,7 @@
               <a href="#" class="cert-list-item__start">Start</a>
             </div>
 
-            <div class="cert-list-item reveal" style="background: rgba(147, 0, 10, 0.1); border: 1px solid rgba(147, 0, 10, 0.2);">
+            <div class="cert-list-item reveal cert-list-item--advanced">
               <div class="cert-list-item__icon">
                 <span class="material-symbols-outlined icon-filled">shield_with_heart</span>
               </div>
@@ -412,7 +273,7 @@
               <a href="#" class="cert-list-item__start">Start</a>
             </div>
 
-            <div class="cert-list-item reveal" style="background: rgba(147, 0, 10, 0.1); border: 1px solid rgba(147, 0, 10, 0.2);">
+            <div class="cert-list-item reveal cert-list-item--advanced">
               <div class="cert-list-item__icon">
                 <span class="material-symbols-outlined icon-filled">javascript</span>
               </div>
@@ -421,7 +282,7 @@
               <a href="#" class="cert-list-item__start">Start</a>
             </div>
 
-            <div class="cert-list-item reveal" style="background: rgba(147, 0, 10, 0.1); border: 1px solid rgba(147, 0, 10, 0.2);">
+            <div class="cert-list-item reveal cert-list-item--advanced">
               <div class="cert-list-item__icon">
                 <span class="material-symbols-outlined icon-filled">code_blocks</span>
               </div>
@@ -430,7 +291,7 @@
               <a href="#" class="cert-list-item__start">Start</a>
             </div>
 
-            <div class="cert-list-item reveal" style="background: rgba(147, 0, 10, 0.1); border: 1px solid rgba(147, 0, 10, 0.2);">
+            <div class="cert-list-item reveal cert-list-item--advanced">
               <div class="cert-list-item__icon">
                 <span class="material-symbols-outlined icon-filled">functions</span>
               </div>
@@ -447,8 +308,8 @@
   </main>
 
   <!-- Footer -->
-  <footer class="footer" id="footer" style="margin-top: 0; border-top: 1px solid rgba(53, 52, 56, 0.15);">
-    <div class="footer__inner" style="flex-direction: row; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+  <footer class="footer cert-list-footer" id="footer">
+    <div class="footer__inner">
       <div>
         <div class="footer__brand">Notewise</div>
         <p class="footer__copy">© 2024 Notewise Crimson Scholar Edition. Curating excellence with dignity.</p>
@@ -464,7 +325,7 @@
 
   <!-- Bottom Nav (Mobile) -->
   <nav class="bottom-nav hide-desktop" id="bottom-nav">
-    <a href="index.html" class="bottom-nav__item">
+    <a href="../index.html" class="bottom-nav__item">
       <span class="material-symbols-outlined">home</span>
       <span>Home</span>
     </a>
@@ -482,27 +343,7 @@
     </a>
   </nav>
 
-  <script src="js/main.js"></script>
-  <script>
-    function adjustGrid() {
-      const w = window.innerWidth;
-      const langGrid = document.getElementById('lang-grid');
-      const csGrid = document.getElementById('cs-grid');
-      
-      if (w < 768) {
-        if (langGrid) langGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
-        if (csGrid) csGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
-      } else if (w < 1024) {
-        if (langGrid) langGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
-        if (csGrid) csGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
-      } else {
-        if (langGrid) langGrid.style.gridTemplateColumns = 'repeat(5, 1fr)';
-        if (csGrid) csGrid.style.gridTemplateColumns = 'repeat(5, 1fr)';
-      }
-    }
-    
-    adjustGrid();
-    window.addEventListener('resize', adjustGrid);
-  </script>
+  <script src="../js/main.js"></script>
+  <script src="../js/pages/cert-list.js"></script>
 </body>
 </html>
