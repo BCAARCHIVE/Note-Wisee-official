@@ -1,20 +1,19 @@
-/* ===== certifications.js — Certifications Page Specific JavaScript ===== */
+/* ===== cert-list.js — Certification List Page Specific JavaScript ===== */
 
 function adjustGrid() {
   const w = window.innerWidth;
-  const grid = document.getElementById('cert-grid');
-  const rustCard = document.getElementById('rust-card');
-  if (!grid) return;
+  const langGrid = document.getElementById('lang-grid');
+  const csGrid = document.getElementById('cs-grid');
   
   if (w < 768) {
-    grid.style.gridTemplateColumns = '1fr';
-    if(rustCard) rustCard.style.gridColumn = 'span 1';
+    if (langGrid) langGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
+    if (csGrid) csGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
   } else if (w < 1024) {
-    grid.style.gridTemplateColumns = 'repeat(2, 1fr)';
-    if(rustCard) rustCard.style.gridColumn = 'span 2';
+    if (langGrid) langGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
+    if (csGrid) csGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
   } else {
-    grid.style.gridTemplateColumns = 'repeat(3, 1fr)';
-    if(rustCard) rustCard.style.gridColumn = 'span 2';
+    if (langGrid) langGrid.style.gridTemplateColumns = 'repeat(5, 1fr)';
+    if (csGrid) csGrid.style.gridTemplateColumns = 'repeat(5, 1fr)';
   }
 }
 
