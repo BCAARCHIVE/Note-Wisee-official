@@ -26,6 +26,7 @@
     </a>
     <div class="navbar__links">
       <a href="semesters.html" class="navbar__link">Semesters</a>
+      <a href="courses.html" class="navbar__link">Courses</a>
       <a href="certifications.html" class="navbar__link active">Certifications</a>
     </div>
     <div class="navbar__actions">
@@ -40,31 +41,50 @@
   <div class="mobile-menu" id="mobile-menu">
     <a href="../index.html">Home</a>
     <a href="semesters.html">Semesters</a>
+    <a href="courses.html">Courses</a>
     <a href="certifications.html" class="active">Certifications</a>
     <a href="about.html">About</a>
   </div>
 
-  <main class="pt-navbar">
+  <main class="pt-navbar certifications-main">
 
-    <!-- Heavy Hero Section -->
-    <section class="hero cert-list-hero">
-      <div class="cert-list-hero__bg">
-        <img
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7Ca0_WwRaGpDRV3bN8Q5F6g3h8EpEC1tQiecH-JvCHFigntA29E5hOrU_FdD-sxtSMoSh-riSffXGe62MJjKMvbKD5dNZ4b1A_u68LD-JbL2dKw9lAlyUiU8uihw6F2A17BUipzkmeOGLTzRaz2d7WGqs7LYw-FapviSoioBNifEICIedTEXqPr22C81lXa635ku86Ea9gFqCe7odcs1_nXoUtPkGDx56awafZ8DuNWaMGWDCN6Wqq2y5LB5m87oddfcNGY3pMNM"
-          alt="Background" class="cert-list-hero__img">
-        <div class="cert-list-hero__overlay-top"></div>
-        <div class="cert-list-hero__overlay-right"></div>
-      </div>
+    <!-- HERO SECTION -->
+    <section class="hero hero-gradient" id="hero">
+      <div class="container">
+        <div class="hero__content">
 
-      <div class="container relative reveal cert-list-hero__content">
-        <div class="chip chip--primary cert-list-hero__chip">Elevate Your Credentials</div>
-        <h1 class="display-lg cert-list-hero__title">
-          Certifications
-        </h1>
-        <p class="body-lg text-on-surface-variant font-light cert-list-hero__text">
-          Validate your expertise with industry-aligned academic assessments. From foundational logic to advanced
-          engineering.
-        </p>
+          <!-- Left: Text Content -->
+          <div class="reveal">
+            <div class="chip chip--primary">
+              <span class="material-symbols-outlined">verified</span>
+              Elevate Your Credentials
+            </div>
+
+            <h1 class="display-lg">
+              Professional<br>
+              <span class="text-gradient">Certifications</span>
+            </h1>
+
+            <p class="body-lg text-on-surface-variant">
+              Validate your expertise with industry-aligned academic assessments. 
+              From foundational logic to advanced engineering.
+            </p>
+
+            <div class="flex gap-4 flex-wrap">
+              <a href="#cert-index-list" class="btn btn-primary">
+                Browse Certifications
+              </a>
+              <a href="courses.html" class="btn btn-secondary">
+                View Courses
+              </a>
+            </div>
+          </div>
+          <!-- Right: Hero Image (desktop) -->
+          <div class="hide-mobile" id="hero-image-container">
+            <img src="../images/nobg notewise.png" alt="NoteWise Logo" class="hero-logo-img" style="max-width: 100%; height: auto;" />
+          </div>
+
+        </div> 
       </div>
     </section>
 
@@ -343,6 +363,10 @@
     <a href="semesters.html" class="bottom-nav__item">
       <span class="material-symbols-outlined">menu_book</span>
       <span>Learn</span>
+    </a>
+    <a href="courses.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined">library_books</span>
+      <span>Courses</span>
     </a>
     <a href="certifications.html" class="bottom-nav__item active">
       <span class="material-symbols-outlined icon-filled">verified</span>

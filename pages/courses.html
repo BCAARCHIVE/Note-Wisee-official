@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses — NoteWise</title>
+  <meta name="description"
+    content="Comprehensive academic courses carefully curated for you.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/pages/courses.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="navbar__logo">
+      <img src="../images/notewise title.png" alt="Notewise Title" style="height: 32px; width: auto;">
+    </a>
+    <div class="navbar__links">
+      <a href="semesters.html" class="navbar__link">Semesters</a>
+      <a href="courses.html" class="navbar__link active">Courses</a>
+      <a href="certifications.html" class="navbar__link">Certifications</a>
+    </div>
+    <div class="navbar__actions">
+      <a href="about.html" class="btn-signin hide-mobile">About Us</a>
+      <button class="hamburger hide-desktop" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html">Home</a>
+    <a href="semesters.html">Semesters</a>
+    <a href="courses.html" class="active">Courses</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <main class="pt-navbar courses-main">
+
+    <!-- HERO SECTION -->
+    <section class="hero hero-gradient" id="hero">
+      <div class="container">
+        <div class="hero__content">
+
+          <!-- Left: Text Content -->
+          <div class="reveal">
+            <div class="chip chip--primary">
+              <span class="material-symbols-outlined">school</span>
+              Academic Excellence
+            </div>
+
+            <h1 class="display-lg">
+              Comprehensive<br>
+              <span class="text-gradient">Courses</span>
+            </h1>
+
+            <p class="body-lg text-on-surface-variant">
+              Dive into comprehensive curricula carefully structured to accelerate 
+              your academic and professional journey.
+            </p>
+
+            <div class="flex gap-4 flex-wrap">
+              <a href="#courses-index-list" class="btn btn-primary">
+                Browse Courses
+              </a>
+              <a href="certifications.html" class="btn btn-secondary">
+                View Certifications
+              </a>
+            </div>
+          </div>
+          <!-- Right: Hero Image (desktop) -->
+          <div class="hide-mobile" id="hero-image-container">
+            <img src="../images/nobg notewise.png" alt="NoteWise Logo" class="hero-logo-img" style="max-width: 100%; height: auto;" />
+          </div>
+
+        </div> 
+      </div>
+    </section>
+
+    <!-- Content Area -->
+    <section class="section courses-content">
+      <div class="container space-y-28">
+
+        <!-- Degree Programs -->
+        <div class="reveal category-section">
+          <div class="category-header">
+            <div class="category-header__line"></div>
+            <h2 class="display-sm section-heading">Degree Programs</h2>
+            <p class="body-md text-on-surface-variant max-w-md">Explore full degree coursework structured logically.</p>
+          </div>
+
+          <div class="grid grid-3 stagger" id="programs-grid">
+            <!-- BCA -->
+            <button class="category-btn reveal">
+              <span class="material-symbols-outlined category-btn__bg-icon">computer</span>
+              <div class="category-btn__icon-wrap">
+                <span class="material-symbols-outlined icon-filled">laptop_mac</span>
+              </div>
+              <span class="category-btn__title">BCA</span>
+              <span class="category-btn__label">Bachelors in Computer Applications</span>
+            </button>
+
+            <!-- B.Tech -->
+            <button class="category-btn reveal">
+              <span class="material-symbols-outlined category-btn__bg-icon">engineering</span>
+              <div class="category-btn__icon-wrap">
+                <span class="material-symbols-outlined icon-filled">architecture</span>
+              </div>
+              <span class="category-btn__title">B.Tech</span>
+              <span class="category-btn__label">Bachelor of Technology</span>
+            </button>
+
+            <!-- MCA -->
+            <button class="category-btn reveal">
+              <span class="material-symbols-outlined category-btn__bg-icon">school</span>
+              <div class="category-btn__icon-wrap">
+                <span class="material-symbols-outlined icon-filled">science</span>
+              </div>
+              <span class="category-btn__title">MCA</span>
+              <span class="category-btn__label">Master of Computer Applications</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- COMPACT COURSE INDEX SECTION -->
+        <div class="reveal">
+          <h2 class="display-sm courses-index-header">
+            Featured <span class="text-gradient">Course Index</span>
+          </h2>
+          <p class="body-lg text-on-surface-variant courses-index-desc">
+            Find the exact subject or module you need to ace your next exam or build your skills.
+          </p>
+
+          <!-- Controls -->
+          <div class="flex gap-4 courses-index-controls">
+            <div class="search-bar courses-search">
+              <span class="material-symbols-outlined">search</span>
+              <input type="text" placeholder="Search courses..." data-search="#courses-index-list .cert-list-item">
+            </div>
+            <select class="select-dropdown courses-filter">
+              <option value="all">Filter by Program</option>
+              <option value="bca">BCA</option>
+              <option value="btech">B.Tech</option>
+              <option value="mca">MCA</option>
+            </select>
+          </div>
+
+          <!-- List -->
+          <div id="courses-index-list" class="grid grid-1 gap-4 stagger">
+
+            <div class="cert-list-item reveal">
+              <div class="cert-list-item__icon">
+                <span class="material-symbols-outlined icon-filled">functions</span>
+              </div>
+              <h3 class="cert-list-item__title">Discrete Mathematics</h3>
+              <span class="chip chip--beginner hide-mobile">BCA</span>
+              <a href="#" class="cert-list-item__start">View</a>
+            </div>
+
+            <div class="cert-list-item reveal cert-list-item--advanced">
+              <div class="cert-list-item__icon">
+                <span class="material-symbols-outlined icon-filled">memory</span>
+              </div>
+              <h3 class="cert-list-item__title">Operating Systems</h3>
+              <span class="chip chip--advanced hide-mobile">B.Tech</span>
+              <a href="#" class="cert-list-item__start">View</a>
+            </div>
+
+            <div class="cert-list-item reveal">
+              <div class="cert-list-item__icon">
+                <span class="material-symbols-outlined icon-filled">database</span>
+              </div>
+              <h3 class="cert-list-item__title">Database Management Systems</h3>
+              <span class="chip chip--intermediate hide-mobile">BCA</span>
+              <a href="#" class="cert-list-item__start">View</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer courses-footer" id="footer">
+    <div class="footer__inner">
+      <div>
+        <div class="footer__brand">Notewise</div>
+        <p class="footer__copy">© 2024 Notewise Crimson Scholar Edition. Curating excellence with dignity.</p>
+      </div>
+      <div class="footer__links">
+        <a href="#" class="footer__link">Privacy Policy</a>
+        <a href="#" class="footer__link">Terms of Service</a>
+        <a href="#" class="footer__link">Academic Integrity</a>
+        <a href="about.html#contact" class="footer__link">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bottom Nav (Mobile) -->
+  <nav class="bottom-nav hide-desktop" id="bottom-nav">
+    <a href="../index.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined">home</span>
+      <span>Home</span>
+    </a>
+    <a href="semesters.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined">menu_book</span>
+      <span>Learn</span>
+    </a>
+    <a href="courses.html" class="bottom-nav__item active">
+      <span class="material-symbols-outlined">library_books</span>
+      <span>Courses</span>
+    </a>
+    <a href="certifications.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined icon-filled">verified</span>
+      <span>Certs</span>
+    </a>
+    <a href="about.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined">person</span>
+      <span>Profile</span>
+    </a>
+  </nav>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/pages/courses.js"></script>
+</body>
+
+</html>

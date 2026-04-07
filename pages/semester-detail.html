@@ -21,6 +21,7 @@
     </a>
     <div class="navbar__links">
       <a href="semesters.html" class="navbar__link active">Semesters</a>
+      <a href="courses.html" class="navbar__link">Courses</a>
       <a href="certifications.html" class="navbar__link">Certifications</a>
     </div>
     <div class="navbar__actions">
@@ -34,26 +35,56 @@
   <div class="mobile-menu" id="mobile-menu">
     <a href="../index.html">Home</a>
     <a href="semesters.html" class="active">Semesters</a>
+    <a href="courses.html">Courses</a>
     <a href="certifications.html">Certifications</a>
     <a href="about.html">About</a>
   </div>
 
   <main class="pt-navbar sem-detail-main">
+
+    <!-- HERO SECTION -->
+    <section class="hero hero-gradient" id="hero">
+      <div class="container">
+        <div class="hero__content">
+
+          <!-- Left: Text Content -->
+          <div class="reveal">
+            <div class="breadcrumb sem-detail-breadcrumb">
+              <a href="semesters.html">Semesters</a>
+              <span class="material-symbols-outlined breadcrumb-icon">chevron_right</span>
+              <span>Semester 1</span>
+            </div>
+
+            <h1 class="display-lg">
+              Foundation of<br>
+              <span class="text-gradient">Computing</span>
+            </h1>
+
+            <p class="body-lg text-on-surface-variant">
+              Lecture notes, materials, and resources for Semester 1 BCA students. 
+              Everything you need to ace your foundation year.
+            </p>
+
+            <div class="flex gap-4 flex-wrap">
+              <a href="#notes-list" class="btn btn-primary">
+                View Notes
+              </a>
+              <a href="semesters.html" class="btn btn-secondary">
+                All Semesters
+              </a>
+            </div>
+          </div>
+          <!-- Right: Hero Image (desktop) -->
+          <div class="hide-mobile" id="hero-image-container">
+            <img src="../images/nobg notewise.png" alt="NoteWise Logo" class="hero-logo-img" style="max-width: 100%; height: auto;" />
+          </div>
+
+        </div> 
+      </div>
+    </section>
+
     <div class="container sem-detail-container">
       
-      <!-- Header Area -->
-      <div class="reveal sem-detail-header">
-        <div class="sem-detail-header-glow">
-        
-        <div class="breadcrumb">
-          <a href="semesters.html">Semesters</a>
-          <span class="material-symbols-outlined breadcrumb-icon">chevron_right</span>
-          <span>Semester 1</span>
-        </div>
-        
-        <h1 class="display-md sem-detail-title">Semester 1: Foundation of Computing</h1>
-      </div>
-
       <!-- Controls -->
       <div class="reveal flex flex-wrap gap-4 sem-detail-controls">
         <div class="search-bar sem-detail-search">
@@ -195,6 +226,10 @@
     <a href="semesters.html" class="bottom-nav__item active">
       <span class="material-symbols-outlined icon-filled">menu_book</span>
       <span>Learn</span>
+    </a>
+    <a href="courses.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined">library_books</span>
+      <span>Courses</span>
     </a>
     <a href="#" class="bottom-nav__item">
       <span class="material-symbols-outlined">search</span>

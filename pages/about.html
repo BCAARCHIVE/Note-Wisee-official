@@ -33,6 +33,7 @@
       </a>
       <div class="navbar__links">
         <a href="semesters.html" class="navbar__link">Semesters</a>
+        <a href="courses.html" class="navbar__link">Courses</a>
         <a href="certifications.html" class="navbar__link">Certifications</a>
       </div>
       <div class="navbar__actions">
@@ -46,24 +47,57 @@
     <div class="mobile-menu" id="mobile-menu">
       <a href="../index.html">Home</a>
       <a href="semesters.html">Semesters</a>
+      <a href="courses.html">Courses</a>
       <a href="certifications.html">Certifications</a>
       <a href="about.html#contact" class="active">About</a>
     </div>
 
-    <main class="pt-navbar">
-      <!-- Hero / About Section -->
+    <main class="pt-navbar about-main">
+
+      <!-- HERO SECTION -->
+      <section class="hero hero-gradient" id="hero">
+        <div class="container">
+          <div class="hero__content">
+
+            <!-- Left: Text Content -->
+            <div class="reveal">
+              <div class="chip chip--primary">
+                <span class="material-symbols-outlined">info</span>
+                About NoteWise
+              </div>
+
+              <h1 class="display-lg">
+                The Academic<br>
+                <span class="text-gradient">Curator</span>
+              </h1>
+
+              <p class="body-lg text-on-surface-variant">
+                NoteWise was born from a simple observation: BCA students waste
+                countless hours searching for reliable study materials instead of
+                actually studying.
+              </p>
+
+              <div class="flex gap-4 flex-wrap">
+                <a href="#contact" class="btn btn-primary">
+                  Get in Touch
+                </a>
+                <a href="semesters.html" class="btn btn-secondary">
+                  Explore Resources
+                </a>
+              </div>
+            </div>
+            <!-- Right: Hero Image (desktop) -->
+            <div class="hide-mobile" id="hero-image-container">
+              <img src="../images/nobg notewise.png" alt="NoteWise Logo" class="hero-logo-img" style="max-width: 100%; height: auto;" />
+            </div>
+
+          </div> 
+        </div>
+      </section>
+
+      <!-- About Content Section -->
       <section class="section">
         <div class="container about-container">
-          <div class="reveal about-hero">
-            <h1 class="display-lg text-gradient about-hero-title">
-              The Academic Curator
-            </h1>
-            <p class="body-lg text-on-surface-variant about-hero-text">
-              Notewise was born from a simple observation: BCA students waste
-              countless hours searching for reliable study materials instead of
-              actually studying.
-            </p>
-          </div>
 
           <div class="reveal about-mission">
             <h2 class="headline-md about-mission-title">Our Mission</h2>
@@ -221,6 +255,10 @@
       <a href="semesters.html" class="bottom-nav__item">
         <span class="material-symbols-outlined">menu_book</span>
         <span>Learn</span>
+      </a>
+      <a href="courses.html" class="bottom-nav__item">
+        <span class="material-symbols-outlined">library_books</span>
+        <span>Courses</span>
       </a>
       <a href="certifications.html" class="bottom-nav__item">
         <span class="material-symbols-outlined">verified</span>

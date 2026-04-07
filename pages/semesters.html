@@ -21,6 +21,7 @@
     </a>
     <div class="navbar__links">
       <a href="semesters.html" class="navbar__link active">Semesters</a>
+      <a href="courses.html" class="navbar__link">Courses</a>
       <a href="certifications.html" class="navbar__link">Certifications</a>
     </div>
     <div class="navbar__actions">
@@ -34,48 +35,50 @@
   <div class="mobile-menu" id="mobile-menu">
     <a href="../index.html">Home</a>
     <a href="semesters.html" class="active">Semesters</a>
+    <a href="courses.html">Courses</a>
     <a href="certifications.html">Certifications</a>
     <a href="about.html">About</a>
   </div>
 
   <main class="pt-navbar semesters-main">
 
-    <!-- Custom Hero Section -->
-    <section class="semesters-hero-section custom-hero-section reveal">
-      <div class="custom-hero-bg-blur"></div>
-      <div class="custom-hero-content">
-        <h1 class="custom-hero-title">
-          Build and scale up your startup with the best tools
-        </h1>
-        <p class="custom-hero-text">
-          Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-        </p>
-        <form class="custom-hero-form" onsubmit="event.preventDefault()">
-          <input type="text" placeholder="Enter your email" class="custom-hero-input" />
-          <button class="custom-hero-btn">
-            Get started
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="hero-btn-icon">
-              <path fill-rule="evenodd" d="M2 10a.75.75 0 01.75-.75h12.59l-2.1-1.95a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.1-1.95H2.75A.75.75 0 012 10z" clip-rule="evenodd" />
-            </svg>
-          </button>
-        </form>
-        <div class="custom-hero-social">
-          <div class="custom-hero-stars">
-            <svg class="hero-star" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"/>
-            </svg>
-            <svg class="hero-star" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"/>
-            </svg>
-            <svg class="hero-star" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"/>
-            </svg>
-            <svg class="hero-star" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"/>
-            </svg>
+    <!-- HERO SECTION -->
+    <section class="hero hero-gradient" id="hero">
+      <div class="container">
+        <div class="hero__content">
+
+          <!-- Left: Text Content -->
+          <div class="reveal">
+            <div class="chip chip--primary">
+              <span class="material-symbols-outlined">school</span>
+              BCA Curriculum
+            </div>
+
+            <h1 class="display-lg">
+              Navigate Your<br>
+              <span class="text-gradient">Academic Journey</span>
+            </h1>
+
+            <p class="body-lg text-on-surface-variant">
+              Explore all 6 semesters with meticulously organized lecture notes, study materials, 
+              and resources structured for clarity and success.
+            </p>
+
+            <div class="flex gap-4 flex-wrap">
+              <a href="#bento-grid" class="btn btn-primary">
+                View Semesters
+              </a>
+              <a href="certifications.html" class="btn btn-secondary">
+                Certifications
+              </a>
+            </div>
           </div>
-          <p><span class="hero-highlight">5.0</span> by over 200 users</p>
-        </div>
+          <!-- Right: Hero Image (desktop) -->
+          <div class="hide-mobile" id="hero-image-container">
+            <img src="../images/nobg notewise.png" alt="NoteWise Logo" class="hero-logo-img" style="max-width: 100%; height: auto;" />
+          </div>
+
+        </div> 
       </div>
     </section>
 
@@ -87,7 +90,7 @@
           <h2 class="headline-lg">Explore Semesters</h2>
         </div>
         <div class="flex gap-3 sem-header-buttons">
-          <button class="btn btn-secondary btn-pill">Download All</button>
+          <!-- <button class="btn btn-secondary btn-pill">Download All</button> -->
           <button class="btn btn-primary btn-pill">Latest Updates</button>
         </div>
       </div>
@@ -266,6 +269,10 @@
     <a href="semesters.html" class="bottom-nav__item active">
       <span class="material-symbols-outlined icon-filled">menu_book</span>
       <span>Learn</span>
+    </a>
+    <a href="courses.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined">library_books</span>
+      <span>Courses</span>
     </a>
     <a href="#" class="bottom-nav__item">
       <span class="material-symbols-outlined">search</span>

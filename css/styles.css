@@ -504,7 +504,7 @@ ul, ol { list-style: none; }
 
 /* Sign In Button */
 .btn-signin {
-  background: linear-gradient(135deg, var(--primary), var(--primary-container));
+  background: linear-gradient(180deg, var(--primary), var(--primary-container));
   color: var(--on-primary);
   padding: 0.5rem 1.5rem;
   border-radius: var(--radius-md);
@@ -591,7 +591,7 @@ ul, ol { list-style: none; }
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary), var(--primary-container));
+  background: linear-gradient(180deg, var(--primary), var(--primary-container));
   color: var(--on-primary);
 }
 

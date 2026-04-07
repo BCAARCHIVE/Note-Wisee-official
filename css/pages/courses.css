@@ -1,4 +1,4 @@
-/* ===== cert-list.html Page Specific Styles ===== */
+/* ===== courses.css Page Specific Styles ===== */
 
 /* Hero Section Styles */
 .hero__content {
@@ -32,12 +32,12 @@
 }
 
 /* Main padding */
-.certifications-main {
+.courses-main {
   padding-top: 6rem;
 }
 
 /* Content Area Section */
-.cert-list-content {
+.courses-content {
   padding-top: 3rem;
   padding-bottom: 6rem;
 }
@@ -154,102 +154,35 @@
   color: var(--primary);
 }
 
-/* Concept Card Component */
-.concept-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 2rem;
-  background: rgba(53, 52, 56, 0.4);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(81, 67, 74, 0.2);
-  border-radius: var(--radius-xl);
-  transition: all var(--transition-base);
-  cursor: pointer;
-}
-
-.concept-card:hover {
-  background: rgba(106, 30, 85, 0.2);
-  transform: scale(1.02);
-  box-shadow: var(--shadow-crimson-glow);
-}
-
-.concept-card .material-symbols-outlined {
-  color: var(--primary);
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  transition: transform var(--transition-base);
-}
-
-.concept-card:hover .material-symbols-outlined {
-  transform: scale(1.1);
-}
-
-.concept-card__title {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: var(--on-surface);
-  line-height: 1.2;
-  transition: color var(--transition-base);
-}
-
-.concept-card:hover .concept-card__title {
-  color: var(--primary);
-}
-
-.concept-card__line {
-  margin-top: 1rem;
-  width: 100%;
-  height: 1px;
-  background: rgba(81, 67, 74, 0.2);
-  transition: background var(--transition-base);
-}
-
-.concept-card:hover .concept-card__line {
-  background: rgba(255, 174, 223, 0.4);
-}
-
-.concept-card--centered {
-  align-items: center;
-  text-align: center;
-}
-
-/* Compact Certification Index Section */
-.cert-index-header {
+/* Compact Courses Index Section */
+.courses-index-header {
   margin-bottom: 1rem;
 }
 
-.cert-index-header h2 {
+.courses-index-header h2 {
   font-size: 2.5rem;
   font-weight: 800;
   letter-spacing: -0.02em;
 }
 
-.cert-index-desc {
+.courses-index-desc {
   margin-bottom: 3rem;
   max-width: 42rem;
 }
 
 /* Controls */
-.cert-index-controls {
+.courses-index-controls {
   margin-bottom: 2rem;
   flex-wrap: wrap;
 }
 
-.cert-index-controls .search-bar {
+.courses-index-controls .search-bar {
   flex: 1;
   min-width: 250px;
 }
 
-.cert-index-controls .select-dropdown {
+.courses-index-controls .select-dropdown {
   min-width: 200px;
-}
-
-/* Certification List Items - Special styling for advanced items */
-.cert-list-item--advanced {
-  background: rgba(147, 0, 10, 0.1);
-  border: 1px solid rgba(147, 0, 10, 0.2);
 }
 
 /* Section Heading */
@@ -268,43 +201,14 @@
   margin-bottom: 8rem;
 }
 
-/* Cert Index Header */
-.cert-index-header {
-  font-size: 2.5rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  margin-bottom: 1rem;
-}
-
-/* Cert Index Description */
-.cert-index-desc {
-  margin-bottom: 3rem;
-  max-width: 42rem;
-}
-
-/* Cert Index Controls */
-.cert-index-controls {
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.cert-search {
-  flex: 1;
-  min-width: 250px;
-}
-
-.cert-filter {
-  min-width: 200px;
-}
-
-/* Certification List Items - Special styling for advanced items */
+/* List Items */
 .cert-list-item--advanced {
   background: rgba(147, 0, 10, 0.1);
   border: 1px solid rgba(147, 0, 10, 0.2);
 }
 
 /* Footer Adjustments */
-.cert-list-footer {
+.courses-footer {
   margin-top: 0;
   border-top: 1px solid rgba(53, 52, 56, 0.15);
 }
@@ -317,7 +221,7 @@
 }
 
 @media (max-width: 767px) {
-  .cert-list-footer .footer__inner {
+  .courses-footer .footer__inner {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
