@@ -13,9 +13,9 @@
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/pages/index.css">
-  <link rel="shortcut icon" href="images/nobg notewise crop.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/pages/styles.css">
+  <link rel="stylesheet" href="../css/pages/index.css">
+  <link rel="shortcut icon" href="../images/nobg notewise crop.png" type="image/x-icon">
 </head>
 
 <body>
@@ -23,17 +23,17 @@
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <a href="index.html" class="navbar__logo">
-      <img src="images/notewise title.png" alt="Notewise Title" style="height: 32px; width: auto;">
+      <img src="../images/notewise title.png" alt="Notewise Title" style="height: 32px; width: auto;">
     </a>
 
     <div class="navbar__links">
-      <a href="pages/semesters.html" class="navbar__link">Semesters</a>
-      <a href="pages/courses.html" class="navbar__link">Courses</a>
-      <a href="pages/certifications.html" class="navbar__link">Certifications</a>
+      <a href="semesters.html" class="navbar__link">Semesters</a>
+      <a href="courses.html" class="navbar__link">Courses</a>
+      <a href="certifications.html" class="navbar__link">Certifications</a>
     </div>
 
     <div class="navbar__actions">
-      <a href="pages/about.html" class="btn-signin hide-mobile">About Us</a>
+      <a href="about.html" class="btn-signin hide-mobile">About Us</a>
       <button class="hamburger hide-desktop" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -43,10 +43,10 @@
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu" id="mobile-menu">
     <a href="index.html" class="active">Home</a>
-    <a href="pages/semesters.html">Semesters</a>
-    <a href="pages/courses.html">Courses</a>
-    <a href="pages/certifications.html">Certifications</a>
-    <a href="pages/about.html">About</a>
+    <a href="semesters.html">Semesters</a>
+    <a href="courses.html">Courses</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="about.html">About</a>
   </div>
 
   <!-- ===== MAIN CONTENT ===== -->
@@ -75,7 +75,7 @@
             </p>
 
             <div class="flex gap-4 flex-wrap">
-              <a href="pages/semesters.html" class="btn btn-primary">
+              <a href="semesters.html" class="btn btn-primary">
                 Explore Resources
               </a>
               <!-- <a href="#" class="btn btn-secondary">
@@ -85,7 +85,7 @@
           </div>
           <!-- Right: Hero Image (desktop) -->
           <div class="hide-mobile" id="hero-image-container">
-            <img src="images/nobg notewise.png" alt="NoteWise Logo" class="hero-logo-img" style="max-width: 100%; height: auto;" />
+            <img src="../images/nobg notewise.png" alt="NoteWise Logo" class="hero-logo-img" style="max-width: 100%; height: auto;" />
           </div>
 
         </div> 
@@ -111,7 +111,7 @@
         <div class="grid gap-6 stagger" id="semester-grid">
 
           <!-- Semester 1 (Large) -->
-          <a href="pages/semester-detail.html" class="card reveal sem-card-link" id="sem1-card">
+          <a href="semester-detail.html" class="card reveal sem-card-link" id="sem1-card">
             <div class="hero-feature-card__overlay-dark"></div>
             <div>
               <div class="chip chip--primary">Current Focus</div>
@@ -126,7 +126,7 @@
           </a>
 
           <!-- Semester 2 -->
-          <a href="pages/semester-detail.html" class="card reveal sem-card-link sem-card-small" id="sem2-card">
+          <a href="semester-detail.html" class="card reveal sem-card-link sem-card-small" id="sem2-card">
             <span class="material-symbols-outlined text-primary">filter_2</span>
             <div>
               <h3 class="headline-sm card-title">Semester 2</h3>
@@ -135,7 +135,7 @@
           </a>
 
           <!-- Semester 3 -->
-          <a href="pages/semester-detail.html" class="card reveal sem-card-link sem-card-small" id="sem3-card">
+          <a href="semester-detail.html" class="card reveal sem-card-link sem-card-small" id="sem3-card">
             <span class="material-symbols-outlined text-primary">code</span>
             <div>
               <h3 class="headline-sm card-title">Semester 3</h3>
@@ -144,7 +144,7 @@
           </a>
 
           <!-- Semester 4 -->
-          <a href="pages/semester-detail.html" class="card reveal sem-card-link sem-card-small" id="sem4-card">
+          <a href="semester-detail.html" class="card reveal sem-card-link sem-card-small" id="sem4-card">
             <span class="material-symbols-outlined text-primary">cloud</span>
             <div>
               <h3 class="headline-sm card-title">Semester 4</h3>
@@ -153,7 +153,7 @@
           </a>
 
           <!-- Semester 5 -->
-          <a href="pages/semester-detail.html" class="card reveal sem-card-link sem-card-small" id="sem5-card">
+          <a href="semester-detail.html" class="card reveal sem-card-link sem-card-small" id="sem5-card">
             <span class="material-symbols-outlined text-primary">psychology</span>
             <div>
               <h3 class="headline-sm card-title">Semester 5</h3>
@@ -162,7 +162,7 @@
           </a>
 
           <!-- Semester 6 (Full width) -->
-          <a href="pages/semester-detail.html" class="card reveal sem-card-link" id="sem6-card">
+          <a href="semester-detail.html" class="card reveal sem-card-link" id="sem6-card">
             <div>
               <h3 class="headline-sm card-title">Semester 6</h3>
               <p class="body-sm text-on-surface-variant">Capstone Projects & Internship Preparation.</p>
@@ -195,8 +195,8 @@
             </p>
 
             <div class="cert-launch__actions">
-              <a href="pages/certifications.html" class="btn btn-primary">Go to Certifications</a>
-              <a href="pages/certifications.html#cert-index-list" class="btn btn-secondary">Browse Tracks</a>
+              <a href="certifications.html" class="btn btn-primary">Go to Certifications</a>
+              <a href="certifications.html#cert-index-list" class="btn btn-secondary">Browse Tracks</a>
             </div>
           </div>
 
@@ -253,8 +253,8 @@
             </p>
 
             <div class="course-launch__actions">
-              <a href="pages/courses.html" class="btn btn-primary">Go to Courses</a>
-              <a href="pages/courses.html#courses-index-list" class="btn btn-secondary">View Featured Tracks</a>
+              <a href="courses.html" class="btn btn-primary">Go to Courses</a>
+              <a href="courses.html#courses-index-list" class="btn btn-secondary">View Featured Tracks</a>
             </div>
           </div>
 
@@ -297,19 +297,19 @@
         <p class="footer__copy">© 2026 Notewise BCA Resources. The Academic Curator.</p>
         <div class="footer-social">
           <a href="#" class="footer__social-icon" aria-label="GitHub">
-            <img src="icons/github-svgrepo-com.svg" alt="GitHub" class="footer-social-img">
+            <img src="../icons/github-svgrepo-com.svg" alt="GitHub" class="footer-social-img">
           </a>
           <a href="#" class="footer__social-icon" aria-label="Discord">
-            <img src="icons/discord-svgrepo-com.svg" alt="Discord" class="footer-social-img">
+            <img src="../icons/discord-svgrepo-com.svg" alt="Discord" class="footer-social-img">
           </a>
           <a href="#" class="footer__social-icon" aria-label="WhatsApp">
-            <img src="icons/whatsapp-logo-bold-svgrepo-com.svg" alt="WhatsApp" class="footer-social-img">
+            <img src="../icons/whatsapp-logo-bold-svgrepo-com.svg" alt="WhatsApp" class="footer-social-img">
           </a>
           <a href="#" class="footer__social-icon" aria-label="Instagram">
-            <img src="icons/instagram-svgrepo-com.svg" alt="Instagram" class="footer-social-img">
+            <img src="../icons/instagram-svgrepo-com.svg" alt="Instagram" class="footer-social-img">
           </a>
           <a href="#" class="footer__social-icon" aria-label="Email">
-            <img src="icons/mail-alt-3-svgrepo-com.svg" alt="Email" class="footer-social-img">
+            <img src="../icons/mail-alt-3-svgrepo-com.svg" alt="Email" class="footer-social-img">
           </a>
         </div>
       </div>
@@ -322,11 +322,11 @@
       <span class="material-symbols-outlined icon-filled">home</span>
       <span>Home</span>
     </a>
-    <a href="pages/semesters.html" class="bottom-nav__item">
+    <a href="semesters.html" class="bottom-nav__item">
       <span class="material-symbols-outlined">menu_book</span>
       <span>Learn</span>
     </a>
-    <a href="pages/courses.html" class="bottom-nav__item">
+    <a href="courses.html" class="bottom-nav__item">
       <span class="material-symbols-outlined">library_books</span>
       <span>Courses</span>
     </a>
@@ -334,14 +334,14 @@
       <span class="material-symbols-outlined">search</span>
       <span>Search</span>
     </a>
-    <a href="pages/certifications.html" class="bottom-nav__item">
+    <a href="certifications.html" class="bottom-nav__item">
       <span class="material-symbols-outlined">verified</span>
       <span>Certs</span>
     </a>
   </nav>
 
-  <script src="js/main.js"></script>
-  <script src="js/pages/index.js"></script>
+  <script src="../js/pages/main.js"></script>
+  <script src="../js/pages/index.js"></script>
 </body>
 
 </html>
