@@ -793,9 +793,20 @@ ul, ol { list-style: none; }
 /* ---------- Footer ---------- */
 .footer {
   width: 100%;
-  border-top: 1px solid rgba(53, 52, 56, 0.15);
-  background: var(--surface);
+  background: var(--surface-container-low);
   margin-top: var(--space-20);
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--primary-container) 50%, transparent 100%);
+  opacity: 0.5;
 }
 
 .footer__inner {
@@ -808,15 +819,18 @@ ul, ol { list-style: none; }
 }
 
 .footer__brand {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 900;
-  color: var(--primary-container);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .footer__copy {
   font-size: 0.75rem;
-  font-weight: 300;
-  color: var(--surface-container-highest);
+  font-weight: 400;
+  color: var(--on-surface-variant);
   letter-spacing: 0.02em;
   margin-top: var(--space-2);
 }
@@ -831,14 +845,15 @@ ul, ol { list-style: none; }
 }
 
 .footer__link {
-  color: var(--surface-container-highest);
-  opacity: 0.8;
-  transition: color var(--transition-base), opacity var(--transition-base);
+  color: var(--on-surface-variant);
+  font-weight: 400;
+  transition: color var(--transition-base), transform var(--transition-base);
+  display: inline-block;
 }
 
 .footer__link:hover {
   color: var(--primary);
-  opacity: 1;
+  transform: translateX(2px);
 }
 
 .footer__social {
@@ -850,17 +865,21 @@ ul, ol { list-style: none; }
   width: 2.5rem;
   height: 2.5rem;
   border-radius: var(--radius-full);
-  background: var(--surface-container-high);
+  background: var(--surface-container);
+  border: 1px solid var(--outline-variant);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--on-surface-variant);
-  transition: background var(--transition-base), color var(--transition-base);
+  transition: all var(--transition-base);
 }
 
 .footer__social-icon:hover {
   background: var(--primary-container);
+  border-color: var(--primary-container);
   color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(106, 30, 85, 0.3);
 }
 
 /* ---------- Hero Sections ---------- */
@@ -1494,6 +1513,7 @@ textarea.form-input {
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
