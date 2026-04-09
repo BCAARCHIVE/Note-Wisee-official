@@ -116,33 +116,32 @@ function initAccordions() {
 
 /* ---------- Active Nav Link ---------- */
 function initActiveNavLink() {
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const currentPath = window.location.pathname;
 
-  // Desktop nav
-  document.querySelectorAll('.navbar__link').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
+  const isSamePath = (href) => {
+    if (!href || href.startsWith('#')) return false;
+    try {
+      const linkPath = new URL(href, window.location.href).pathname;
+      if (linkPath === currentPath) return true;
+      // Treat both "/" and "/index.html" as home.
+      return (
+        (linkPath.endsWith('/index.html') && currentPath.endsWith('/')) ||
+        (currentPath.endsWith('/index.html') && linkPath.endsWith('/'))
+      );
+    } catch {
+      return false;
     }
-  });
+  };
 
-  // Mobile menu
-  document.querySelectorAll('.mobile-menu a').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
-      link.classList.add('active');
-    }
-  });
+  const setActiveState = (selector) => {
+    document.querySelectorAll(selector).forEach((link) => {
+      link.classList.toggle('active', isSamePath(link.getAttribute('href')));
+    });
+  };
 
-  // Bottom nav
-  document.querySelectorAll('.bottom-nav__item').forEach(item => {
-    const href = item.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
-      item.classList.add('active');
-    }
-  });
+  setActiveState('.navbar__link');
+  setActiveState('.mobile-menu a');
+  setActiveState('.bottom-nav__item');
 }
 
 /* ---------- Smooth Scroll for Anchor Links ---------- */
