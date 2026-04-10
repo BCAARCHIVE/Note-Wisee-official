@@ -193,6 +193,13 @@ ul, ol { list-style: none; }
   line-height: 1.1;
 }
 
+.display-sm {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
 .headline-lg {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
@@ -1411,7 +1418,20 @@ textarea.form-input {
   .container {
     max-width: 1400px;
   }
-  
+
+  .navbar__links {
+    display: flex;
+    gap: var(--space-8);
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .bottom-nav {
+    display: none;
+  }
+
   .display-lg {
     font-size: clamp(3.5rem, 6vw, 6.5rem);
   }
@@ -1421,6 +1441,19 @@ textarea.form-input {
 @media (min-width: 1024px) and (max-width: 1439px) {
   .container {
     max-width: 1200px;
+  }
+
+  .navbar__links {
+    display: flex;
+    gap: var(--space-8);
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .bottom-nav {
+    display: none;
   }
 }
 

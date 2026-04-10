@@ -101,7 +101,7 @@
                   <span class="material-symbols-outlined contact-method-icon">location_on</span>
                   <div class="contact-method-content">
                     <h3 class="body-lg contact-method-title">Location</h3>
-                    <p class="body-sm text-on-surface-variant">Made with ❤️ for BCA students</p>
+                    <p class="body-sm text-on-surface-variant">Made for BCA students</p>
                   </div>
                 </div>
               </div>
@@ -218,76 +218,25 @@
                 </form>
               </div>
 
-              <!-- Quick Review Form -->
+              <!-- Quick Review Card -->
               <div class="contact-form-wrapper review-form-wrapper">
                 <h3 class="headline-sm form-title">
                   <span class="material-symbols-outlined">rate_review</span>
                   Quick Review
                 </h3>
-                <form class="contact-form" id="review-form">
-                  <div class="form-group">
-                    <label for="reviewName" class="label-sm">Your Name</label>
-                    <input 
-                      type="text" 
-                      id="reviewName" 
-                      name="reviewName" 
-                      class="form-input" 
-                      placeholder="Enter your name"
-                      required
-                    />
-                  </div>
-
-                  <div class="form-group">
-                    <label class="label-sm">Rating</label>
-                    <div class="rating-stars" id="rating-stars">
-                      <button type="button" class="star-btn" data-rating="1">
-                        <span class="material-symbols-outlined">star</span>
-                      </button>
-                      <button type="button" class="star-btn" data-rating="2">
-                        <span class="material-symbols-outlined">star</span>
-                      </button>
-                      <button type="button" class="star-btn" data-rating="3">
-                        <span class="material-symbols-outlined">star</span>
-                      </button>
-                      <button type="button" class="star-btn" data-rating="4">
-                        <span class="material-symbols-outlined">star</span>
-                      </button>
-                      <button type="button" class="star-btn" data-rating="5">
-                        <span class="material-symbols-outlined">star</span>
-                      </button>
-                    </div>
-                    <input type="hidden" id="ratingValue" name="rating" value="" required>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="reviewCategory" class="label-sm">What are you reviewing?</label>
-                    <select id="reviewCategory" name="reviewCategory" class="form-select" required>
-                      <option value="">Select category</option>
-                      <option value="website">Website Experience</option>
-                      <option value="notes">Notes Quality</option>
-                      <option value="courses">Courses Content</option>
-                      <option value="certifications">Certifications</option>
-                      <option value="overall">Overall Experience</option>
-                    </select>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="reviewMessage" class="label-sm">Your Review</label>
-                    <textarea 
-                      id="reviewMessage" 
-                      name="reviewMessage" 
-                      class="form-textarea" 
-                      rows="4" 
-                      placeholder="Share your experience with us..."
-                      required
-                    ></textarea>
-                  </div>
-
-                  <button type="submit" class="btn btn-secondary contact-submit">
-                    <span class="material-symbols-outlined">rate_review</span>
-                    Submit Review
-                  </button>
-                </form>
+                <div class="review-card">
+                  <p class="body-md text-on-surface-variant">
+                    We value your feedback! Help us improve NoteWise by sharing your experience. Your review will help other students find the best resources.
+                  </p>
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSe_pDTiSkutvxpOhV6O70Kd9z8apcU8ny6e55dwQRKB6-A1DA/viewform?usp=header"
+                    target="_blank"
+                    class="btn btn-primary contact-submit"
+                  >
+                    <span class="material-symbols-outlined">open_in_new</span>
+                    Open Review Form
+                  </a>
+                </div>
               </div>
             </div>
           </div>

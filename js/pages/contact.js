@@ -52,25 +52,56 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Handle contact form submission
+  // Handle contact form submission with Web3Forms
   const contactForm = document.getElementById('contact-form');
-  
+
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      
-      // Get form data
+
       const formData = new FormData(contactForm);
-      const data = Object.fromEntries(formData.entries());
-      
-      // Log form data (replace with actual submission logic)
-      console.log('Contact form submitted:', data);
-      
-      // Show success message
-      alert('Thank you for your message! We will get back to you soon.');
-      
-      // Reset form
-      contactForm.reset();
+      formData.append('access_key', 'bc8a520e-f848-4c5b-a8f4-6880663812a1');
+
+      // Combine firstName and lastName into name for Web3Forms
+      const firstName = formData.get('firstName') || '';
+      const lastName = formData.get('lastName') || '';
+      formData.append('name', firstName + ' ' + lastName);
+
+      // Log form data for debugging
+      console.log('Form data:');
+      for (let [key, value] of formData.entries()) {
+        console.log(key + ': ' + value);
+      }
+
+      const originalText = submitBtn.innerHTML;
+
+      submitBtn.innerHTML = '<span class="material-symbols-outlined">hourglass_empty</span>Sending...';
+      submitBtn.disabled = true;
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+
+        const data = await response.json();
+        console.log('Response:', data);
+
+        if (response.ok) {
+          alert('Success! Your message has been sent.');
+          contactForm.reset();
+        } else {
+          alert('Error: ' + data.message);
+        }
+      } catch (error) {
+        console.error('Fetch error:', error);
+        alert('Something went wrong. Please try again. Error: ' + error.message);
+      } finally {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }
     });
   }
 
