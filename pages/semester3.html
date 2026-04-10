@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semester 3: Java & OS Architecture — NoteWise</title>
+  <meta name="description" content="Lecture notes, materials, and resources for Semester 3 BCA — Java Programming, Operating Systems, Database Management.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/pages/semester-detail.css">
+  <link rel="shortcut icon" href="../images/nobg notewise crop.png" type="image/png">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="navbar__logo">
+      <img src="../images/notewise title.png" alt="Notewise Title" style="height: 32px; width: auto;">
+    </a>
+    <div class="navbar__links">
+      <a href="semesters.html" class="navbar__link active">Semesters</a>
+      <a href="courses.html" class="navbar__link">Courses</a>
+      <a href="certifications.html" class="navbar__link">Certifications</a>
+      <a href="contact.html" class="navbar__link">Contact Us</a>
+    </div>
+    <div class="navbar__actions">
+      <a href="about.html" class="btn-signin hide-mobile">About Us</a>
+      <button class="hamburger hide-desktop" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html">Home</a>
+    <a href="semesters.html" class="active">Semesters</a>
+    <a href="courses.html">Courses</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main class="pt-navbar sem-detail-main">
+
+    <div class="container sem-detail-container" style="margin-top: var(--space-8);">
+      <div class="reveal flex flex-wrap gap-4 sem-detail-controls">
+        <div class="search-bar sem-detail-search">
+          <span class="material-symbols-outlined">search</span>
+          <input type="text" placeholder="Search notes..." data-search="#notes-list .note-item">
+        </div>
+        <select class="select-dropdown sem-detail-sort">
+          <option value="subject">Sort by: Subject</option>
+          <option value="recent">Sort by: Most Recent</option>
+          <option value="name">Sort by: Name (A-Z)</option>
+        </select>
+      </div>
+
+      <div id="notes-list" class="grid grid-1 gap-4 stagger sem-detail-notes">
+
+        <div class="note-item reveal" data-subject="Java" data-name="Java Programming - Unit 1">
+          <div class="note-item__icon"><span>PDF</span></div>
+          <div class="note-item__info">
+            <h3 class="note-item__title" data-sort-key="Java Programming - Unit 1">Java Programming — Unit 1: Basics & Syntax</h3>
+            <span class="note-item__tag">Java</span>
+          </div>
+          <div class="note-item__actions">
+            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+          </div>
+        </div>
+
+        <div class="note-item reveal" data-subject="Java" data-name="Java Programming - Unit 2">
+          <div class="note-item__icon"><span>PDF</span></div>
+          <div class="note-item__info">
+            <h3 class="note-item__title" data-sort-key="Java Programming - Unit 2">Java Programming — Unit 2: Inheritance & Interfaces</h3>
+            <span class="note-item__tag">Java</span>
+          </div>
+          <div class="note-item__actions">
+            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+          </div>
+        </div>
+
+        <div class="note-item reveal" data-subject="Java" data-name="Java Programming - Unit 3">
+          <div class="note-item__icon"><span>PDF</span></div>
+          <div class="note-item__info">
+            <h3 class="note-item__title" data-sort-key="Java Programming - Unit 3">Java Programming — Unit 3: Exception Handling & I/O</h3>
+            <span class="note-item__tag">Java</span>
+          </div>
+          <div class="note-item__actions">
+            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+          </div>
+        </div>
+
+        <div class="note-item reveal" data-subject="OS" data-name="Operating Systems - Unit 1">
+          <div class="note-item__icon"><span>PDF</span></div>
+          <div class="note-item__info">
+            <h3 class="note-item__title" data-sort-key="Operating Systems - Unit 1">Operating Systems — Unit 1: Process Management</h3>
+            <span class="note-item__tag note-item__tag--hardware">OS</span>
+          </div>
+          <div class="note-item__actions">
+            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+          </div>
+        </div>
+
+        <div class="note-item reveal" data-subject="OS" data-name="Operating Systems - Unit 2">
+          <div class="note-item__icon"><span>PDF</span></div>
+          <div class="note-item__info">
+            <h3 class="note-item__title" data-sort-key="Operating Systems - Unit 2">Operating Systems — Unit 2: Memory Management</h3>
+            <span class="note-item__tag note-item__tag--hardware">OS</span>
+          </div>
+          <div class="note-item__actions">
+            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+          </div>
+        </div>
+
+        <div class="note-item reveal" data-subject="DB" data-name="DBMS - Unit 1">
+          <div class="note-item__icon"><span>PDF</span></div>
+          <div class="note-item__info">
+            <h3 class="note-item__title" data-sort-key="DBMS - Unit 1">Database Management — Unit 1: Relational Model</h3>
+            <span class="note-item__tag">DB</span>
+          </div>
+          <div class="note-item__actions">
+            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+          </div>
+        </div>
+
+        <div class="note-item reveal" data-subject="DB" data-name="DBMS - Unit 2">
+          <div class="note-item__icon"><span>PDF</span></div>
+          <div class="note-item__info">
+            <h3 class="note-item__title" data-sort-key="DBMS - Unit 2">Database Management — Unit 2: SQL Queries</h3>
+            <span class="note-item__tag">DB</span>
+          </div>
+          <div class="note-item__actions">
+            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer home-footer" id="footer">
+    <div class="footer__inner">
+      <div class="footer-minimal">
+        <div class="footer__brand">Notewise</div>
+        <p class="footer__copy">© 2026 Notewise BCA Resources. The Academic Curator.</p>
+        <div class="footer-social">
+          <a href="#" class="footer__social-icon" aria-label="GitHub"><img src="../icons/github-svgrepo-com.svg" alt="GitHub" class="footer-social-img"></a>
+          <a href="#" class="footer__social-icon" aria-label="Discord"><img src="../icons/discord-svgrepo-com.svg" alt="Discord" class="footer-social-img"></a>
+          <a href="#" class="footer__social-icon" aria-label="WhatsApp"><img src="../icons/whatsapp-logo-bold-svgrepo-com.svg" alt="WhatsApp" class="footer-social-img"></a>
+          <a href="#" class="footer__social-icon" aria-label="Instagram"><img src="../icons/instagram-svgrepo-com.svg" alt="Instagram" class="footer-social-img"></a>
+          <a href="#" class="footer__social-icon" aria-label="Email"><img src="../icons/mail-alt-3-svgrepo-com.svg" alt="Email" class="footer-social-img"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="bottom-nav hide-desktop" id="bottom-nav">
+    <a href="../index.html" class="bottom-nav__item"><span class="material-symbols-outlined">home</span><span>Home</span></a>
+    <a href="semesters.html" class="bottom-nav__item active"><span class="material-symbols-outlined icon-filled">menu_book</span><span>Semesters</span></a>
+    <a href="courses.html" class="bottom-nav__item"><span class="material-symbols-outlined">library_books</span><span>Courses</span></a>
+    <a href="certifications.html" class="bottom-nav__item"><span class="material-symbols-outlined">verified</span><span>Certs</span></a>
+    <a href="contact.html" class="bottom-nav__item"><span class="material-symbols-outlined">contact_support</span><span>Contact</span></a>
+  </nav>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

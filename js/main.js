@@ -66,12 +66,14 @@ function initScrollReveal() {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (prefersReducedMotion) {
     revealElements.forEach(el => el.classList.add('visible'));
+    initStaggerAnimations();
     return;
   }
 
   // Fallback for browsers without IntersectionObserver
   if (!('IntersectionObserver' in window)) {
     revealElements.forEach(el => el.classList.add('visible'));
+    initStaggerAnimations();
     return;
   }
 
@@ -83,11 +85,68 @@ function initScrollReveal() {
       }
     });
   }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -40px 0px'
+    threshold: 0.05,
+    rootMargin: '0px 0px -20px 0px'
   });
 
   revealElements.forEach(el => observer.observe(el));
+
+  // Immediately make visible anything already in viewport at load time
+  // (important for deployment where elements may not trigger observer callback)
+  requestAnimationFrame(() => {
+    revealElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('visible');
+      }
+    });
+  });
+
+  initStaggerAnimations();
+}
+
+/* ---------- Stagger Animations ---------- */
+function initStaggerAnimations() {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const staggerContainers = document.querySelectorAll('.stagger');
+  if (staggerContainers.length === 0) return;
+
+  if (prefersReducedMotion) return;
+
+  if (!('IntersectionObserver' in window)) return;
+
+  const staggerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const children = entry.target.children;
+        Array.from(children).forEach((child, i) => {
+          child.style.animationDelay = `${i * 80}ms`;
+          child.classList.add('stagger-visible');
+        });
+        staggerObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.05,
+    rootMargin: '0px 0px -20px 0px'
+  });
+
+  staggerContainers.forEach(el => staggerObserver.observe(el));
+
+  // Immediately handle stagger containers already in viewport
+  requestAnimationFrame(() => {
+    staggerContainers.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        const children = el.children;
+        Array.from(children).forEach((child, i) => {
+          child.style.animationDelay = `${i * 80}ms`;
+          child.classList.add('stagger-visible');
+        });
+      }
+    });
+  });
 }
 
 /* ---------- Accordion ---------- */
