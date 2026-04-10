@@ -24,6 +24,7 @@
       <a href="semesters.html" class="navbar__link active">Semesters</a>
       <a href="courses.html" class="navbar__link">Courses</a>
       <a href="certifications.html" class="navbar__link">Certifications</a>
+      <a href="contact.html" class="navbar__link">Contact Us</a>
     </div>
     <div class="navbar__actions">
       <a href="about.html" class="btn-signin hide-mobile">About Us</a>
@@ -39,6 +40,7 @@
     <a href="courses.html">Courses</a>
     <a href="certifications.html">Certifications</a>
     <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
   </div>
 
   <main class="pt-navbar semesters-main">
@@ -193,53 +195,114 @@
       </div>
     </section>
 
-    <!-- Featured Resource Section -->
-    <section class="featured-section">
+    <!-- Other Helpful Resources Section -->
+    <section class="resources-section">
       <div class="container">
-        <div id="featured-grid" class="featured-grid">
-          
-          <!-- Image -->
-          <div class="reveal-left featured-img-section">
-            <div class="blur-circle"></div>
-            <div class="featured-img">
-              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBt68RTB4wJBvVemY2GSIoL8GAlcUZVi0T3R9_x7Od4RXLVt6OlbcGElQog08SlC4bdvnlAb4ckAfJhAJcQgx2ioKTEs1PbIlzZs-WMrjlufG18OOsnoCzGMrH9MBXvlgIGNUlAyAs3BDNrgJycrytw5wcaTUmWVJmMbzVsy5iVqf1n6PmT5cAXgMKqgnJXNiHSNEgeTOnUEALhV-vpzSmQRL_7WU1ij2oKXCV6W3JzQfU2tlRaAXUclpBbmYqCFvO7uiU4qfzHWg" alt="Study resources">
-              <div class="glass-panel pdf-panel">
-                <div class="pdf-icon">PDF</div>
-                <div>
-                  <p class="pdf-name">BCA_DataStructures_Final.pdf</p>
-                  <p class="label-sm text-on-surface-variant pdf-meta">Added 2 days ago • 4.2 MB</p>
-                </div>
-              </div>
+        <div class="resources-header">
+          <h2 class="headline-lg resources-title">
+            Other <span class="text-primary">Helpful</span> Resources
+          </h2>
+          <p class="body-lg text-on-surface-variant resources-subtitle">
+            Discover additional learning materials, certifications, and tools to accelerate your BCA journey beyond the classroom.
+          </p>
+        </div>
+
+        <div class="resources-grid">
+          <!-- Resource Card 1: Certifications -->
+          <a href="#" class="resource-card">
+            <div class="resource-icon-wrap">
+              <span class="material-symbols-outlined resource-icon">workspace_premium</span>
             </div>
-          </div>
-
-          <!-- Text -->
-          <div class="reveal-right">
-            <h2 class="headline-lg featured-title">
-              Meticulously <span class="text-primary">Archived</span> for Clarity.
-            </h2>
-            <p class="body-lg text-on-surface-variant featured-text">
-              Our resource engine doesn't just store files; it organizes them into logical study pathways. Every document is vetted for quality and relevance to the current BCA curriculum.
+            <h3 class="title-lg resource-card-title">Certifications</h3>
+            <p class="body-md text-on-surface-variant resource-card-text">
+              Industry-recognized certifications to boost your resume and validate your skills.
             </p>
-            <ul class="featured-list">
-              <li class="featured-list-item">
-                <div class="featured-bullet"></div>
-                <span class="featured-list-text">Verified Semester-wise Hierarchy</span>
-              </li>
-              <li class="featured-list-item">
-                <div class="featured-bullet"></div>
-                <span class="featured-list-text">Optical Character Recognition (OCR) Search</span>
-              </li>
-              <li class="featured-list-item">
-                <div class="featured-bullet"></div>
-                <span class="featured-list-text">Dark-mode Optimized Reading PDFs</span>
-              </li>
-            </ul>
-            <a href="#" class="btn btn-surface">
-              Explore Archive <span class="material-symbols-outlined">arrow_forward</span>
-            </a>
-          </div>
+            <div class="resource-tags">
+              <span class="resource-tag">AWS</span>
+              <span class="resource-tag">Google</span>
+              <span class="resource-tag">Oracle</span>
+            </div>
+          </a>
 
+          <!-- Resource Card 2: Online Courses -->
+          <a href="#" class="resource-card">
+            <div class="resource-icon-wrap">
+              <span class="material-symbols-outlined resource-icon">smart_display</span>
+            </div>
+            <h3 class="title-lg resource-card-title">Online Courses</h3>
+            <p class="body-md text-on-surface-variant resource-card-text">
+              Curated video tutorials and courses from top platforms to supplement your studies.
+            </p>
+            <div class="resource-tags">
+              <span class="resource-tag">Coursera</span>
+              <span class="resource-tag">Udemy</span>
+              <span class="resource-tag">NPTEL</span>
+            </div>
+          </a>
+
+          <!-- Resource Card 3: Programming Practice -->
+          <a href="#" class="resource-card">
+            <div class="resource-icon-wrap">
+              <span class="material-symbols-outlined resource-icon">code</span>
+            </div>
+            <h3 class="title-lg resource-card-title">Programming Practice</h3>
+            <p class="body-md text-on-surface-variant resource-card-text">
+              Sharpen your coding skills with hands-on challenges and competitive programming.
+            </p>
+            <div class="resource-tags">
+              <span class="resource-tag">LeetCode</span>
+              <span class="resource-tag">HackerRank</span>
+              <span class="resource-tag">CodeChef</span>
+            </div>
+          </a>
+
+          <!-- Resource Card 4: Development Tools -->
+          <a href="#" class="resource-card">
+            <div class="resource-icon-wrap">
+              <span class="material-symbols-outlined resource-icon">construction</span>
+            </div>
+            <h3 class="title-lg resource-card-title">Dev Tools & IDEs</h3>
+            <p class="body-md text-on-surface-variant resource-card-text">
+              Essential development environments, editors, and productivity tools for developers.
+            </p>
+            <div class="resource-tags">
+              <span class="resource-tag">VS Code</span>
+              <span class="resource-tag">GitHub</span>
+              <span class="resource-tag">Docker</span>
+            </div>
+          </a>
+
+          <!-- Resource Card 5: Documentation -->
+          <a href="#" class="resource-card">
+            <div class="resource-icon-wrap">
+              <span class="material-symbols-outlined resource-icon">menu_book</span>
+            </div>
+            <h3 class="title-lg resource-card-title">Documentation</h3>
+            <p class="body-md text-on-surface-variant resource-card-text">
+              Official docs and references for programming languages, frameworks, and libraries.
+            </p>
+            <div class="resource-tags">
+              <span class="resource-tag">MDN</span>
+              <span class="resource-tag">DevDocs</span>
+              <span class="resource-tag">W3Schools</span>
+            </div>
+          </a>
+
+          <!-- Resource Card 6: Community -->
+          <a href="#" class="resource-card">
+            <div class="resource-icon-wrap">
+              <span class="material-symbols-outlined resource-icon">groups</span>
+            </div>
+            <h3 class="title-lg resource-card-title">Communities</h3>
+            <p class="body-md text-on-surface-variant resource-card-text">
+              Connect with fellow students and developers for collaboration and mentorship.
+            </p>
+            <div class="resource-tags">
+              <span class="resource-tag">Discord</span>
+              <span class="resource-tag">Reddit</span>
+              <span class="resource-tag">Stack Overflow</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -291,9 +354,9 @@
       <span class="material-symbols-outlined">verified</span>
       <span>Certs</span>
     </a>
-    <a href="about.html" class="bottom-nav__item">
-      <span class="material-symbols-outlined">person</span>
-      <span>About</span>
+    <a href="contact.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined">contact_support</span>
+      <span>Contact</span>
     </a>
   </nav>
 

@@ -29,6 +29,7 @@
       <a href="semesters.html" class="navbar__link">Semesters</a>
       <a href="courses.html" class="navbar__link active">Courses</a>
       <a href="certifications.html" class="navbar__link">Certifications</a>
+      <a href="contact.html" class="navbar__link">Contact Us</a>
     </div>
     <div class="navbar__actions">
       <a href="about.html" class="btn-signin hide-mobile">About Us</a>
@@ -45,6 +46,7 @@
     <a href="courses.html" class="active">Courses</a>
     <a href="certifications.html">Certifications</a>
     <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
   </div>
 
   <main class="pt-navbar courses-main">
@@ -90,149 +92,147 @@
     </section>
 
     <!-- Content Area -->
-    <section class="section courses-content">
-      <div class="container space-y-28">
+    <section class="section courses-content" id="courses-list">
+      <div class="container">
 
-        <!-- Degree Programs -->
-        <div class="reveal category-section">
-          <div class="category-header">
-            <div class="category-header__line"></div>
-            <h2 class="display-sm section-heading">Degree Programs</h2>
-            <p class="body-md text-on-surface-variant max-w-md">Explore full degree coursework structured logically.</p>
+        <!-- Section Header -->
+        <div class="courses-list-header reveal">
+          <div class="chip chip--primary">
+            <span class="material-symbols-outlined">auto_stories</span>
+            All Courses
           </div>
-
-          <div class="grid grid-3 stagger" id="programs-grid">
-            <!-- BCA -->
-            <button class="category-btn reveal">
-              <span class="material-symbols-outlined category-btn__bg-icon">computer</span>
-              <div class="category-btn__icon-wrap">
-                <span class="material-symbols-outlined icon-filled">laptop_mac</span>
-              </div>
-              <span class="category-btn__title">BCA</span>
-              <span class="category-btn__label">Bachelors in Computer Applications</span>
-            </button>
-
-            <!-- B.Tech -->
-            <button class="category-btn reveal">
-              <span class="material-symbols-outlined category-btn__bg-icon">engineering</span>
-              <div class="category-btn__icon-wrap">
-                <span class="material-symbols-outlined icon-filled">architecture</span>
-              </div>
-              <span class="category-btn__title">B.Tech</span>
-              <span class="category-btn__label">Bachelor of Technology</span>
-            </button>
-
-            <!-- MCA -->
-            <button class="category-btn reveal">
-              <span class="material-symbols-outlined category-btn__bg-icon">school</span>
-              <div class="category-btn__icon-wrap">
-                <span class="material-symbols-outlined icon-filled">science</span>
-              </div>
-              <span class="category-btn__title">MCA</span>
-              <span class="category-btn__label">Master of Computer Applications</span>
-            </button>
-          </div>
+          <h2 class="display-sm courses-list-title">
+            Explore The <span class="text-gradient">Course Catalog</span>
+          </h2>
+          <p class="body-lg text-on-surface-variant courses-list-desc">
+            Discover 10 comprehensive courses designed to take you from fundamentals to advanced concepts. 
+            Each course includes structured modules, hands-on projects, and certification opportunities.
+          </p>
         </div>
 
-        <!-- FEATURED COURSES SECTION -->
-        <section class="reveal course-feature-section" id="courses-index-list">
-          <div class="course-feature-heading">
-            <div class="chip chip--primary">
-              <span class="material-symbols-outlined">auto_stories</span>
-              Curated Learning Paths
+        <!-- Courses Grid - 10 Uniform Tiles -->
+        <div class="courses-grid">
+          <!-- Course 1: Full-Stack Development -->
+          <article class="course-tile reveal">
+            <div class="course-tile__icon">
+              <span class="material-symbols-outlined icon-filled">code</span>
             </div>
-            <h2 class="display-sm courses-index-header">
-              Featured <span class="text-gradient">Course Tracks</span>
-            </h2>
-            <p class="body-lg text-on-surface-variant courses-index-desc">
-              Learn through guided tracks designed for exam mastery and skill-building. Each sequence combines core
-              theory with practical assignments and revision-ready resources.
+            <h3 class="course-tile__title">Full-Stack Development</h3>
+            <p class="body-sm text-on-surface-variant course-tile__desc">
+              Master frontend, backend, databases, and deployment with modern frameworks and tools.
             </p>
-          </div>
+            <a href="#" class="btn btn-primary course-tile__btn">View Course</a>
+          </article>
 
-          <div class="course-feature-layout">
-            <article class="course-spotlight reveal">
-              <p class="label-lg text-primary">Top Recommendation</p>
-              <h3 class="headline-md course-spotlight__title">Full-Stack Development Core</h3>
-              <p class="body-md text-on-surface-variant course-spotlight__desc">
-                Progress from web fundamentals to production-grade deployment with structured modules in frontend,
-                backend, databases, and integration testing.
-              </p>
-
-              <div class="course-spotlight__tags">
-                <span class="chip chip--intermediate">Intermediate</span>
-                <span class="chip chip--beginner">24 Modules</span>
-                <span class="chip chip--advanced">Project Driven</span>
-              </div>
-
-              <div class="course-spotlight__actions">
-                <a href="#" class="btn btn-primary">Start Learning</a>
-                <a href="certifications.html" class="btn btn-secondary">Match With Certifications</a>
-              </div>
-
-              <div class="course-spotlight__stats">
-                <div>
-                  <span>180+</span>
-                  <p>Study Hours</p>
-                </div>
-                <div>
-                  <span>32</span>
-                  <p>Hands-on Labs</p>
-                </div>
-                <div>
-                  <span>8</span>
-                  <p>Major Projects</p>
-                </div>
-              </div>
-            </article>
-
-            <div class="course-side-grid stagger">
-              <article class="course-feature-card reveal">
-                <div class="course-feature-card__icon">
-                  <span class="material-symbols-outlined icon-filled">functions</span>
-                </div>
-                <p class="label-sm text-primary">Foundation</p>
-                <h3 class="course-feature-card__title">Discrete Mathematics Mastery</h3>
-                <p class="body-sm text-on-surface-variant">Build strong logic for algorithms, proofs, and graph-based
-                  problem solving used throughout computer science.</p>
-                <a href="#" class="cert-list-item__start">Explore</a>
-              </article>
-
-              <article class="course-feature-card reveal">
-                <div class="course-feature-card__icon">
-                  <span class="material-symbols-outlined icon-filled">memory</span>
-                </div>
-                <p class="label-sm text-primary">Core Systems</p>
-                <h3 class="course-feature-card__title">Operating Systems in Practice</h3>
-                <p class="body-sm text-on-surface-variant">Understand processes, scheduling, memory management, and file
-                  systems with simulation-focused assignments.</p>
-                <a href="#" class="cert-list-item__start">Explore</a>
-              </article>
-
-              <article class="course-feature-card reveal">
-                <div class="course-feature-card__icon">
-                  <span class="material-symbols-outlined icon-filled">database</span>
-                </div>
-                <p class="label-sm text-primary">Data Intensive</p>
-                <h3 class="course-feature-card__title">DBMS and SQL Engineering</h3>
-                <p class="body-sm text-on-surface-variant">Design schemas, optimize queries, and reason about indexing,
-                  ACID guarantees, and transaction control.</p>
-                <a href="#" class="cert-list-item__start">Explore</a>
-              </article>
-
-              <article class="course-feature-card reveal">
-                <div class="course-feature-card__icon">
-                  <span class="material-symbols-outlined icon-filled">hub</span>
-                </div>
-                <p class="label-sm text-primary">Career Ready</p>
-                <h3 class="course-feature-card__title">Networks and Cloud Fundamentals</h3>
-                <p class="body-sm text-on-surface-variant">Learn protocols, routing, security basics, and deployment
-                  workflows used in modern distributed applications.</p>
-                <a href="#" class="cert-list-item__start">Explore</a>
-              </article>
+          <!-- Course 2: Data Structures & Algorithms -->
+          <article class="course-tile reveal">
+            <div class="course-tile__icon">
+              <span class="material-symbols-outlined icon-filled">account_tree</span>
             </div>
-          </div>
-        </section>
+            <h3 class="course-tile__title">Data Structures & Algorithms</h3>
+            <p class="body-sm text-on-surface-variant course-tile__desc">
+              Build efficient problem-solving skills with arrays, trees, graphs, and dynamic programming.
+            </p>
+            <a href="#" class="btn btn-primary course-tile__btn">View Course</a>
+          </article>
+
+          <!-- Course 3: Database Management Systems -->
+          <article class="course-tile reveal">
+            <div class="course-tile__icon">
+              <span class="material-symbols-outlined icon-filled">database</span>
+            </div>
+            <h3 class="course-tile__title">Database Management Systems</h3>
+            <p class="body-sm text-on-surface-variant course-tile__desc">
+              Learn SQL, schema design, normalization, and transaction management in depth.
+            </p>
+            <a href="#" class="btn btn-primary course-tile__btn">View Course</a>
+          </article>
+
+          <!-- Course 4: Operating Systems -->
+          <article class="course-tile reveal">
+            <div class="course-tile__icon">
+              <span class="material-symbols-outlined icon-filled">memory</span>
+            </div>
+            <h3 class="course-tile__title">Operating Systems</h3>
+            <p class="body-sm text-on-surface-variant course-tile__desc">
+              Understand processes, memory management, file systems, and system calls.
+            </p>
+            <a href="#" class="btn btn-primary course-tile__btn">View Course</a>
+          </article>
+
+          <!-- Course 5: Computer Networks -->
+          <article class="course-tile reveal">
+            <div class="course-tile__icon">
+              <span class="material-symbols-outlined icon-filled">hub</span>
+            </div>
+            <h3 class="course-tile__title">Computer Networks</h3>
+            <p class="body-sm text-on-surface-variant course-tile__desc">
+              Master protocols, routing, security, and cloud networking fundamentals.
+            </p>
+            <a href="#" class="btn btn-primary course-tile__btn">View Course</a>
+          </article>
+
+          <!-- Course 6: Artificial Intelligence -->
+          <article class="course-tile reveal">
+            <div class="course-tile__icon">
+              <span class="material-symbols-outlined icon-filled">psychology</span>
+            </div>
+            <h3 class="course-tile__title">Artificial Intelligence</h3>
+            <p class="body-sm text-on-surface-variant course-tile__desc">
+              Explore machine learning, neural networks, and intelligent system design.
+            </p>
+            <a href="#" class="btn btn-primary course-tile__btn">View Course</a>
+          </article>
+
+          <!-- Course 7: Web Development -->
+          <article class="course-tile reveal">
+            <div class="course-tile__icon">
+              <span class="material-symbols-outlined icon-filled">language</span>
+            </div>
+            <h3 class="course-tile__title">Web Development</h3>
+            <p class="body-sm text-on-surface-variant course-tile__desc">
+              Create responsive websites with HTML, CSS, JavaScript, and modern frameworks.
+            </p>
+            <a href="#" class="btn btn-primary course-tile__btn">View Course</a>
+          </article>
+
+          <!-- Course 8: Software Engineering -->
+          <article class="course-tile reveal">
+            <div class="course-tile__icon">
+              <span class="material-symbols-outlined icon-filled">engineering</span>
+            </div>
+            <h3 class="course-tile__title">Software Engineering</h3>
+            <p class="body-sm text-on-surface-variant course-tile__desc">
+              Learn SDLC, Agile methodologies, testing, and project management practices.
+            </p>
+            <a href="#" class="btn btn-primary course-tile__btn">View Course</a>
+          </article>
+
+          <!-- Course 9: Cyber Security -->
+          <article class="course-tile reveal">
+            <div class="course-tile__icon">
+              <span class="material-symbols-outlined icon-filled">security</span>
+            </div>
+            <h3 class="course-tile__title">Cyber Security</h3>
+            <p class="body-sm text-on-surface-variant course-tile__desc">
+              Understand threats, encryption, ethical hacking, and security best practices.
+            </p>
+            <a href="#" class="btn btn-primary course-tile__btn">View Course</a>
+          </article>
+
+          <!-- Course 10: Cloud Computing -->
+          <article class="course-tile reveal">
+            <div class="course-tile__icon">
+              <span class="material-symbols-outlined icon-filled">cloud</span>
+            </div>
+            <h3 class="course-tile__title">Cloud Computing</h3>
+            <p class="body-sm text-on-surface-variant course-tile__desc">
+              Deploy and manage applications on AWS, Azure, and Google Cloud Platform.
+            </p>
+            <a href="#" class="btn btn-primary course-tile__btn">View Course</a>
+          </article>
+        </div>
+
       </div>
     </section>
 
@@ -283,9 +283,9 @@
       <span class="material-symbols-outlined">verified</span>
       <span>Certs</span>
     </a>
-    <a href="about.html" class="bottom-nav__item">
-      <span class="material-symbols-outlined">person</span>
-      <span>About</span>
+    <a href="contact.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined">contact_support</span>
+      <span>Contact</span>
     </a>
   </nav>
 

@@ -36,6 +36,7 @@
         <a href="semesters.html" class="navbar__link">Semesters</a>
         <a href="courses.html" class="navbar__link">Courses</a>
         <a href="certifications.html" class="navbar__link">Certifications</a>
+        <a href="contact.html" class="navbar__link">Contact Us</a>
       </div>
       <div class="navbar__actions">
         <a href="about.html" class="btn-signin hide-mobile">About Us</a>
@@ -50,49 +51,27 @@
       <a href="semesters.html">Semesters</a>
       <a href="courses.html">Courses</a>
       <a href="certifications.html">Certifications</a>
-      <a href="about.html#contact" class="active">About</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
     </div>
 
     <main class="pt-navbar about-main">
 
       <!-- HERO SECTION -->
-      <section class="hero hero-gradient" id="hero">
+      <section class="hero hero-minimal" id="hero">
         <div class="container">
-          <div class="hero__content">
-
-            <!-- Left: Text Content -->
-            <div class="reveal">
-              <div class="chip chip--primary">
-                <span class="material-symbols-outlined">info</span>
-                About NoteWise
-              </div>
-
-              <h1 class="display-lg">
-                The Academic<br>
-                <span class="text-gradient">Curator</span>
-              </h1>
-
-              <p class="body-lg text-on-surface-variant">
-                NoteWise was born from a simple observation: BCA students waste
-                countless hours searching for reliable study materials instead of
-                actually studying.
-              </p>
-
-              <div class="flex gap-4 flex-wrap">
-                <a href="#contact" class="btn btn-primary">
-                  Get in Touch
-                </a>
-                <a href="semesters.html" class="btn btn-secondary">
-                  Explore Resources
-                </a>
-              </div>
+          <div class="hero-minimal__content reveal">
+            <h1 class="display-sm">Free Resources for <span class="text-gradient">BCA Students</span></h1>
+            <p class="body-md text-on-surface-variant hero-minimal__desc">
+              NoteWise is a peer-driven platform providing curated academic notes, 
+              previous year questions, and learning resources — completely free. 
+              Built by students, for students.
+            </p>
+            <div class="hero-minimal__actions">
+              <a href="semesters.html" class="btn btn-primary">Explore Resources</a>
+              <a href="#team" class="btn btn-secondary">Meet the Team</a>
             </div>
-            <!-- Right: Hero Image (desktop) -->
-            <div class="hide-mobile" id="hero-image-container">
-              <img src="../images/nobg notewise crop.png" alt="NoteWise Logo" class="hero-logo-img" style="max-width: 100%; height: auto;" />
-            </div>
-
-          </div> 
+          </div>
         </div>
       </section>
 
@@ -100,28 +79,70 @@
       <section class="section">
         <div class="container about-container">
 
-          <div class="reveal about-mission">
-            <h2 class="headline-md about-mission-title">Our Mission</h2>
-            <p class="body-md text-on-surface-variant">
-              We curate, organize, and present high-quality academic resources
-              with the dignity they deserve. We believe that a cluttered digital
-              environment leads to a cluttered mind. By applying principles of
-              organic minimalism to educational resources, we aim to provide a
-              serene, premium learning experience entirely for free.
+          <!-- TEAM SECTION -->
+          <div class="team-section reveal" id="team">
+            <h2 class="headline-md team-title">Meet the Team</h2>
+            <p class="body-sm text-on-surface-variant team-subtitle">
+              The minds behind NoteWise — passionate students building for the community.
             </p>
-          </div>
-
-          <div
-            class="grid grid-2 gap-6 stagger about-stats"
-            id="about-stats-grid"
-          >
-            <div class="card reveal stat-card">
-              <div class="stat-card__num">5,000+</div>
-              <div class="label-sm text-outline">Curated Documents</div>
-            </div>
-            <div class="card reveal stat-card">
-              <div class="stat-card__num">24/7</div>
-              <div class="label-sm text-outline">Platform Availability</div>
+            <div class="team-grid">
+              <!-- Team Member 1 -->
+              <div class="team-card">
+                <div class="team-card__avatar">
+                  <span class="material-symbols-outlined">person</span>
+                </div>
+                <h3 class="team-card__name">Team Member 1</h3>
+                <p class="team-card__role body-sm text-on-surface-variant">Co-Founder & Developer</p>
+                <div class="team-card__links">
+                  <a href="#" class="team-card__link" aria-label="GitHub">
+                    <img src="../icons/github-svgrepo-com.svg" alt="GitHub">
+                  </a>
+                  <a href="#" class="team-card__link" aria-label="LinkedIn">
+                    <img src="../icons/linkedin-svgrepo-com.svg" alt="LinkedIn">
+                  </a>
+                  <a href="#" class="team-card__link" aria-label="Personal Website">
+                    <img src="../icons/web-.svg" alt="Website">
+                  </a>
+                </div>
+              </div>
+              <!-- Team Member 2 -->
+              <div class="team-card">
+                <div class="team-card__avatar">
+                  <span class="material-symbols-outlined">person</span>
+                </div>
+                <h3 class="team-card__name">Team Member 2</h3>
+                <p class="team-card__role body-sm text-on-surface-variant">Co-Founder & Content Lead</p>
+                <div class="team-card__links">
+                  <a href="#" class="team-card__link" aria-label="GitHub">
+                    <img src="../icons/github-svgrepo-com.svg" alt="GitHub">
+                  </a>
+                  <a href="#" class="team-card__link" aria-label="LinkedIn">
+                    <img src="../icons/linkedin-svgrepo-com.svg" alt="LinkedIn">
+                  </a>
+                  <a href="#" class="team-card__link" aria-label="Personal Website">
+                    <img src="../icons/web-.svg" alt="Website">
+                  </a>
+                </div>
+              </div>
+              <!-- Team Member 3 -->
+              <div class="team-card">
+                <div class="team-card__avatar">
+                  <span class="material-symbols-outlined">person</span>
+                </div>
+                <h3 class="team-card__name">Team Member 3</h3>
+                <p class="team-card__role body-sm text-on-surface-variant">Co-Founder & Designer</p>
+                <div class="team-card__links">
+                  <a href="#" class="team-card__link" aria-label="GitHub">
+                    <img src="../icons/github-svgrepo-com.svg" alt="GitHub">
+                  </a>
+                  <a href="#" class="team-card__link" aria-label="LinkedIn">
+                    <img src="../icons/linkedin-svgrepo-com.svg" alt="LinkedIn">
+                  </a>
+                  <a href="#" class="team-card__link" aria-label="Personal Website">
+                    <img src="../icons/web-.svg" alt="Website">
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -175,61 +196,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Contact Section -->
-          <div class="reveal about-contact" id="contact">
-            <div class="contact-container">
-              <h2 class="headline-md about-contact-title">Get in Touch</h2>
-              <p class="body-sm text-on-surface-variant about-contact-text">
-                Have a question or found an error in our resources? Let us know.
-              </p>
-
-              <form action="#" method="get" class="contact-form">
-                <div class="form-row" id="contact-name-email">
-                  <div class="form-group form-group-half">
-                    <label class="form-label">Full Name</label>
-                    <input
-                      type="text"
-                      class="form-input"
-                      placeholder="Enter your name"
-                    />
-                  </div>
-                  <div class="form-group form-group-half">
-                    <label class="form-label">Email Address</label>
-                    <input
-                      type="email"
-                      class="form-input"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label">Subject</label>
-                  <select class="form-input select-dropdown form-select">
-                    <option>General Inquiry</option>
-                    <option>Report Resource Error</option>
-                    <option>Suggest Content</option>
-                    <option>Technical Issue</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label">Message</label>
-                  <textarea
-                    class="form-input"
-                    placeholder="How can we help you?"
-                  ></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary contact-submit">
-                  Send Message
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
 
     <!-- ===== FOOTER ===== -->
@@ -277,9 +243,9 @@
         <span class="material-symbols-outlined">verified</span>
         <span>Certs</span>
       </a>
-      <a href="about.html" class="bottom-nav__item active">
-        <span class="material-symbols-outlined icon-filled">person</span>
-        <span>About</span>
+      <a href="contact.html" class="bottom-nav__item">
+        <span class="material-symbols-outlined">contact_support</span>
+        <span>Contact</span>
       </a>
     </nav>
 

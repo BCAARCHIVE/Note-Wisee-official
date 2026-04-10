@@ -1,6 +1,35 @@
 /* ===== about.css Page Specific Styles ===== */
 
-/* Hero Section Styles */
+/* Hero Minimal Styles */
+.hero-minimal {
+  padding: 4rem 0 3rem;
+  background: transparent;
+}
+
+.hero-minimal__content {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.hero-minimal__content h1 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-minimal__desc {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-minimal__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Hero Section Styles - Legacy */
 .hero__content {
   display: grid;
   grid-template-columns: 1fr;
@@ -66,6 +95,102 @@
   color: var(--primary);
   margin-bottom: 0.5rem;
   line-height: 1;
+}
+
+/* Team Section */
+.team-section {
+  margin-bottom: 5rem;
+  padding-top: 2rem;
+}
+
+.team-title {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.team-subtitle {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.team-card {
+  background: var(--surface-container-low);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  text-align: center;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-1);
+}
+
+.team-card__avatar {
+  width: 80px;
+  height: 80px;
+  background: var(--surface-container-high);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+
+.team-card__avatar .material-symbols-outlined {
+  font-size: 2.5rem;
+  color: var(--on-surface-variant);
+}
+
+.team-card__name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--on-surface);
+}
+
+.team-card__role {
+  margin-bottom: 1.25rem;
+}
+
+.team-card__links {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.team-card__link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--surface-container-high);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-base), transform var(--transition-base);
+}
+
+.team-card__link:hover {
+  background: var(--primary-container);
+  transform: scale(1.05);
+}
+
+.team-card__link img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+  opacity: 0.8;
+  transition: opacity var(--transition-base);
+}
+
+.team-card__link:hover img {
+  opacity: 1;
 }
 
 /* FAQ Section */
@@ -185,7 +310,23 @@
   }
 }
 
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 767px) {
+  .hero-minimal {
+    padding: 3rem 0 2rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
   .form-row {
     flex-direction: column;
   }

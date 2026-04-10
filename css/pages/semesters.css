@@ -1097,3 +1097,145 @@
     max-width: 32rem;
   }
 }
+
+/* ===== Other Helpful Resources Section ===== */
+.resources-section {
+  background: #131316;
+  padding: 5rem 0;
+  margin-top: 5rem;
+}
+
+.resources-header {
+  text-align: center;
+  max-width: 42rem;
+  margin: 0 auto 3.5rem;
+}
+
+.resources-title {
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.resources-subtitle {
+  opacity: 0.8;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  background: #242427;
+  border-radius: var(--radius-2xl);
+  padding: 2rem;
+  text-decoration: none;
+  transition: all var(--transition-slow);
+  border: 1px solid rgba(81, 67, 74, 0.1);
+  height: 100%;
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(106, 30, 85, 0.15);
+  border-color: rgba(255, 174, 223, 0.3);
+}
+
+.resource-icon-wrap {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--radius-xl);
+  background: var(--primary-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  transition: all var(--transition-base);
+}
+
+.resource-card:hover .resource-icon-wrap {
+  background: var(--primary);
+  transform: scale(1.05);
+}
+
+.resource-icon {
+  font-size: 1.5rem;
+  color: var(--on-primary-container);
+  transition: color var(--transition-base);
+}
+
+.resource-card:hover .resource-icon {
+  color: var(--on-primary);
+}
+
+.resource-card-title {
+  margin-bottom: 0.75rem;
+  color: var(--on-surface);
+  font-weight: 700;
+}
+
+.resource-card-text {
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+  line-height: 1.6;
+  font-size: 0.9375rem;
+}
+
+.resource-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.resource-tag {
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--radius-full);
+  background: var(--surface-container-high);
+  color: var(--on-surface-variant);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Resources Section Responsive */
+@media (max-width: 1023px) {
+  .resources-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .resources-section {
+    padding: 0rem 0;
+    margin-top: 3rem;
+  }
+
+  .resources-header {
+    margin-bottom: 2.5rem;
+    padding: 0 1rem;
+  }
+
+  .resources-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .resource-card {
+    padding: 1.5rem;
+  }
+
+  .resource-icon-wrap {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .resource-icon {
+    font-size: 1.25rem;
+  }
+}
