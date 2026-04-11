@@ -520,7 +520,7 @@
   }
   
   .hero-home {
-    min-height: 75vh;
+    min-height: 70vh;
     display: flex;
     align-items: flex-start;
   }
@@ -586,21 +586,31 @@
   .hero-chip-mobile-hide {
     display: none !important;
   }
-  
+
   .hero-home {
-    min-height: 80vh;
+    min-height: 70vh;
     display: flex;
     align-items: flex-start;
   }
-  
+
   .hero__content {
     gap: 1.25rem;
   }
-  
+
   .hero__content h1 {
     margin-bottom: 1rem;
   }
-  
+
+  .hero__buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
   #semester-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -694,32 +704,36 @@
   .hero-chip-mobile-hide {
     display: none !important;
   }
-  
+
   .hero-home {
     padding-bottom: 0 !important;
-    min-height: 82vh;
+    min-height: 70vh;
     display: flex;
     align-items: flex-start;
   }
-  
+
   .hero__content {
     gap: 1rem;
   }
-  
+
   .hero__content h1 {
     margin-bottom: 1rem;
   }
-  
+
   .hero__content > div > p {
     margin-bottom: 1.25rem;
   }
-  
+
+  .hero__buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
   .hero__buttons .btn {
-    flex: 1;
-    min-width: calc(50% - 0.375rem);
+    width: 100%;
     justify-content: center;
-    padding: 0.75rem 1rem;
-    font-size: 0.8125rem;
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
     white-space: normal;
     text-align: center;
   }
