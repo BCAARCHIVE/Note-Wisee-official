@@ -4,6 +4,7 @@
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+  applyMotionPreference();
   initNavbar();
   initMobileMenu();
   initScrollReveal();
@@ -12,7 +13,32 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initSearchFilter();
   initSortDropdown();
+  initScrollProgress();
+  initScrollToTop();
+  initButtonRipple();
 });
+
+/* ---------- Motion Preference ---------- */
+function getMotionPreference() {
+  const params = new URLSearchParams(window.location.search);
+  const queryMotion = params.get('motion');
+
+  // Optional manual toggle:
+  // ?motion=off -> disables animations
+  // ?motion=on  -> enables animations
+  if (queryMotion === 'off') {
+    localStorage.setItem('notewise-motion', 'off');
+  } else if (queryMotion === 'on') {
+    localStorage.setItem('notewise-motion', 'on');
+  }
+
+  return localStorage.getItem('notewise-motion') === 'off';
+}
+
+function applyMotionPreference() {
+  const disableMotion = getMotionPreference();
+  document.documentElement.classList.toggle('reduce-motion', disableMotion);
+}
 
 /* ---------- Navbar Scroll Effect ---------- */
 function initNavbar() {
@@ -62,9 +88,10 @@ function initScrollReveal() {
   const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
   if (revealElements.length === 0) return;
 
-  // Check for reduced motion preference
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (prefersReducedMotion) {
+  // Activate CSS: only hide .reveal elements once JS is confirmed running
+  document.body.classList.add('js-animations');
+
+  if (getMotionPreference()) {
     revealElements.forEach(el => el.classList.add('visible'));
     initStaggerAnimations();
     return;
@@ -86,13 +113,12 @@ function initScrollReveal() {
     });
   }, {
     threshold: 0.05,
-    rootMargin: '0px 0px -20px 0px'
+    rootMargin: '0px 0px 0px 0px'
   });
 
   revealElements.forEach(el => observer.observe(el));
 
   // Immediately make visible anything already in viewport at load time
-  // (important for deployment where elements may not trigger observer callback)
   requestAnimationFrame(() => {
     revealElements.forEach(el => {
       const rect = el.getBoundingClientRect();
@@ -102,17 +128,25 @@ function initScrollReveal() {
     });
   });
 
+  // Safety net: after 2.5s, force-reveal anything still hidden
+  // (handles edge cases where IntersectionObserver misses elements)
+  setTimeout(() => {
+    revealElements.forEach(el => {
+      if (!el.classList.contains('visible')) {
+        el.classList.add('visible');
+      }
+    });
+  }, 2500);
+
   initStaggerAnimations();
 }
 
 /* ---------- Stagger Animations ---------- */
 function initStaggerAnimations() {
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
   const staggerContainers = document.querySelectorAll('.stagger');
   if (staggerContainers.length === 0) return;
 
-  if (prefersReducedMotion) return;
+  if (getMotionPreference()) return;
 
   if (!('IntersectionObserver' in window)) return;
 
@@ -294,4 +328,63 @@ function throttle(fn, wait) {
       fn.apply(this, args);
     }
   };
+}
+
+/* ---------- Scroll Progress Bar ---------- */
+function initScrollProgress() {
+  // Create progress bar element
+  const bar = document.createElement('div');
+  bar.className = 'scroll-progress';
+  bar.setAttribute('role', 'progressbar');
+  bar.setAttribute('aria-label', 'Reading progress');
+  document.body.prepend(bar);
+
+  const update = () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = `${Math.min(progress, 100)}%`;
+  };
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+}
+
+/* ---------- Scroll-to-Top Button ---------- */
+function initScrollToTop() {
+  // Create button
+  const btn = document.createElement('button');
+  btn.className = 'scroll-top-btn';
+  btn.setAttribute('aria-label', 'Scroll to top');
+  btn.innerHTML = '<span class="material-symbols-outlined" style="font-size:1.25rem">keyboard_arrow_up</span>';
+  document.body.appendChild(btn);
+
+  // Show/hide based on scroll position
+  const toggle = () => {
+    if (window.scrollY > 320) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  };
+
+  window.addEventListener('scroll', toggle, { passive: true });
+  toggle();
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+/* ---------- Button Ripple Effect ---------- */
+function initButtonRipple() {
+  document.querySelectorAll('.btn, .btn-primary, .btn-secondary, .btn-filled, .btn-card').forEach(btn => {
+    btn.addEventListener('pointerdown', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      btn.style.setProperty('--ripple-x', `${x}%`);
+      btn.style.setProperty('--ripple-y', `${y}%`);
+    });
+  });
 }

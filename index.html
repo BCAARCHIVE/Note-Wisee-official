@@ -70,8 +70,8 @@
         <div class="container">
           <div class="hero__content">
             <!-- Left: Text Content -->
-            <div class="hero-animate">
-              <div class="chip chip--primary">
+            <div class="reveal">
+              <div class="chip chip--primary hero-chip-mobile-hide">
                 <span class="material-symbols-outlined">verified</span>
                 Academic Curator 2026
               </div>
@@ -89,18 +89,21 @@
 
               <div class="hero__buttons">
                 <a href="pages/semesters.html" class="btn btn-primary">
+                  <span class="material-symbols-outlined" style="font-size:1.1em">menu_book</span>
                   Explore Notes
                 </a>
-                <a href="pages/certifications.html" class="btn btn-primary">
-                  Explore Certification
+                <a href="pages/certifications.html" class="btn btn-secondary">
+                  <span class="material-symbols-outlined" style="font-size:1.1em">verified</span>
+                  Certifications
                 </a>
-                <a href="pages/courses.html" class="btn btn-primary">
-                  Explore Courses
+                <a href="pages/courses.html" class="btn btn-secondary hide-mobile">
+                  <span class="material-symbols-outlined" style="font-size:1.1em">library_books</span>
+                  Courses
                 </a>
               </div>
             </div>
             <!-- Right: Hero Image (desktop) -->
-            <div class="hide-mobile hero-animate-img" id="hero-image-container">
+            <div class="hide-mobile reveal" id="hero-image-container">
               <img
                 src="images/nobg notewise crop.png"
                 alt="NoteWise Logo"
