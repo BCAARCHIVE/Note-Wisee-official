@@ -48,7 +48,7 @@
       <div class="reveal flex flex-wrap gap-4 sem-detail-controls">
         <div class="search-bar sem-detail-search">
           <span class="material-symbols-outlined">search</span>
-          <input type="text" placeholder="Search notes..." data-search="#notes-list .note-item">
+          <input type="text" placeholder="Search notes..." data-search=".subject-section__list .note-item">
         </div>
         <select class="select-dropdown sem-detail-sort">
           <option value="subject">Sort by: Subject</option>
@@ -57,91 +57,189 @@
         </select>
       </div>
 
-      <div id="notes-list" class="grid grid-1 gap-4 stagger sem-detail-notes">
-
-        <div class="note-item reveal" data-subject="Cloud" data-name="Cloud Computing - Unit 1">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Cloud Computing - Unit 1">Cloud Computing — Unit 1: IaaS, PaaS & SaaS</h3>
-            <span class="note-item__tag note-item__tag--hardware">Cloud</span>
+      <!-- Subject Cards Grid -->
+      <div class="subject-cards-grid reveal" id="subject-cards">
+        <div class="subject-card" data-subject="cloud">
+          <div class="subject-card__icon">
+            <span class="material-symbols-outlined">cloud</span>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
+          <h3 class="subject-card__title">Cloud Computing</h3>
+          <p class="subject-card__count">2 Units</p>
         </div>
-
-        <div class="note-item reveal" data-subject="Cloud" data-name="Cloud Computing - Unit 2">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Cloud Computing - Unit 2">Cloud Computing — Unit 2: AWS & Azure Fundamentals</h3>
-            <span class="note-item__tag note-item__tag--hardware">Cloud</span>
+        <div class="subject-card" data-subject="cyber-security">
+          <div class="subject-card__icon">
+            <span class="material-symbols-outlined">security</span>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
+          <h3 class="subject-card__title">Cyber Security</h3>
+          <p class="subject-card__count">2 Units</p>
         </div>
-
-        <div class="note-item reveal" data-subject="Security" data-name="Cyber Security - Unit 1">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Cyber Security - Unit 1">Cyber Security — Unit 1: Threats & Cryptography</h3>
-            <span class="note-item__tag">Security</span>
+        <div class="subject-card" data-subject="project">
+          <div class="subject-card__icon">
+            <span class="material-symbols-outlined">folder_special</span>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
+          <h3 class="subject-card__title">Capstone & Project</h3>
+          <p class="subject-card__count">2 Units</p>
         </div>
-
-        <div class="note-item reveal" data-subject="Security" data-name="Cyber Security - Unit 2">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Cyber Security - Unit 2">Cyber Security — Unit 2: Network Security & Firewalls</h3>
-            <span class="note-item__tag">Security</span>
+        <div class="subject-card" data-subject="career">
+          <div class="subject-card__icon">
+            <span class="material-symbols-outlined">work</span>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
+          <h3 class="subject-card__title">Internship Prep</h3>
+          <p class="subject-card__count">1 Unit</p>
         </div>
+      </div>
 
-        <div class="note-item reveal" data-subject="Project" data-name="Project Management - Unit 1">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Project Management - Unit 1">Project Management — Unit 1: Agile & Scrum</h3>
-            <span class="note-item__tag">Project</span>
-          </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
-        </div>
+      <!-- Subject Sections -->
+      <div class="subjects-container" id="subjects-container">
 
-        <div class="note-item reveal" data-subject="Project" data-name="Capstone Project Guide">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Capstone Project Guide">Capstone Project — Guidelines & Report Format</h3>
-            <span class="note-item__tag">Project</span>
+        <!-- Cloud Computing Section -->
+        <section class="subject-section" id="cloud">
+          <div class="subject-section__header">
+            <div class="subject-section__icon subject-section__icon--cyan">
+              <span class="material-symbols-outlined">cloud</span>
+            </div>
+            <div class="subject-section__info">
+              <h2 class="subject-section__title">Cloud Computing</h2>
+              <p class="subject-section__desc">IaaS, PaaS, SaaS, AWS & Azure Fundamentals</p>
+            </div>
+            <button class="subject-section__toggle" aria-label="Toggle section">
+              <span class="material-symbols-outlined">expand_less</span>
+            </button>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+          <div class="subject-section__list">
+            <div class="note-item reveal" data-subject="cloud" data-name="Cloud Computing - Unit 1">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Cloud Computing - Unit 1">Unit 1: IaaS, PaaS & SaaS</h3>
+                <span class="note-item__tag note-item__tag--web">Cloud</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+            <div class="note-item reveal" data-subject="cloud" data-name="Cloud Computing - Unit 2">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Cloud Computing - Unit 2">Unit 2: AWS & Azure Fundamentals</h3>
+                <span class="note-item__tag note-item__tag--web">Cloud</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div class="note-item reveal" data-subject="Career" data-name="Internship Prep Guide">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Internship Prep Guide">Internship Prep — Resume, Interview & DSA Cheat Sheet</h3>
-            <span class="note-item__tag">Career</span>
+        <!-- Cyber Security Section -->
+        <section class="subject-section" id="cyber-security">
+          <div class="subject-section__header">
+            <div class="subject-section__icon subject-section__icon--purple">
+              <span class="material-symbols-outlined">security</span>
+            </div>
+            <div class="subject-section__info">
+              <h2 class="subject-section__title">Cyber Security</h2>
+              <p class="subject-section__desc">Threats, Cryptography, Network Security & Firewalls</p>
+            </div>
+            <button class="subject-section__toggle" aria-label="Toggle section">
+              <span class="material-symbols-outlined">expand_less</span>
+            </button>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+          <div class="subject-section__list">
+            <div class="note-item reveal" data-subject="cyber-security" data-name="Cyber Security - Unit 1">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Cyber Security - Unit 1">Unit 1: Threats & Cryptography</h3>
+                <span class="note-item__tag">Security</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+            <div class="note-item reveal" data-subject="cyber-security" data-name="Cyber Security - Unit 2">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Cyber Security - Unit 2">Unit 2: Network Security & Firewalls</h3>
+                <span class="note-item__tag">Security</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
+
+        <!-- Capstone & Project Section -->
+        <section class="subject-section" id="project">
+          <div class="subject-section__header">
+            <div class="subject-section__icon subject-section__icon--green">
+              <span class="material-symbols-outlined">folder_special</span>
+            </div>
+            <div class="subject-section__info">
+              <h2 class="subject-section__title">Capstone & Project Management</h2>
+              <p class="subject-section__desc">Agile, Scrum, Project Guidelines & Report Format</p>
+            </div>
+            <button class="subject-section__toggle" aria-label="Toggle section">
+              <span class="material-symbols-outlined">expand_less</span>
+            </button>
+          </div>
+          <div class="subject-section__list">
+            <div class="note-item reveal" data-subject="project" data-name="Project Management - Unit 1">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Project Management - Unit 1">Unit 1: Agile & Scrum</h3>
+                <span class="note-item__tag">Project</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+            <div class="note-item reveal" data-subject="project" data-name="Capstone Project Guide">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Capstone Project Guide">Capstone Guidelines & Report Format</h3>
+                <span class="note-item__tag">Project</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Internship Prep Section -->
+        <section class="subject-section" id="career">
+          <div class="subject-section__header">
+            <div class="subject-section__icon subject-section__icon--orange">
+              <span class="material-symbols-outlined">work</span>
+            </div>
+            <div class="subject-section__info">
+              <h2 class="subject-section__title">Internship Preparation</h2>
+              <p class="subject-section__desc">Resume Building, Interview Tips & DSA Cheat Sheet</p>
+            </div>
+            <button class="subject-section__toggle" aria-label="Toggle section">
+              <span class="material-symbols-outlined">expand_less</span>
+            </button>
+          </div>
+          <div class="subject-section__list">
+            <div class="note-item reveal" data-subject="career" data-name="Internship Prep Guide">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Internship Prep Guide">Resume, Interview & DSA Cheat Sheet</h3>
+                <span class="note-item__tag">Career</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
 
       </div>
     </div>
@@ -172,5 +270,6 @@
   </nav>
 
   <script src="../js/main.js"></script>
+  <script src="../js/pages/semester-subjects.js"></script>
 </body>
 </html>

@@ -48,7 +48,7 @@
       <div class="reveal flex flex-wrap gap-4 sem-detail-controls">
         <div class="search-bar sem-detail-search">
           <span class="material-symbols-outlined">search</span>
-          <input type="text" placeholder="Search notes..." data-search="#notes-list .note-item">
+          <input type="text" placeholder="Search notes..." data-search=".subject-section__list .note-item">
         </div>
         <select class="select-dropdown sem-detail-sort">
           <option value="subject">Sort by: Subject</option>
@@ -57,91 +57,164 @@
         </select>
       </div>
 
-      <div id="notes-list" class="grid grid-1 gap-4 stagger sem-detail-notes">
-
-        <div class="note-item reveal" data-subject="Java" data-name="Java Programming - Unit 1">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Java Programming - Unit 1">Java Programming — Unit 1: Basics & Syntax</h3>
-            <span class="note-item__tag">Java</span>
+      <!-- Subject Cards Grid -->
+      <div class="subject-cards-grid reveal" id="subject-cards">
+        <div class="subject-card" data-subject="java">
+          <div class="subject-card__icon">
+            <span class="material-symbols-outlined">coffee</span>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
+          <h3 class="subject-card__title">Java Programming</h3>
+          <p class="subject-card__count">3 Units</p>
         </div>
-
-        <div class="note-item reveal" data-subject="Java" data-name="Java Programming - Unit 2">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Java Programming - Unit 2">Java Programming — Unit 2: Inheritance & Interfaces</h3>
-            <span class="note-item__tag">Java</span>
+        <div class="subject-card" data-subject="os">
+          <div class="subject-card__icon">
+            <span class="material-symbols-outlined">terminal</span>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
+          <h3 class="subject-card__title">Operating Systems</h3>
+          <p class="subject-card__count">2 Units</p>
         </div>
-
-        <div class="note-item reveal" data-subject="Java" data-name="Java Programming - Unit 3">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Java Programming - Unit 3">Java Programming — Unit 3: Exception Handling & I/O</h3>
-            <span class="note-item__tag">Java</span>
+        <div class="subject-card" data-subject="dbms">
+          <div class="subject-card__icon">
+            <span class="material-symbols-outlined">database</span>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
+          <h3 class="subject-card__title">Database Management</h3>
+          <p class="subject-card__count">2 Units</p>
         </div>
+      </div>
 
-        <div class="note-item reveal" data-subject="OS" data-name="Operating Systems - Unit 1">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Operating Systems - Unit 1">Operating Systems — Unit 1: Process Management</h3>
-            <span class="note-item__tag note-item__tag--hardware">OS</span>
-          </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
-        </div>
+      <!-- Subject Sections -->
+      <div class="subjects-container" id="subjects-container">
 
-        <div class="note-item reveal" data-subject="OS" data-name="Operating Systems - Unit 2">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Operating Systems - Unit 2">Operating Systems — Unit 2: Memory Management</h3>
-            <span class="note-item__tag note-item__tag--hardware">OS</span>
+        <!-- Java Programming Section -->
+        <section class="subject-section" id="java">
+          <div class="subject-section__header">
+            <div class="subject-section__icon subject-section__icon--orange">
+              <span class="material-symbols-outlined">coffee</span>
+            </div>
+            <div class="subject-section__info">
+              <h2 class="subject-section__title">Java Programming</h2>
+              <p class="subject-section__desc">Basics, OOP Concepts, Inheritance, Interfaces, Exception Handling & I/O</p>
+            </div>
+            <button class="subject-section__toggle" aria-label="Toggle section">
+              <span class="material-symbols-outlined">expand_less</span>
+            </button>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+          <div class="subject-section__list">
+            <div class="note-item reveal" data-subject="java" data-name="Java Programming - Unit 1">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Java Programming - Unit 1">Unit 1: Basics & Syntax</h3>
+                <span class="note-item__tag">Core</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+            <div class="note-item reveal" data-subject="java" data-name="Java Programming - Unit 2">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Java Programming - Unit 2">Unit 2: Inheritance & Interfaces</h3>
+                <span class="note-item__tag">OOP</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+            <div class="note-item reveal" data-subject="java" data-name="Java Programming - Unit 3">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Java Programming - Unit 3">Unit 3: Exception Handling & I/O</h3>
+                <span class="note-item__tag">Advanced</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div class="note-item reveal" data-subject="DB" data-name="DBMS - Unit 1">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="DBMS - Unit 1">Database Management — Unit 1: Relational Model</h3>
-            <span class="note-item__tag">DB</span>
+        <!-- Operating Systems Section -->
+        <section class="subject-section" id="os">
+          <div class="subject-section__header">
+            <div class="subject-section__icon subject-section__icon--purple">
+              <span class="material-symbols-outlined">terminal</span>
+            </div>
+            <div class="subject-section__info">
+              <h2 class="subject-section__title">Operating Systems</h2>
+              <p class="subject-section__desc">Process Management, Memory Management, File Systems & Deadlocks</p>
+            </div>
+            <button class="subject-section__toggle" aria-label="Toggle section">
+              <span class="material-symbols-outlined">expand_less</span>
+            </button>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+          <div class="subject-section__list">
+            <div class="note-item reveal" data-subject="os" data-name="Operating Systems - Unit 1">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Operating Systems - Unit 1">Unit 1: Process Management</h3>
+                <span class="note-item__tag note-item__tag--hardware">OS</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+            <div class="note-item reveal" data-subject="os" data-name="Operating Systems - Unit 2">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Operating Systems - Unit 2">Unit 2: Memory Management</h3>
+                <span class="note-item__tag note-item__tag--hardware">OS</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div class="note-item reveal" data-subject="DB" data-name="DBMS - Unit 2">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="DBMS - Unit 2">Database Management — Unit 2: SQL Queries</h3>
-            <span class="note-item__tag">DB</span>
+        <!-- Database Management Section -->
+        <section class="subject-section" id="dbms">
+          <div class="subject-section__header">
+            <div class="subject-section__icon subject-section__icon--blue">
+              <span class="material-symbols-outlined">database</span>
+            </div>
+            <div class="subject-section__info">
+              <h2 class="subject-section__title">Database Management</h2>
+              <p class="subject-section__desc">Relational Model, ER Diagrams, SQL Queries & Normalization</p>
+            </div>
+            <button class="subject-section__toggle" aria-label="Toggle section">
+              <span class="material-symbols-outlined">expand_less</span>
+            </button>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+          <div class="subject-section__list">
+            <div class="note-item reveal" data-subject="dbms" data-name="DBMS - Unit 1">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="DBMS - Unit 1">Unit 1: Relational Model & ER</h3>
+                <span class="note-item__tag note-item__tag--db">Theory</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+            <div class="note-item reveal" data-subject="dbms" data-name="DBMS - Unit 2">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="DBMS - Unit 2">Unit 2: SQL Queries</h3>
+                <span class="note-item__tag note-item__tag--db">Practical</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
 
       </div>
     </div>
@@ -172,5 +245,6 @@
   </nav>
 
   <script src="../js/main.js"></script>
+  <script src="../js/pages/semester-subjects.js"></script>
 </body>
 </html>

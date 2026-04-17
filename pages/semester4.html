@@ -48,7 +48,7 @@
       <div class="reveal flex flex-wrap gap-4 sem-detail-controls">
         <div class="search-bar sem-detail-search">
           <span class="material-symbols-outlined">search</span>
-          <input type="text" placeholder="Search notes..." data-search="#notes-list .note-item">
+          <input type="text" placeholder="Search notes..." data-search=".subject-section__list .note-item">
         </div>
         <select class="select-dropdown sem-detail-sort">
           <option value="subject">Sort by: Subject</option>
@@ -57,91 +57,164 @@
         </select>
       </div>
 
-      <div id="notes-list" class="grid grid-1 gap-4 stagger sem-detail-notes">
-
-        <div class="note-item reveal" data-subject="Network" data-name="Computer Networks - Unit 1">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Computer Networks - Unit 1">Computer Networks — Unit 1: OSI Model</h3>
-            <span class="note-item__tag note-item__tag--hardware">Network</span>
+      <!-- Subject Cards Grid -->
+      <div class="subject-cards-grid reveal" id="subject-cards">
+        <div class="subject-card" data-subject="networks">
+          <div class="subject-card__icon">
+            <span class="material-symbols-outlined">network_node</span>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
+          <h3 class="subject-card__title">Computer Networks</h3>
+          <p class="subject-card__count">3 Units</p>
         </div>
-
-        <div class="note-item reveal" data-subject="Network" data-name="Computer Networks - Unit 2">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Computer Networks - Unit 2">Computer Networks — Unit 2: TCP/IP & Protocols</h3>
-            <span class="note-item__tag note-item__tag--hardware">Network</span>
+        <div class="subject-card" data-subject="web-tech">
+          <div class="subject-card__icon">
+            <span class="material-symbols-outlined">language</span>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
+          <h3 class="subject-card__title">Web Technologies</h3>
+          <p class="subject-card__count">2 Units</p>
         </div>
-
-        <div class="note-item reveal" data-subject="Network" data-name="Computer Networks - Unit 3">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Computer Networks - Unit 3">Computer Networks — Unit 3: Routing & Subnetting</h3>
-            <span class="note-item__tag note-item__tag--hardware">Network</span>
+        <div class="subject-card" data-subject="software-eng">
+          <div class="subject-card__icon">
+            <span class="material-symbols-outlined">architecture</span>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
+          <h3 class="subject-card__title">Software Engineering</h3>
+          <p class="subject-card__count">2 Units</p>
         </div>
+      </div>
 
-        <div class="note-item reveal" data-subject="Web" data-name="Web Technologies - Unit 1">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Web Technologies - Unit 1">Web Technologies — Unit 1: HTML5 & CSS3</h3>
-            <span class="note-item__tag">Web</span>
-          </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
-        </div>
+      <!-- Subject Sections -->
+      <div class="subjects-container" id="subjects-container">
 
-        <div class="note-item reveal" data-subject="Web" data-name="Web Technologies - Unit 2">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Web Technologies - Unit 2">Web Technologies — Unit 2: JavaScript & DOM</h3>
-            <span class="note-item__tag">Web</span>
+        <!-- Computer Networks Section -->
+        <section class="subject-section" id="networks">
+          <div class="subject-section__header">
+            <div class="subject-section__icon subject-section__icon--cyan">
+              <span class="material-symbols-outlined">network_node</span>
+            </div>
+            <div class="subject-section__info">
+              <h2 class="subject-section__title">Computer Networks</h2>
+              <p class="subject-section__desc">OSI Model, TCP/IP, Protocols, Routing, Subnetting & Network Security</p>
+            </div>
+            <button class="subject-section__toggle" aria-label="Toggle section">
+              <span class="material-symbols-outlined">expand_less</span>
+            </button>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+          <div class="subject-section__list">
+            <div class="note-item reveal" data-subject="networks" data-name="Computer Networks - Unit 1">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Computer Networks - Unit 1">Unit 1: OSI Model</h3>
+                <span class="note-item__tag note-item__tag--web">Network</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+            <div class="note-item reveal" data-subject="networks" data-name="Computer Networks - Unit 2">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Computer Networks - Unit 2">Unit 2: TCP/IP & Protocols</h3>
+                <span class="note-item__tag note-item__tag--web">Network</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+            <div class="note-item reveal" data-subject="networks" data-name="Computer Networks - Unit 3">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Computer Networks - Unit 3">Unit 3: Routing & Subnetting</h3>
+                <span class="note-item__tag note-item__tag--web">Network</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div class="note-item reveal" data-subject="SE" data-name="Software Engineering - Unit 1">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Software Engineering - Unit 1">Software Engineering — Unit 1: SDLC Models</h3>
-            <span class="note-item__tag">SE</span>
+        <!-- Web Technologies Section -->
+        <section class="subject-section" id="web-tech">
+          <div class="subject-section__header">
+            <div class="subject-section__icon subject-section__icon--orange">
+              <span class="material-symbols-outlined">language</span>
+            </div>
+            <div class="subject-section__info">
+              <h2 class="subject-section__title">Web Technologies</h2>
+              <p class="subject-section__desc">HTML5, CSS3, JavaScript, DOM, AJAX & Responsive Design</p>
+            </div>
+            <button class="subject-section__toggle" aria-label="Toggle section">
+              <span class="material-symbols-outlined">expand_less</span>
+            </button>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+          <div class="subject-section__list">
+            <div class="note-item reveal" data-subject="web-tech" data-name="Web Technologies - Unit 1">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Web Technologies - Unit 1">Unit 1: HTML5 & CSS3</h3>
+                <span class="note-item__tag">Web</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+            <div class="note-item reveal" data-subject="web-tech" data-name="Web Technologies - Unit 2">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Web Technologies - Unit 2">Unit 2: JavaScript & DOM</h3>
+                <span class="note-item__tag">Web</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div class="note-item reveal" data-subject="SE" data-name="Software Engineering - Unit 2">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Software Engineering - Unit 2">Software Engineering — Unit 2: UML & Design Patterns</h3>
-            <span class="note-item__tag">SE</span>
+        <!-- Software Engineering Section -->
+        <section class="subject-section" id="software-eng">
+          <div class="subject-section__header">
+            <div class="subject-section__icon subject-section__icon--purple">
+              <span class="material-symbols-outlined">architecture</span>
+            </div>
+            <div class="subject-section__info">
+              <h2 class="subject-section__title">Software Engineering</h2>
+              <p class="subject-section__desc">SDLC Models, Requirements, UML, Design Patterns & Testing</p>
+            </div>
+            <button class="subject-section__toggle" aria-label="Toggle section">
+              <span class="material-symbols-outlined">expand_less</span>
+            </button>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+          <div class="subject-section__list">
+            <div class="note-item reveal" data-subject="software-eng" data-name="Software Engineering - Unit 1">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Software Engineering - Unit 1">Unit 1: SDLC Models</h3>
+                <span class="note-item__tag">SE</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+            <div class="note-item reveal" data-subject="software-eng" data-name="Software Engineering - Unit 2">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Software Engineering - Unit 2">Unit 2: UML & Design Patterns</h3>
+                <span class="note-item__tag">SE</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
 
       </div>
     </div>
@@ -172,5 +245,6 @@
   </nav>
 
   <script src="../js/main.js"></script>
+  <script src="../js/pages/semester-subjects.js"></script>
 </body>
 </html>

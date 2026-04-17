@@ -51,7 +51,7 @@
       <div class="reveal flex flex-wrap gap-4 sem-detail-controls">
         <div class="search-bar sem-detail-search">
           <span class="material-symbols-outlined">search</span>
-          <input type="text" placeholder="Search notes..." data-search="#notes-list .note-item">
+          <input type="text" placeholder="Search notes..." data-search=".subject-section__list .note-item">
         </div>
         <select class="select-dropdown sem-detail-sort">
           <option value="subject">Sort by: Subject</option>
@@ -60,104 +60,200 @@
         </select>
       </div>
 
-      <!-- Notes List -->
-      <div id="notes-list" class="grid grid-1 gap-4 stagger sem-detail-notes">
-
-        <div class="note-item reveal" data-subject="Math" data-name="Discrete Mathematics - Unit 1">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Discrete Mathematics - Unit 1">Discrete Mathematics — Unit 1</h3>
-            <span class="note-item__tag">Math</span>
+      <!-- Subject Cards Grid -->
+      <div class="subject-cards-grid reveal" id="subject-cards">
+        <div class="subject-card" data-subject="discrete-math">
+          <div class="subject-card__icon">
+            <span class="material-symbols-outlined">calculate</span>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
+          <h3 class="subject-card__title">Discrete Mathematics</h3>
+          <p class="subject-card__count">2 Units</p>
         </div>
-
-        <div class="note-item reveal" data-subject="Math" data-name="Discrete Mathematics - Unit 2">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Discrete Mathematics - Unit 2">Discrete Mathematics — Unit 2</h3>
-            <span class="note-item__tag">Math</span>
+        <div class="subject-card" data-subject="c-programming">
+          <div class="subject-card__icon">
+            <span class="material-symbols-outlined">code</span>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
+          <h3 class="subject-card__title">C Programming</h3>
+          <p class="subject-card__count">3 Units</p>
         </div>
-
-        <div class="note-item reveal" data-subject="CS" data-name="C Programming - Unit 1">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="C Programming - Unit 1">C Programming — Unit 1: Basics & Operators</h3>
-            <span class="note-item__tag">CS</span>
+        <div class="subject-card" data-subject="computer-org">
+          <div class="subject-card__icon">
+            <span class="material-symbols-outlined">memory</span>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
+          <h3 class="subject-card__title">Computer Organisation</h3>
+          <p class="subject-card__count">2 Units</p>
         </div>
-
-        <div class="note-item reveal" data-subject="CS" data-name="C Programming - Unit 2">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="C Programming - Unit 2">C Programming — Unit 2: Arrays & Strings</h3>
-            <span class="note-item__tag">CS</span>
+        <div class="subject-card" data-subject="communication">
+          <div class="subject-card__icon">
+            <span class="material-symbols-outlined">chat</span>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
+          <h3 class="subject-card__title">Communication Skills</h3>
+          <p class="subject-card__count">1 Unit</p>
         </div>
+      </div>
 
-        <div class="note-item reveal" data-subject="CS" data-name="C Programming - Lab Manual">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="C Programming - Lab Manual">C Programming — Lab Manual</h3>
-            <span class="note-item__tag">CS</span>
-          </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
-        </div>
+      <!-- Subject Sections -->
+      <div class="subjects-container" id="subjects-container">
 
-        <div class="note-item reveal" data-subject="Hardware" data-name="Computer Organisation - Unit 1">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Computer Organisation - Unit 1">Computer Organisation — Unit 1</h3>
-            <span class="note-item__tag note-item__tag--hardware">Hardware</span>
+        <!-- Discrete Mathematics Section -->
+        <section class="subject-section" id="discrete-math">
+          <div class="subject-section__header">
+            <div class="subject-section__icon subject-section__icon--green">
+              <span class="material-symbols-outlined">calculate</span>
+            </div>
+            <div class="subject-section__info">
+              <h2 class="subject-section__title">Discrete Mathematics</h2>
+              <p class="subject-section__desc">Logic, Sets, Relations, Functions, Graph Theory & Combinatorics</p>
+            </div>
+            <button class="subject-section__toggle" aria-label="Toggle section">
+              <span class="material-symbols-outlined">expand_less</span>
+            </button>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+          <div class="subject-section__list">
+            <div class="note-item reveal" data-subject="discrete-math" data-name="Discrete Mathematics - Unit 1">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Discrete Mathematics - Unit 1">Unit 1: Logic & Set Theory</h3>
+                <span class="note-item__tag note-item__tag--math">Math</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+            <div class="note-item reveal" data-subject="discrete-math" data-name="Discrete Mathematics - Unit 2">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Discrete Mathematics - Unit 2">Unit 2: Graph Theory & Combinatorics</h3>
+                <span class="note-item__tag note-item__tag--math">Math</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div class="note-item reveal" data-subject="Hardware" data-name="Computer Organisation - Unit 2">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Computer Organisation - Unit 2">Computer Organisation — Unit 2</h3>
-            <span class="note-item__tag note-item__tag--hardware">Hardware</span>
+        <!-- C Programming Section -->
+        <section class="subject-section" id="c-programming">
+          <div class="subject-section__header">
+            <div class="subject-section__icon subject-section__icon--blue">
+              <span class="material-symbols-outlined">code</span>
+            </div>
+            <div class="subject-section__info">
+              <h2 class="subject-section__title">C Programming</h2>
+              <p class="subject-section__desc">Basics, Operators, Control Structures, Arrays, Strings & Functions</p>
+            </div>
+            <button class="subject-section__toggle" aria-label="Toggle section">
+              <span class="material-symbols-outlined">expand_less</span>
+            </button>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+          <div class="subject-section__list">
+            <div class="note-item reveal" data-subject="c-programming" data-name="C Programming - Unit 1">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="C Programming - Unit 1">Unit 1: Basics & Operators</h3>
+                <span class="note-item__tag">Core</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+            <div class="note-item reveal" data-subject="c-programming" data-name="C Programming - Unit 2">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="C Programming - Unit 2">Unit 2: Arrays & Strings</h3>
+                <span class="note-item__tag">Core</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+            <div class="note-item reveal" data-subject="c-programming" data-name="C Programming - Lab Manual">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="C Programming - Lab Manual">Lab Manual</h3>
+                <span class="note-item__tag note-item__tag--oop">Practical</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div class="note-item reveal" data-subject="English" data-name="Communication Skills - Unit 1">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Communication Skills - Unit 1">Communication Skills — Unit 1</h3>
-            <span class="note-item__tag">English</span>
+        <!-- Computer Organisation Section -->
+        <section class="subject-section" id="computer-org">
+          <div class="subject-section__header">
+            <div class="subject-section__icon subject-section__icon--orange">
+              <span class="material-symbols-outlined">memory</span>
+            </div>
+            <div class="subject-section__info">
+              <h2 class="subject-section__title">Computer Organisation</h2>
+              <p class="subject-section__desc">Digital Logic, CPU Architecture, Memory Hierarchy & I/O Systems</p>
+            </div>
+            <button class="subject-section__toggle" aria-label="Toggle section">
+              <span class="material-symbols-outlined">expand_less</span>
+            </button>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+          <div class="subject-section__list">
+            <div class="note-item reveal" data-subject="computer-org" data-name="Computer Organisation - Unit 1">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Computer Organisation - Unit 1">Unit 1: Digital Logic & CPU</h3>
+                <span class="note-item__tag note-item__tag--hardware">Hardware</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+            <div class="note-item reveal" data-subject="computer-org" data-name="Computer Organisation - Unit 2">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Computer Organisation - Unit 2">Unit 2: Memory & I/O Systems</h3>
+                <span class="note-item__tag note-item__tag--hardware">Hardware</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
+
+        <!-- Communication Skills Section -->
+        <section class="subject-section" id="communication">
+          <div class="subject-section__header">
+            <div class="subject-section__icon subject-section__icon--purple">
+              <span class="material-symbols-outlined">chat</span>
+            </div>
+            <div class="subject-section__info">
+              <h2 class="subject-section__title">Communication Skills</h2>
+              <p class="subject-section__desc">Business Communication, Presentation Skills & Technical Writing</p>
+            </div>
+            <button class="subject-section__toggle" aria-label="Toggle section">
+              <span class="material-symbols-outlined">expand_less</span>
+            </button>
+          </div>
+          <div class="subject-section__list">
+            <div class="note-item reveal" data-subject="communication" data-name="Communication Skills - Unit 1">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Communication Skills - Unit 1">Unit 1: Business Communication</h3>
+                <span class="note-item__tag">English</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
 
       </div>
     </div>
@@ -190,5 +286,6 @@
   </nav>
 
   <script src="../js/main.js"></script>
+  <script src="../js/pages/semester-subjects.js"></script>
 </body>
 </html>

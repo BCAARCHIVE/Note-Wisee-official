@@ -48,7 +48,7 @@
       <div class="reveal flex flex-wrap gap-4 sem-detail-controls">
         <div class="search-bar sem-detail-search">
           <span class="material-symbols-outlined">search</span>
-          <input type="text" placeholder="Search notes..." data-search="#notes-list .note-item">
+          <input type="text" placeholder="Search notes..." data-search=".subject-section__list .note-item">
         </div>
         <select class="select-dropdown sem-detail-sort">
           <option value="subject">Sort by: Subject</option>
@@ -57,91 +57,189 @@
         </select>
       </div>
 
-      <div id="notes-list" class="grid grid-1 gap-4 stagger sem-detail-notes">
-
-        <div class="note-item reveal" data-subject="Java" data-name="Advanced Java - Unit 1">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Advanced Java - Unit 1">Advanced Java — Unit 1: Servlets & JSP</h3>
-            <span class="note-item__tag">Java</span>
+      <!-- Subject Cards Grid -->
+      <div class="subject-cards-grid reveal" id="subject-cards">
+        <div class="subject-card" data-subject="advanced-java">
+          <div class="subject-card__icon">
+            <span class="material-symbols-outlined">coffee</span>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
+          <h3 class="subject-card__title">Advanced Java</h3>
+          <p class="subject-card__count">2 Units</p>
         </div>
-
-        <div class="note-item reveal" data-subject="Java" data-name="Advanced Java - Unit 2">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Advanced Java - Unit 2">Advanced Java — Unit 2: JDBC & Hibernate</h3>
-            <span class="note-item__tag">Java</span>
+        <div class="subject-card" data-subject="ai">
+          <div class="subject-card__icon">
+            <span class="material-symbols-outlined">psychology</span>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
+          <h3 class="subject-card__title">Artificial Intelligence</h3>
+          <p class="subject-card__count">3 Units</p>
         </div>
-
-        <div class="note-item reveal" data-subject="AI" data-name="Artificial Intelligence - Unit 1">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Artificial Intelligence - Unit 1">Artificial Intelligence — Unit 1: Search Algorithms</h3>
-            <span class="note-item__tag">AI</span>
+        <div class="subject-card" data-subject="python">
+          <div class="subject-card__icon">
+            <span class="material-symbols-outlined">code_blocks</span>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
+          <h3 class="subject-card__title">Python Programming</h3>
+          <p class="subject-card__count">1 Unit</p>
         </div>
-
-        <div class="note-item reveal" data-subject="AI" data-name="Artificial Intelligence - Unit 2">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Artificial Intelligence - Unit 2">Artificial Intelligence — Unit 2: Machine Learning Basics</h3>
-            <span class="note-item__tag">AI</span>
+        <div class="subject-card" data-subject="testing">
+          <div class="subject-card__icon">
+            <span class="material-symbols-outlined">bug_report</span>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
+          <h3 class="subject-card__title">Software Testing</h3>
+          <p class="subject-card__count">1 Unit</p>
         </div>
+      </div>
 
-        <div class="note-item reveal" data-subject="Python" data-name="Python Programming - Unit 1">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Python Programming - Unit 1">Python Programming — Unit 1: Core Syntax & Data Types</h3>
-            <span class="note-item__tag">Python</span>
-          </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
-          </div>
-        </div>
+      <!-- Subject Sections -->
+      <div class="subjects-container" id="subjects-container">
 
-        <div class="note-item reveal" data-subject="SE" data-name="Software Testing - Unit 1">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="Software Testing - Unit 1">Software Testing — Unit 1: Testing Strategies</h3>
-            <span class="note-item__tag">SE</span>
+        <!-- Advanced Java Section -->
+        <section class="subject-section" id="advanced-java">
+          <div class="subject-section__header">
+            <div class="subject-section__icon subject-section__icon--orange">
+              <span class="material-symbols-outlined">coffee</span>
+            </div>
+            <div class="subject-section__info">
+              <h2 class="subject-section__title">Advanced Java</h2>
+              <p class="subject-section__desc">Servlets, JSP, JDBC, Hibernate & Enterprise Java</p>
+            </div>
+            <button class="subject-section__toggle" aria-label="Toggle section">
+              <span class="material-symbols-outlined">expand_less</span>
+            </button>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+          <div class="subject-section__list">
+            <div class="note-item reveal" data-subject="advanced-java" data-name="Advanced Java - Unit 1">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Advanced Java - Unit 1">Unit 1: Servlets & JSP</h3>
+                <span class="note-item__tag">Java</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+            <div class="note-item reveal" data-subject="advanced-java" data-name="Advanced Java - Unit 2">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Advanced Java - Unit 2">Unit 2: JDBC & Hibernate</h3>
+                <span class="note-item__tag">Java</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div class="note-item reveal" data-subject="AI" data-name="AI Ethics - Unit 1">
-          <div class="note-item__icon"><span>PDF</span></div>
-          <div class="note-item__info">
-            <h3 class="note-item__title" data-sort-key="AI Ethics - Unit 1">AI Ethics & Society — Unit 1: Bias, Privacy & Fairness</h3>
-            <span class="note-item__tag">AI</span>
+        <!-- Artificial Intelligence Section -->
+        <section class="subject-section" id="ai">
+          <div class="subject-section__header">
+            <div class="subject-section__icon subject-section__icon--purple">
+              <span class="material-symbols-outlined">psychology</span>
+            </div>
+            <div class="subject-section__info">
+              <h2 class="subject-section__title">Artificial Intelligence</h2>
+              <p class="subject-section__desc">Search Algorithms, Machine Learning, Neural Networks & AI Ethics</p>
+            </div>
+            <button class="subject-section__toggle" aria-label="Toggle section">
+              <span class="material-symbols-outlined">expand_less</span>
+            </button>
           </div>
-          <div class="note-item__actions">
-            <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
-            <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+          <div class="subject-section__list">
+            <div class="note-item reveal" data-subject="ai" data-name="Artificial Intelligence - Unit 1">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Artificial Intelligence - Unit 1">Unit 1: Search Algorithms</h3>
+                <span class="note-item__tag note-item__tag--oop">AI Core</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+            <div class="note-item reveal" data-subject="ai" data-name="Artificial Intelligence - Unit 2">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Artificial Intelligence - Unit 2">Unit 2: Machine Learning Basics</h3>
+                <span class="note-item__tag note-item__tag--oop">ML</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+            <div class="note-item reveal" data-subject="ai" data-name="AI Ethics - Unit 1">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="AI Ethics - Unit 1">Unit 3: AI Ethics & Society</h3>
+                <span class="note-item__tag note-item__tag--oop">Ethics</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
+
+        <!-- Python Programming Section -->
+        <section class="subject-section" id="python">
+          <div class="subject-section__header">
+            <div class="subject-section__icon subject-section__icon--green">
+              <span class="material-symbols-outlined">code_blocks</span>
+            </div>
+            <div class="subject-section__info">
+              <h2 class="subject-section__title">Python Programming</h2>
+              <p class="subject-section__desc">Core Syntax, Data Types, Functions, OOP & Libraries</p>
+            </div>
+            <button class="subject-section__toggle" aria-label="Toggle section">
+              <span class="material-symbols-outlined">expand_less</span>
+            </button>
+          </div>
+          <div class="subject-section__list">
+            <div class="note-item reveal" data-subject="python" data-name="Python Programming - Unit 1">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Python Programming - Unit 1">Unit 1: Core Syntax & Data Types</h3>
+                <span class="note-item__tag note-item__tag--math">Python</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Software Testing Section -->
+        <section class="subject-section" id="testing">
+          <div class="subject-section__header">
+            <div class="subject-section__icon subject-section__icon--blue">
+              <span class="material-symbols-outlined">bug_report</span>
+            </div>
+            <div class="subject-section__info">
+              <h2 class="subject-section__title">Software Testing</h2>
+              <p class="subject-section__desc">Testing Strategies, Manual Testing, Automation & QA</p>
+            </div>
+            <button class="subject-section__toggle" aria-label="Toggle section">
+              <span class="material-symbols-outlined">expand_less</span>
+            </button>
+          </div>
+          <div class="subject-section__list">
+            <div class="note-item reveal" data-subject="testing" data-name="Software Testing - Unit 1">
+              <div class="note-item__icon"><span>PDF</span></div>
+              <div class="note-item__info">
+                <h3 class="note-item__title" data-sort-key="Software Testing - Unit 1">Unit 1: Testing Strategies</h3>
+                <span class="note-item__tag note-item__tag--db">Testing</span>
+              </div>
+              <div class="note-item__actions">
+                <a href="#" class="note-item__action" aria-label="Download"><span class="material-symbols-outlined">download</span></a>
+                <a href="#" class="note-item__action" aria-label="View"><span class="material-symbols-outlined">description</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
 
       </div>
     </div>
@@ -172,5 +270,6 @@
   </nav>
 
   <script src="../js/main.js"></script>
+  <script src="../js/pages/semester-subjects.js"></script>
 </body>
 </html>
