@@ -1,11 +1,5 @@
 /* ===== about.css — Mobile-First Styles ===== */
 
-/* Main wrapper — pt-navbar already applies navbar offset */
-.about-main {
-  /* Don't double-add, remove the old hardcoded 6rem */
-  padding-top: 0;
-}
-
 /* ---- Hero Minimal ---- */
 .hero-minimal {
   /* Mobile: compact padding, base hero handles section padding */
@@ -58,7 +52,7 @@
 
 /* ---- Container ---- */
 .about-container {
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 /* ---- Mission Section ---- */
@@ -161,7 +155,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  max-width: 340px;
+  max-width: 420px;
   margin: 0 auto;
 }
 
@@ -182,62 +176,79 @@
 
 .team-card {
   background: var(--surface-container-low);
-  border-radius: var(--radius-xl);
-  padding: 1.25rem;
+  border-radius: var(--radius-2xl);
+  padding: 1.5rem;
   text-align: center;
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  border: 1px solid rgba(81, 67, 74, 0.2);
+  transition: all var(--transition-slow);
 }
 
 @media (min-width: 768px) {
-  .team-card { padding: 1.75rem; }
-}
-
-@media (min-width: 1024px) {
   .team-card { padding: 2rem; }
 }
 
+@media (min-width: 1024px) {
+  .team-card { padding: 2.5rem; }
+}
+
 .team-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-ambient);
+  transform: translateY(-8px);
+  background: var(--surface-container);
+  border-color: rgba(255, 174, 223, 0.35);
+  box-shadow: 0 20px 40px rgba(106, 30, 85, 0.15);
 }
 
 .team-card__avatar {
-  width: 64px;
-  height: 64px;
-  background: var(--surface-container-high);
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(135deg, var(--surface-container-highest), rgba(106, 30, 85, 0.4));
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.5rem;
+  border: 1px solid rgba(255, 174, 223, 0.2);
+  box-shadow: inset 0 2px 10px rgba(255, 255, 255, 0.05);
+  transition: transform var(--transition-slow);
+}
+
+.team-card:hover .team-card__avatar {
+  transform: scale(1.1);
+  border-color: var(--primary);
+  background: linear-gradient(135deg, var(--primary-container), rgba(106, 30, 85, 0.6));
 }
 
 @media (min-width: 768px) {
-  .team-card__avatar { width: 72px; height: 72px; }
+  .team-card__avatar { width: 84px; height: 84px; }
 }
 
 @media (min-width: 1024px) {
-  .team-card__avatar { width: 80px; height: 80px; }
+  .team-card__avatar { width: 96px; height: 96px; }
 }
 
 .team-card__avatar .material-symbols-outlined {
-  font-size: 1.875rem;
-  color: var(--on-surface-variant);
+  font-size: 2rem;
+  color: var(--primary);
+  transition: color var(--transition-base);
+}
+
+.team-card:hover .team-card__avatar .material-symbols-outlined {
+  color: var(--on-primary-container);
 }
 
 @media (min-width: 1024px) {
-  .team-card__avatar .material-symbols-outlined { font-size: 2.5rem; }
+  .team-card__avatar .material-symbols-outlined { font-size: 2.75rem; }
 }
 
 .team-card__name {
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.35rem;
   color: var(--on-surface);
 }
 
 @media (min-width: 768px) {
-  .team-card__name { font-size: 1.125rem; }
+  .team-card__name { font-size: 1.25rem; }
 }
 
 .team-card__role {

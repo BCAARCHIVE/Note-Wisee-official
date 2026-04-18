@@ -58,11 +58,15 @@
     <main class="pt-navbar about-main">
 
       <!-- HERO SECTION -->
-      <section class="hero hero-minimal" id="hero">
+      <section class="hero hero-gradient" id="hero">
         <div class="container">
           <div class="hero-minimal__content reveal">
-            <h1 class="display-sm">Free Resources for <span class="text-gradient">BCA Students</span></h1>
-            <p class="body-md text-on-surface-variant hero-minimal__desc">
+            <div class="chip chip--primary" style="margin: 0 auto 1.5rem;">
+              <span class="material-symbols-outlined">diversity_3</span>
+              The Creators
+            </div>
+            <h1 class="display-sm">Free Resources for <br><span class="text-gradient">BCA Students</span></h1>
+            <p class="body-md text-on-surface-variant hero-minimal__desc" style="max-width: 40rem; margin-inline: auto;">
               NoteWise is a peer-driven platform providing curated academic notes, 
               previous year questions, and learning resources — completely free. 
               Built by students, for students.
@@ -78,6 +82,33 @@
       <!-- About Content Section -->
       <section class="section">
         <div class="container about-container">
+
+          <!-- MISSION & STATS -->
+          <div class="about-mission reveal">
+            <h2 class="headline-md about-mission-title text-center" style="text-align: center;">Our Mission</h2>
+            <p class="body-md text-on-surface-variant text-center" style="max-width: 48rem; margin: 0 auto; text-align: center;">
+              We believe quality education shouldn't be gated behind paywalls. NoteWise 
+              curates the best academic materials for BCA students, structured seamlessly 
+              so you can focus entirely on learning rather than endless searching.
+            </p>
+          </div>
+
+          <div class="about-stats reveal">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1.5rem;">
+              <div class="stat-card">
+                <div class="stat-card__num">500+</div>
+                <p class="body-sm text-on-surface-variant">Resources</p>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__num">10k+</div>
+                <p class="body-sm text-on-surface-variant">Students</p>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__num">50+</div>
+                <p class="body-sm text-on-surface-variant">Contributors</p>
+              </div>
+            </div>
+          </div>
 
           <!-- TEAM SECTION -->
           <div class="team-section reveal" id="team">
@@ -233,7 +264,7 @@
       </a>
       <a href="semesters.html" class="bottom-nav__item">
         <span class="material-symbols-outlined">menu_book</span>
-        <span>Semesters</span>
+        <span>Sems</span>
       </a>
       <a href="courses.html" class="bottom-nav__item">
         <span class="material-symbols-outlined">library_books</span>

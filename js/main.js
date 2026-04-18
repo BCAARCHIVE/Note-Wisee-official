@@ -19,20 +19,28 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ---------- Motion Preference ---------- */
+const MOTION_STORAGE_KEY = 'notewise-motion';
+
 function getMotionPreference() {
   const params = new URLSearchParams(window.location.search);
   const queryMotion = params.get('motion');
 
-  // Optional manual toggle:
-  // ?motion=off -> disables animations
-  // ?motion=on  -> enables animations
+  // Optional manual toggle (session only — avoids sticky localStorage disabling motion for everyone):
+  // ?motion=off -> disables animations until the tab closes or ?motion=on is used
+  // ?motion=on  -> clears that choice (full animations again)
   if (queryMotion === 'off') {
-    localStorage.setItem('notewise-motion', 'off');
+    sessionStorage.setItem(MOTION_STORAGE_KEY, 'off');
   } else if (queryMotion === 'on') {
-    localStorage.setItem('notewise-motion', 'on');
+    sessionStorage.removeItem(MOTION_STORAGE_KEY);
   }
 
-  return localStorage.getItem('notewise-motion') === 'off';
+  try {
+    localStorage.removeItem(MOTION_STORAGE_KEY);
+  } catch (_) {
+    /* ignore */
+  }
+
+  return sessionStorage.getItem(MOTION_STORAGE_KEY) === 'off';
 }
 
 function applyMotionPreference() {

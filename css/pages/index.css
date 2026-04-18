@@ -11,16 +11,6 @@ html {
   html {
     scroll-behavior: auto;
   }
-  
-  .reveal,
-  .hero-animate,
-  .hero-animate-img {
-    animation: none !important;
-    -webkit-animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-    -webkit-transform: none !important;
-  }
 }
 
 /* ---- Hero Section (Home) ---- */

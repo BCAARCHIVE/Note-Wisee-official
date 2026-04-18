@@ -14,6 +14,8 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  /* Clip horizontal overflow here (not on body) so position:fixed descendants stay viewport-relative */
+  overflow-x: hidden;
 }
 
 html.reduce-motion { scroll-behavior: auto; }
@@ -141,7 +143,6 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
   /* Space for bottom nav on mobile */
   padding-bottom: 5.25rem;
 }
@@ -643,20 +644,21 @@ ul, ol { list-style: none; }
 /* ---------- Bottom Navigation (Mobile only) ---------- */
 .bottom-nav {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  bottom: max(1.25rem, env(safe-area-inset-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 2.5rem);
+  max-width: 400px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0.5rem max(0.75rem, env(safe-area-inset-left)) calc(0.75rem + env(safe-area-inset-bottom)) max(0.75rem, env(safe-area-inset-right));
-  background: rgba(19, 19, 22, 0.95);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  z-index: 100;
-  border-radius: 1rem 1rem 0 0;
-  box-shadow: 0 -4px 40px rgba(106, 30, 85, 0.08);
-  border-top: 1px solid rgba(255, 174, 223, 0.12);
+  padding: 0.5rem 0.75rem;
+  background: rgba(42, 41, 45, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 1000;
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 174, 223, 0.1);
 }
 
 /* Hide bottom nav on tablet+ */
@@ -677,10 +679,10 @@ ul, ol { list-style: none; }
   gap: 0.2rem;
   flex: 1;
   min-width: 0;
-  padding: 0.35rem 0.25rem;
+  padding: 0.4rem 0.25rem;
   color: var(--on-surface-variant);
   transition: color var(--transition-base), transform var(--transition-fast);
-  border-radius: 0.75rem;
+  border-radius: var(--radius-full);
 }
 
 .bottom-nav__item:active {
@@ -1584,20 +1586,6 @@ textarea.form-input {
   -webkit-transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), -webkit-transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Fallback for browsers without JS or with reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .js-animations .reveal,
-  .js-animations .reveal-left,
-  .js-animations .reveal-right,
-  .js-animations .reveal-scale {
-    opacity: 1;
-    transform: none;
-    -webkit-transform: none;
-    animation: none;
-    transition: none;
-  }
-}
-
 .reveal.visible {
   opacity: 1 !important;
   transform: translateY(0) !important;
@@ -2166,14 +2154,15 @@ textarea.form-input {
 }
 
 /* ---------- Page Load Fade-in ---------- */
+/* Opacity only — never transform on body, or fixed descendants (e.g. .bottom-nav) tie to body instead of the viewport */
 @keyframes pageFadeIn {
-  from { opacity: 0; transform: translateY(4px); -webkit-transform: translateY(4px); }
-  to   { opacity: 1; transform: translateY(0); -webkit-transform: translateY(0); }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 @-webkit-keyframes pageFadeIn {
-  from { opacity: 0; -webkit-transform: translateY(4px); }
-  to   { opacity: 1; -webkit-transform: translateY(0); }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 body {

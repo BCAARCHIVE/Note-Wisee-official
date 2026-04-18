@@ -16,9 +16,6 @@
 @media (min-width: 1024px) {
   .hero { 
     padding: var(--space-20) 0 var(--space-16);
-    min-height: calc(70vh - var(--navbar-height));
-    display: flex;
-    align-items: center;
   }
 }
 
@@ -31,7 +28,12 @@
 }
 
 @media (min-width: 1024px) {
-  .hero__content { grid-template-columns: 1.2fr 0.8fr; gap: 3rem; }
+  .hero__content { 
+    grid-template-columns: 1.2fr 0.8fr; 
+    gap: 3rem; 
+    min-height: calc(70vh - var(--navbar-height));
+    align-items: center;
+  }
 }
 
 .hero__content .chip { margin-bottom: 1rem; }
