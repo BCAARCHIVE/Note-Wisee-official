@@ -1,286 +1,279 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About & Contact — NoteWise</title>
-    <meta
-      name="description"
-      content="Learn more about NoteWise, the academic curator for BCA students. Contact us for support or inquiries."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/pages/about.css" />
-    <link rel="shortcut icon" href="../images/nobg notewise crop.png" type="image/png" />
-  </head>
-  <body>
-    <!-- NAVBAR -->
-    <nav class="navbar" id="navbar">
-      <a href="../index.html" class="navbar__logo">
-        <img
-          src="../images/notewise title.png"
-          alt="Notewise Title"
-          style="height: 32px; width: auto"
-        />
-      </a>
-      <div class="navbar__links">
-        <a href="semesters.html" class="navbar__link">Semesters</a>
-        <a href="courses.html" class="navbar__link">Courses</a>
-        <a href="certifications.html" class="navbar__link">Certifications</a>
-        <a href="contact.html" class="navbar__link">Contact Us</a>
-      </div>
-      <div class="navbar__actions">
-        <a href="about.html" class="btn-signin hide-mobile">About Us</a>
-        <button class="hamburger hide-desktop" id="hamburger" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
 
-    <div class="mobile-menu" id="mobile-menu">
-      <a href="../index.html">Home</a>
-      <a href="semesters.html">Semesters</a>
-      <a href="courses.html">Courses</a>
-      <a href="certifications.html">Certifications</a>
-      <a href="about.html" class="active">About</a>
-      <a href="contact.html">Contact</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About & Contact — NoteWise</title>
+  <meta name="description"
+    content="Learn more about NoteWise, the academic curator for BCA students. Contact us for support or inquiries." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/pages/about.css" />
+  <link rel="shortcut icon" href="../images/nobg notewise crop.png" type="image/png" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="navbar__logo">
+      <img src="../images/notewise title.png" alt="Notewise Title" style="height: 32px; width: auto" />
+    </a>
+    <div class="navbar__links">
+      <a href="semesters.html" class="navbar__link">Semesters</a>
+      <a href="courses.html" class="navbar__link">Courses</a>
+      <a href="certifications.html" class="navbar__link">Certifications</a>
+      <a href="contact.html" class="navbar__link">Contact Us</a>
     </div>
+    <div class="navbar__actions">
+      <a href="about.html" class="btn-signin hide-mobile">About Us</a>
+      <button class="hamburger hide-desktop" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-    <main class="pt-navbar about-main">
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html">Home</a>
+    <a href="semesters.html">Semesters</a>
+    <a href="courses.html">Courses</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="about.html" class="active">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-      <!-- HERO SECTION -->
-      <section class="hero hero-gradient" id="hero">
-        <div class="container">
-          <div class="hero-minimal__content reveal">
-            <div class="chip chip--primary" style="margin: 0 auto 1.5rem;">
-              <span class="material-symbols-outlined">diversity_3</span>
-              The Creators
-            </div>
-            <h1 class="display-sm">Free Resources for <br><span class="text-gradient">BCA Students</span></h1>
-            <p class="body-md text-on-surface-variant hero-minimal__desc" style="max-width: 40rem; margin-inline: auto;">
-              NoteWise is a peer-driven platform providing curated academic notes, 
-              previous year questions, and learning resources — completely free. 
-              Built by students, for students.
-            </p>
-            <div class="hero-minimal__actions">
-              <a href="semesters.html" class="btn btn-primary">Explore Resources</a>
-              <a href="#team" class="btn btn-secondary">Meet the Team</a>
-            </div>
+  <main class="pt-navbar about-main">
+
+    <!-- HERO SECTION -->
+    <section class="hero hero-gradient" id="hero">
+      <div class="container">
+        <div class="hero-minimal__content reveal">
+          <div class="chip chip--primary" style="margin: 0 auto 1.5rem;">
+            <span class="material-symbols-outlined">diversity_3</span>
+            The Creators
           </div>
-        </div>
-      </section>
-
-      <!-- About Content Section -->
-      <section class="section">
-        <div class="container about-container">
-
-          <!-- MISSION & STATS -->
-          <div class="about-mission reveal">
-            <h2 class="headline-md about-mission-title text-center" style="text-align: center;">Our Mission</h2>
-            <p class="body-md text-on-surface-variant text-center" style="max-width: 48rem; margin: 0 auto; text-align: center;">
-              We believe quality education shouldn't be gated behind paywalls. NoteWise 
-              curates the best academic materials for BCA students, structured seamlessly 
-              so you can focus entirely on learning rather than endless searching.
-            </p>
-          </div>
-
-          <div class="about-stats reveal">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1.5rem;">
-              <div class="stat-card">
-                <div class="stat-card__num">500+</div>
-                <p class="body-sm text-on-surface-variant">Resources</p>
-              </div>
-              <div class="stat-card">
-                <div class="stat-card__num">10k+</div>
-                <p class="body-sm text-on-surface-variant">Students</p>
-              </div>
-              <div class="stat-card">
-                <div class="stat-card__num">50+</div>
-                <p class="body-sm text-on-surface-variant">Contributors</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- TEAM SECTION -->
-          <div class="team-section reveal" id="team">
-            <h2 class="headline-md team-title">Meet the Team</h2>
-            <p class="body-sm text-on-surface-variant team-subtitle">
-              The minds behind NoteWise — passionate students building for the community.
-            </p>
-            <div class="team-grid">
-              <!-- Team Member 1 -->
-              <div class="team-card">
-                <div class="team-card__avatar">
-                  <span class="material-symbols-outlined">person</span>
-                </div>
-                <h3 class="team-card__name">Team Member 1</h3>
-                <p class="team-card__role body-sm text-on-surface-variant">Co-Founder & Developer</p>
-                <div class="team-card__links">
-                  <a href="#" class="team-card__link" aria-label="GitHub">
-                    <img src="../icons/github-svgrepo-com.svg" alt="GitHub">
-                  </a>
-                  <a href="#" class="team-card__link" aria-label="LinkedIn">
-                    <img src="../icons/linkedin-svgrepo-com.svg" alt="LinkedIn">
-                  </a>
-                  <a href="#" class="team-card__link" aria-label="Personal Website">
-                    <img src="../icons/web-.svg" alt="Website">
-                  </a>
-                </div>
-              </div>
-              <!-- Team Member 2 -->
-              <div class="team-card">
-                <div class="team-card__avatar">
-                  <span class="material-symbols-outlined">person</span>
-                </div>
-                <h3 class="team-card__name">Team Member 2</h3>
-                <p class="team-card__role body-sm text-on-surface-variant">Co-Founder & Content Lead</p>
-                <div class="team-card__links">
-                  <a href="#" class="team-card__link" aria-label="GitHub">
-                    <img src="../icons/github-svgrepo-com.svg" alt="GitHub">
-                  </a>
-                  <a href="#" class="team-card__link" aria-label="LinkedIn">
-                    <img src="../icons/linkedin-svgrepo-com.svg" alt="LinkedIn">
-                  </a>
-                  <a href="#" class="team-card__link" aria-label="Personal Website">
-                    <img src="../icons/web-.svg" alt="Website">
-                  </a>
-                </div>
-              </div>
-              <!-- Team Member 3 -->
-              <div class="team-card">
-                <div class="team-card__avatar">
-                  <span class="material-symbols-outlined">person</span>
-                </div>
-                <h3 class="team-card__name">Team Member 3</h3>
-                <p class="team-card__role body-sm text-on-surface-variant">Co-Founder & Designer</p>
-                <div class="team-card__links">
-                  <a href="#" class="team-card__link" aria-label="GitHub">
-                    <img src="../icons/github-svgrepo-com.svg" alt="GitHub">
-                  </a>
-                  <a href="#" class="team-card__link" aria-label="LinkedIn">
-                    <img src="../icons/linkedin-svgrepo-com.svg" alt="LinkedIn">
-                  </a>
-                  <a href="#" class="team-card__link" aria-label="Personal Website">
-                    <img src="../icons/web-.svg" alt="Website">
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Section -->
-          <div class="reveal about-faq">
-            <h2 class="headline-md about-faq-title">
-              Frequently Asked Questions
-            </h2>
-            <div class="faq-list">
-              <div class="accordion-item">
-                <div class="accordion-header">
-                  Is Notewise really free?
-                  <span class="material-symbols-outlined">expand_more</span>
-                </div>
-                <div class="accordion-body">
-                  <p>
-                    Yes. All academic notes, previous year questions, and
-                    syllabus mappings are 100% free for BCA students. We believe
-                    education should be accessible to everyone.
-                  </p>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <div class="accordion-header">
-                  Can I contribute my own notes?
-                  <span class="material-symbols-outlined">expand_more</span>
-                </div>
-                <div class="accordion-body">
-                  <p>
-                    Currently, we operate on a strict curation model. A team of
-                    academic reviewers vets all materials before they are
-                    published to maintain quality. However, you can use the
-                    contact form below to suggest potential additions to the
-                    archive.
-                  </p>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <div class="accordion-header">
-                  How frequently are PYQs updated?
-                  <span class="material-symbols-outlined">expand_more</span>
-                </div>
-                <div class="accordion-body">
-                  <p>
-                    We update our Previous Year Questions database at the end of
-                    every semester (typically January and July).
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-    </main>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer home-footer" id="footer">
-      <div class="footer__inner">
-        <div class="footer-minimal">
-          <div class="footer__brand">Notewise</div>
-          <p class="footer__copy">© 2026 Notewise BCA Resources. The Academic Curator.</p>
-          <div class="footer-social">
-            <a href="#" class="footer__social-icon" aria-label="GitHub">
-              <img src="../icons/github-svgrepo-com.svg" alt="GitHub" class="footer-social-img">
-            </a>
-            <a href="#" class="footer__social-icon" aria-label="Discord">
-              <img src="../icons/discord-svgrepo-com.svg" alt="Discord" class="footer-social-img">
-            </a>
-            <a href="#" class="footer__social-icon" aria-label="WhatsApp">
-              <img src="../icons/whatsapp-logo-bold-svgrepo-com.svg" alt="WhatsApp" class="footer-social-img">
-            </a>
-            <a href="#" class="footer__social-icon" aria-label="Instagram">
-              <img src="../icons/instagram-svgrepo-com.svg" alt="Instagram" class="footer-social-img">
-            </a>
-            <a href="#" class="footer__social-icon" aria-label="Email">
-              <img src="../icons/mail-alt-3-svgrepo-com.svg" alt="Email" class="footer-social-img">
-            </a>
+          <h1 class="display-sm">Free Resources for <br><span class="text-gradient">BCA Students</span></h1>
+          <p class="body-md text-on-surface-variant hero-minimal__desc" style="max-width: 40rem; margin-inline: auto;">
+            NoteWise is a peer-driven platform offering curated academic notes, previous year questions, and helpful
+            learning resources — all completely free. Built by students, for students, it’s designed to make studying
+            smarter, simpler, and more accessible.
+          </p>
+          <div class="hero-minimal__actions">
+            <a href="semesters.html" class="btn btn-primary">Explore Resources</a>
+            <a href="#team" class="btn btn-secondary">Meet the Team</a>
           </div>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <!-- Bottom Nav (Mobile) -->
-    <nav class="bottom-nav hide-desktop" id="bottom-nav">
-      <a href="../index.html" class="bottom-nav__item">
-        <span class="material-symbols-outlined">home</span>
-        <span>Home</span>
-      </a>
-      <a href="semesters.html" class="bottom-nav__item">
-        <span class="material-symbols-outlined">menu_book</span>
-        <span>Sems</span>
-      </a>
-      <a href="courses.html" class="bottom-nav__item">
-        <span class="material-symbols-outlined">library_books</span>
-        <span>Courses</span>
-      </a>
-      <a href="certifications.html" class="bottom-nav__item">
-        <span class="material-symbols-outlined">verified</span>
-        <span>Certs</span>
-      </a>
-      <a href="contact.html" class="bottom-nav__item">
-        <span class="material-symbols-outlined">contact_support</span>
-        <span>Contact</span>
-      </a>
-    </nav>
+    <!-- About Content Section -->
+    <section class="section">
+      <div class="container about-container">
 
-    <script src="../js/main.js"></script>
-    <script src="../js/pages/about.js"></script>
-  </body>
+        <!-- MISSION & STATS -->
+        <div class="about-mission reveal">
+          <h2 class="headline-md about-mission-title text-center" style="text-align: center;">Our Mission</h2>
+          <p class="body-md text-on-surface-variant text-center"
+            style="max-width: 48rem; margin: 0 auto; text-align: center;">
+            We believe quality education shouldn’t be locked behind paywalls. NoteWise brings together the best academic
+            resources for BCA students, carefully curated and organized so you can spend less time searching and more
+            time actually learning.
+          </p>
+        </div>
+
+        <div class="about-stats reveal">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1.5rem;">
+            <div class="stat-card">
+              <div class="stat-card__num">150+</div>
+              <p class="body-sm text-on-surface-variant">Resources</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__num">2k+</div>
+              <p class="body-sm text-on-surface-variant">Students</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__num">32+</div>
+              <p class="body-sm text-on-surface-variant">Contributors</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TEAM SECTION -->
+        <div class="team-section reveal" id="team">
+          <h2 class="headline-md team-title">Meet the Team</h2>
+          <p class="body-sm text-on-surface-variant team-subtitle">
+            The minds behind NoteWise — passionate students building for the community.
+          </p>
+          <div class="team-grid">
+            <!-- Team Member 1 -->
+            <div class="team-card">
+              <div class="team-card__avatar">
+                <img src="../images/profiles/harsh.png" alt="Harsh">
+              </div>
+              <h3 class="team-card__name">Harsh</h3>
+              <p class="team-card__role body-sm text-on-surface-variant">Co-Founder & Developer</p>
+              <div class="team-card__links">
+                <a href="https://github.com/crimsoncrown21" target="_blank" class="team-card__link" aria-label="GitHub">
+                  <img src="../icons/github-svgrepo-com.svg" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/harsh-bharti-223811377/" target="_blank" class="team-card__link" aria-label="LinkedIn">
+                  <img src="../icons/linkedin-svgrepo-com.svg" alt="LinkedIn">
+                </a>
+                <a href="#" class="team-card__link" aria-label="Personal Website">
+                  <img src="../icons/web-.svg" alt="Website">
+                </a>
+              </div>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="team-card">
+              <div class="team-card__avatar">
+                <img src="../images/profiles/rounak.png" alt="Rounak">
+              </div>
+              <h3 class="team-card__name">Rounak</h3>
+              <p class="team-card__role body-sm text-on-surface-variant">Founder & Content Lead</p>
+              <div class="team-card__links">
+                <a href="https://github.com/xRounak7" target="_blank" class="team-card__link" aria-label="GitHub">
+                  <img src="../icons/github-svgrepo-com.svg" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/aadarsh-verma-3a3325375/" target="_blank" class="team-card__link" aria-label="LinkedIn">
+                  <img src="../icons/linkedin-svgrepo-com.svg" alt="LinkedIn">
+                </a>
+                <a href="#" class="team-card__link" aria-label="Personal Website">
+                  <img src="../icons/web-.svg" alt="Website">
+                </a>
+              </div>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="team-card">
+              <div class="team-card__avatar">
+                <img src="../images/profiles/vaibhav.png" alt="Vaibhav">
+              </div>
+              <h3 class="team-card__name">Vaibhav</h3>
+              <p class="team-card__role body-sm text-on-surface-variant">Co-Founder & Manager</p>
+              <div class="team-card__links">
+                <a href="https://github.com/legendary-kai" target="_blank" class="team-card__link" aria-label="GitHub">
+                  <img src="../icons/github-svgrepo-com.svg" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/kaimadethat07/" target="_blank" class="team-card__link" aria-label="LinkedIn">
+                  <img src="../icons/linkedin-svgrepo-com.svg" alt="LinkedIn">
+                </a>
+                <a href="#" class="team-card__link" aria-label="Personal Website">
+                  <img src="../icons/web-.svg" alt="Website">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal about-faq">
+          <h2 class="headline-md about-faq-title">
+            Frequently Asked Questions
+          </h2>
+          <div class="faq-list">
+            <div class="accordion-item">
+              <div class="accordion-header">
+                Is Notewise really free?
+                <span class="material-symbols-outlined">expand_more</span>
+              </div>
+              <div class="accordion-body">
+                <p>
+                  Yes. All academic notes, previous year questions, and
+                  syllabus mappings are 100% free for BCA students. We believe
+                  education should be accessible to everyone.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">
+                Can I contribute my own notes?
+                <span class="material-symbols-outlined">expand_more</span>
+              </div>
+              <div class="accordion-body">
+                <p>
+                  Currently, we operate on a strict curation model. A team of
+                  academic reviewers vets all materials before they are
+                  published to maintain quality. However, you can use the
+                  contact form below to suggest potential additions to the
+                  archive.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">
+                How frequently are PYQs updated?
+                <span class="material-symbols-outlined">expand_more</span>
+              </div>
+              <div class="accordion-body">
+                <p>
+                  We update our Previous Year Questions database at the end of
+                  every semester (typically January and July).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer home-footer" id="footer">
+    <div class="footer__inner">
+      <div class="footer-minimal">
+        <div class="footer__brand">Notewise</div>
+        <p class="footer__copy">© 2026 Notewise BCA Resources. The Academic Curator.</p>
+        <div class="footer-social">
+          <a href="https://github.com/BCAARCHIVE" target="_blank" class="footer__social-icon" aria-label="GitHub">
+            <img src="../icons/github-svgrepo-com.svg" alt="GitHub" class="footer-social-img">
+          </a>
+          <a href="https://discord.gg/6uhvNcNag2" target="_blank" class="footer__social-icon" aria-label="Discord">
+            <img src="../icons/discord-svgrepo-com.svg" alt="Discord" class="footer-social-img">
+          </a>
+          <a href="https://chat.whatsapp.com/LUHSm7TWDJ003TXp0wUAaT" target="_blank" class="footer__social-icon" aria-label="WhatsApp">
+            <img src="../icons/whatsapp-logo-bold-svgrepo-com.svg" alt="WhatsApp" class="footer-social-img">
+          </a>
+          <a href="https://www.instagram.com/notewisee_bca/" target="_blank" class="footer__social-icon" aria-label="Instagram">
+            <img src="../icons/instagram-svgrepo-com.svg" alt="Instagram" class="footer-social-img">
+          </a>
+          <a href="mailto:archivebca@gmail.com" target="_blank" class="footer__social-icon" aria-label="Email">
+            <img src="../icons/mail-alt-3-svgrepo-com.svg" alt="Email" class="footer-social-img">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bottom Nav (Mobile) -->
+  <nav class="bottom-nav hide-desktop" id="bottom-nav">
+    <a href="../index.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined">home</span>
+      <span>Home</span>
+    </a>
+    <a href="semesters.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined">menu_book</span>
+      <span>Sems</span>
+    </a>
+    <a href="courses.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined">library_books</span>
+      <span>Courses</span>
+    </a>
+    <a href="certifications.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined">verified</span>
+      <span>Certs</span>
+    </a>
+    <a href="contact.html" class="bottom-nav__item">
+      <span class="material-symbols-outlined">contact_support</span>
+      <span>Contact</span>
+    </a>
+  </nav>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/pages/about.js"></script>
+</body>
+
 </html>

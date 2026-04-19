@@ -57,23 +57,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (contactForm) {
     const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const accessKey = 'bc8a520e-f848-4c5b-a8f4-6880663812a1';
 
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
+      const hCaptchaInput = contactForm.querySelector('textarea[name="h-captcha-response"]');
+      if (!hCaptchaInput || !hCaptchaInput.value.trim()) {
+        alert('Please complete the captcha before submitting.');
+        return;
+      }
+
       const formData = new FormData(contactForm);
-      formData.append('access_key', 'bc8a520e-f848-4c5b-a8f4-6880663812a1');
+      formData.append('access_key', accessKey);
 
       // Combine firstName and lastName into name for Web3Forms
-      const firstName = formData.get('firstName') || '';
-      const lastName = formData.get('lastName') || '';
-      formData.append('name', firstName + ' ' + lastName);
-
-      // Log form data for debugging
-      console.log('Form data:');
-      for (let [key, value] of formData.entries()) {
-        console.log(key + ': ' + value);
-      }
+      const firstName = String(formData.get('firstName') || '').trim();
+      const lastName = String(formData.get('lastName') || '').trim();
+      const fullName = [firstName, lastName].filter(Boolean).join(' ');
+      formData.append('name', fullName);
 
       const originalText = submitBtn.innerHTML;
 
@@ -87,17 +89,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const data = await response.json();
-        console.log('Response:', data);
 
-        if (response.ok) {
+        if (response.ok && data.success) {
           alert('Success! Your message has been sent.');
           contactForm.reset();
+          if (window.hcaptcha && typeof window.hcaptcha.reset === 'function') {
+            window.hcaptcha.reset();
+          }
         } else {
-          alert('Error: ' + data.message);
+          const errorMessage = data.message || 'Unable to send message right now.';
+          alert('Error: ' + errorMessage);
         }
       } catch (error) {
-        console.error('Fetch error:', error);
-        alert('Something went wrong. Please try again. Error: ' + error.message);
+        alert('Something went wrong. Please try again.');
       } finally {
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
