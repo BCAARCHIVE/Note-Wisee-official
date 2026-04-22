@@ -647,12 +647,12 @@ ul, ol { list-style: none; }
   bottom: max(1.25rem, env(safe-area-inset-bottom));
   left: 50%;
   transform: translateX(-50%);
-  width: calc(100% - 2.5rem);
-  max-width: 400px;
+  width: calc(100% - 1.5rem);
+  max-width: 440px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0.5rem 0.75rem;
+  padding: 0.625rem 0.875rem;
   background: rgba(42, 41, 45, 0.96);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -679,7 +679,7 @@ ul, ol { list-style: none; }
   gap: 0.2rem;
   flex: 1;
   min-width: 0;
-  padding: 0.4rem 0.25rem;
+  padding: 0.5rem 0.25rem;
   color: var(--on-surface-variant);
   transition: color var(--transition-base), transform var(--transition-fast);
   border-radius: var(--radius-full);
