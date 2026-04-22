@@ -202,11 +202,11 @@
         <!-- COMPACT CERTIFICATION INDEX SECTION -->
         <div class="reveal">
           <h2 class="display-sm cert-index-header">
-            Compact <span class="text-gradient">Certification Index</span>
+            Free <span class="text-gradient">Certification Index</span>
           </h2>
           <p class="body-lg text-on-surface-variant cert-index-desc">
-            An efficient, curated index of professional-grade certifications. Quickly find and start your next
-            challenge.
+            A curated index of free, professional-grade certifications and learning resources. Quickly find and
+            start your next challenge — at zero cost.
           </p>
 
           <!-- Controls -->
@@ -216,122 +216,198 @@
               <input type="text" placeholder="Search certifications..." data-search="#cert-index-list .cert-list-item">
             </div>
             <select class="select-dropdown cert-filter">
-              <option value="all">Filter by Difficulty</option>
-              <option value="beginner">Beginner</option>
-              <option value="intermediate">Intermediate</option>
-              <option value="advanced">Advanced</option>
+              <option value="all">Filter by Category</option>
+              <option value="generative-ai">Generative AI</option>
+              <option value="programming">Programming</option>
+              <option value="web-dev">Web Development</option>
+              <option value="cloud">Cloud</option>
+              <option value="ai-dev">AI &amp; Developer</option>
+              <option value="productivity">Productivity</option>
+              <option value="general">General Learning</option>
+              <option value="student">Student Benefits</option>
             </select>
           </div>
 
           <!-- List -->
           <div id="cert-index-list" class="grid grid-1 gap-4 stagger">
 
-            <div class="cert-list-item reveal">
+            <!-- Generative AI -->
+            <div class="cert-list-item reveal" data-category="generative-ai">
               <div class="cert-list-item__icon">
-                <span class="material-symbols-outlined icon-filled">terminal</span>
+                <span class="material-symbols-outlined icon-filled">psychology</span>
               </div>
-              <h3 class="cert-list-item__title">Python Archival Master</h3>
-              <span class="chip chip--beginner hide-mobile">Beginner</span>
-              <a href="#" class="cert-list-item__start">Start</a>
+              <h3 class="cert-list-item__title">AI Product Management Expert Certification</h3>
+              <span class="chip chip--intermediate hide-mobile">Generative AI</span>
+              <a href="https://www.pragmaticinstitute.com/product/ai-product-management-expert-certification/" target="_blank" class="cert-list-item__start">Start</a>
             </div>
 
-            <div class="cert-list-item reveal cert-list-item--advanced">
+            <div class="cert-list-item reveal" data-category="generative-ai">
               <div class="cert-list-item__icon">
-                <span class="material-symbols-outlined icon-filled">memory</span>
+                <span class="material-symbols-outlined icon-filled">auto_awesome</span>
               </div>
-              <h3 class="cert-list-item__title">C++ Systems Architect</h3>
-              <span class="chip chip--advanced hide-mobile">Advanced</span>
-              <a href="#" class="cert-list-item__start">Start</a>
+              <h3 class="cert-list-item__title">Google AI Essentials Course</h3>
+              <span class="chip chip--beginner hide-mobile">Generative AI</span>
+              <a href="https://www.classcentral.com/course/coursera-google-ai-essentials-289727" target="_blank" class="cert-list-item__start">Start</a>
             </div>
 
-            <div class="cert-list-item reveal">
-              <div class="cert-list-item__icon">
-                <span class="material-symbols-outlined icon-filled">coffee</span>
-              </div>
-              <h3 class="cert-list-item__title">Java Enterprise Core</h3>
-              <span class="chip chip--intermediate hide-mobile">Intermediate</span>
-              <a href="#" class="cert-list-item__start">Start</a>
-            </div>
-
-            <div class="cert-list-item reveal cert-list-item--advanced">
-              <div class="cert-list-item__icon">
-                <span class="material-symbols-outlined icon-filled">shield_with_heart</span>
-              </div>
-              <h3 class="cert-list-item__title">Rust Memory Safety & Concurrency</h3>
-              <span class="chip chip--advanced hide-mobile">Advanced</span>
-              <a href="#" class="cert-list-item__start">Start</a>
-            </div>
-
-            <div class="cert-list-item reveal">
-              <div class="cert-list-item__icon">
-                <span class="material-symbols-outlined icon-filled">smartphone</span>
-              </div>
-              <h3 class="cert-list-item__title">Swift iOS Development</h3>
-              <span class="chip chip--beginner hide-mobile">Beginner</span>
-              <a href="#" class="cert-list-item__start">Start</a>
-            </div>
-
-            <div class="cert-list-item reveal">
-              <div class="cert-list-item__icon">
-                <span class="material-symbols-outlined icon-filled">dns</span>
-              </div>
-              <h3 class="cert-list-item__title">Go Backend Professional</h3>
-              <span class="chip chip--intermediate hide-mobile">Intermediate</span>
-              <a href="#" class="cert-list-item__start">Start</a>
-            </div>
-
-            <div class="cert-list-item reveal">
-              <div class="cert-list-item__icon">
-                <span class="material-symbols-outlined icon-filled">android</span>
-              </div>
-              <h3 class="cert-list-item__title">Kotlin Multiplatform</h3>
-              <span class="chip chip--beginner hide-mobile">Beginner</span>
-              <a href="#" class="cert-list-item__start">Start</a>
-            </div>
-
-            <div class="cert-list-item reveal">
-              <div class="cert-list-item__icon">
-                <span class="material-symbols-outlined icon-filled">diamond</span>
-              </div>
-              <h3 class="cert-list-item__title">Ruby on Rails Specialist</h3>
-              <span class="chip chip--intermediate hide-mobile">Intermediate</span>
-              <a href="#" class="cert-list-item__start">Start</a>
-            </div>
-
-            <div class="cert-list-item reveal">
-              <div class="cert-list-item__icon">
-                <span class="material-symbols-outlined icon-filled">web</span>
-              </div>
-              <h3 class="cert-list-item__title">PHP Modern Web</h3>
-              <span class="chip chip--beginner hide-mobile">Beginner</span>
-              <a href="#" class="cert-list-item__start">Start</a>
-            </div>
-
-            <div class="cert-list-item reveal cert-list-item--advanced">
+            <!-- Programming Languages -->
+            <div class="cert-list-item reveal" data-category="programming">
               <div class="cert-list-item__icon">
                 <span class="material-symbols-outlined icon-filled">javascript</span>
               </div>
-              <h3 class="cert-list-item__title">TypeScript Strict Mode</h3>
-              <span class="chip chip--advanced hide-mobile">Advanced</span>
-              <a href="#" class="cert-list-item__start">Start</a>
+              <h3 class="cert-list-item__title">Object-Oriented Programming in JavaScript</h3>
+              <span class="chip chip--intermediate hide-mobile">Programming</span>
+              <a href="https://codesignal.com/learn/courses/object-oriented-programming-in-javascript" target="_blank" class="cert-list-item__start">Start</a>
             </div>
 
-            <div class="cert-list-item reveal cert-list-item--advanced">
+            <div class="cert-list-item reveal" data-category="programming">
               <div class="cert-list-item__icon">
-                <span class="material-symbols-outlined icon-filled">code_blocks</span>
+                <span class="material-symbols-outlined icon-filled">language</span>
               </div>
-              <h3 class="cert-list-item__title">Scala Functional Programming</h3>
-              <span class="chip chip--advanced hide-mobile">Advanced</span>
-              <a href="#" class="cert-list-item__start">Start</a>
+              <h3 class="cert-list-item__title">JavaScript Programming for Beginners</h3>
+              <span class="chip chip--beginner hide-mobile">Programming</span>
+              <a href="https://codesignal.com/learn/paths/javascript-programming-for-beginners" target="_blank" class="cert-list-item__start">Start</a>
             </div>
 
-            <div class="cert-list-item reveal cert-list-item--advanced">
+            <div class="cert-list-item reveal" data-category="programming">
               <div class="cert-list-item__icon">
-                <span class="material-symbols-outlined icon-filled">functions</span>
+                <span class="material-symbols-outlined icon-filled">memory</span>
               </div>
-              <h3 class="cert-list-item__title">Haskell Pure Functions</h3>
-              <span class="chip chip--advanced hide-mobile">Advanced</span>
-              <a href="#" class="cert-list-item__start">Start</a>
+              <h3 class="cert-list-item__title">C++ Programming for Beginners</h3>
+              <span class="chip chip--beginner hide-mobile">Programming</span>
+              <a href="https://codesignal.com/learn/paths/cpp-programming-for-beginners" target="_blank" class="cert-list-item__start">Start</a>
+            </div>
+
+            <!-- Web Development -->
+            <div class="cert-list-item reveal" data-category="web-dev">
+              <div class="cert-list-item__icon">
+                <span class="material-symbols-outlined icon-filled">code</span>
+              </div>
+              <h3 class="cert-list-item__title">Full-Stack Learning Path — The Odin Project</h3>
+              <span class="chip chip--intermediate hide-mobile">Web Dev</span>
+              <a href="https://www.theodinproject.com/" target="_blank" class="cert-list-item__start">Start</a>
+            </div>
+
+            <div class="cert-list-item reveal" data-category="web-dev">
+              <div class="cert-list-item__icon">
+                <span class="material-symbols-outlined icon-filled">terminal</span>
+              </div>
+              <h3 class="cert-list-item__title">Interactive Coding Curriculum — freeCodeCamp</h3>
+              <span class="chip chip--beginner hide-mobile">Web Dev</span>
+              <a href="https://www.freecodecamp.org/" target="_blank" class="cert-list-item__start">Start</a>
+            </div>
+
+            <div class="cert-list-item reveal" data-category="web-dev">
+              <div class="cert-list-item__icon">
+                <span class="material-symbols-outlined icon-filled">web</span>
+              </div>
+              <h3 class="cert-list-item__title">Responsive Web Design Course</h3>
+              <span class="chip chip--beginner hide-mobile">Web Dev</span>
+              <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank" class="cert-list-item__start">Start</a>
+            </div>
+
+            <!-- Cloud -->
+            <div class="cert-list-item reveal" data-category="cloud">
+              <div class="cert-list-item__icon">
+                <span class="material-symbols-outlined icon-filled">cloud</span>
+              </div>
+              <h3 class="cert-list-item__title">AWS Cloud Essentials Course</h3>
+              <span class="chip chip--beginner hide-mobile">Cloud</span>
+              <a href="https://skillbuilder.aws/search?searchText=aws-foundations-getting-started-with-the-aws-cloud-essentials&showRedirectNotFoundBanner=true" target="_blank" class="cert-list-item__start">Start</a>
+            </div>
+
+            <div class="cert-list-item reveal" data-category="cloud">
+              <div class="cert-list-item__icon">
+                <span class="material-symbols-outlined icon-filled">cloud_upload</span>
+              </div>
+              <h3 class="cert-list-item__title">Cloud Computing Essentials Simulated Course</h3>
+              <span class="chip chip--beginner hide-mobile">Cloud</span>
+              <a href="https://skillbuilder.aws/search?searchText=aws-simulearn-cloud-computing-essentials&showRedirectNotFoundBanner=true" target="_blank" class="cert-list-item__start">Start</a>
+            </div>
+
+            <!-- AI & Developer Learning -->
+            <div class="cert-list-item reveal" data-category="ai-dev">
+              <div class="cert-list-item__icon">
+                <span class="material-symbols-outlined icon-filled">model_training</span>
+              </div>
+              <h3 class="cert-list-item__title">AI for JavaScript Developers with TensorFlow.js</h3>
+              <span class="chip chip--intermediate hide-mobile">AI &amp; Dev</span>
+              <a href="https://www.edx.org/learn/javascript/google-google-ai-for-javascript-developers-with-tensorflow-js" target="_blank" class="cert-list-item__start">Start</a>
+            </div>
+
+            <div class="cert-list-item reveal" data-category="ai-dev">
+              <div class="cert-list-item__icon">
+                <span class="material-symbols-outlined icon-filled">school</span>
+              </div>
+              <h3 class="cert-list-item__title">Google Skills — AI Course Template 539</h3>
+              <span class="chip chip--beginner hide-mobile">AI &amp; Dev</span>
+              <a href="https://www.skills.google/course_templates/539" target="_blank" class="cert-list-item__start">Start</a>
+            </div>
+
+            <div class="cert-list-item reveal" data-category="ai-dev">
+              <div class="cert-list-item__icon">
+                <span class="material-symbols-outlined icon-filled">workspace_premium</span>
+              </div>
+              <h3 class="cert-list-item__title">Google Skills — AI Course Template 554</h3>
+              <span class="chip chip--beginner hide-mobile">AI &amp; Dev</span>
+              <a href="https://www.skills.google/course_templates/554" target="_blank" class="cert-list-item__start">Start</a>
+            </div>
+
+            <!-- Productivity & AI -->
+            <div class="cert-list-item reveal" data-category="productivity">
+              <div class="cert-list-item__icon">
+                <span class="material-symbols-outlined icon-filled">edit_note</span>
+              </div>
+              <h3 class="cert-list-item__title">Craft Effective Prompts for Microsoft 365 Copilot</h3>
+              <span class="chip chip--beginner hide-mobile">Productivity</span>
+              <a href="https://www.edx.org/learn/computer-science/microsoft-learning-path-craft-effective-prompts-for-microsoft-365-copilot" target="_blank" class="cert-list-item__start">Start</a>
+            </div>
+
+            <div class="cert-list-item reveal" data-category="productivity">
+              <div class="cert-list-item__icon">
+                <span class="material-symbols-outlined icon-filled">smart_toy</span>
+              </div>
+              <h3 class="cert-list-item__title">Microsoft Azure AI Fundamentals: AI Overview</h3>
+              <span class="chip chip--beginner hide-mobile">Productivity</span>
+              <a href="https://www.edx.org/learn/computer-science/microsoft-learning-path-microsoft-azure-ai-fundamentals-ai-overview" target="_blank" class="cert-list-item__start">Start</a>
+            </div>
+
+            <div class="cert-list-item reveal" data-category="productivity">
+              <div class="cert-list-item__icon">
+                <span class="material-symbols-outlined icon-filled">savings</span>
+              </div>
+              <h3 class="cert-list-item__title">Corporate Finance Learning Platform (CFI)</h3>
+              <span class="chip chip--intermediate hide-mobile">Productivity</span>
+              <a href="https://corporatefinanceinstitute.com/?coupon=CFI35" target="_blank" class="cert-list-item__start">Start</a>
+            </div>
+
+            <!-- General Learning -->
+            <div class="cert-list-item reveal" data-category="general">
+              <div class="cert-list-item__icon">
+                <span class="material-symbols-outlined icon-filled">devices</span>
+              </div>
+              <h3 class="cert-list-item__title">Human-Computer Interaction I: Fundamentals &amp; Design Principles</h3>
+              <span class="chip chip--intermediate hide-mobile">General</span>
+              <a href="https://www.edx.org/learn/human-computer-interaction/the-georgia-institute-of-technology-human-computer-interaction-i-fundamentals-design-principles" target="_blank" class="cert-list-item__start">Start</a>
+            </div>
+
+            <div class="cert-list-item reveal" data-category="general">
+              <div class="cert-list-item__icon">
+                <span class="material-symbols-outlined icon-filled">security</span>
+              </div>
+              <h3 class="cert-list-item__title">Cybersecurity Fundamentals — RIT on edX</h3>
+              <span class="chip chip--intermediate hide-mobile">General</span>
+              <a href="https://www.edx.org/learn/cybersecurity/rochester-institute-of-technology-cybersecurity-fundamentals" target="_blank" class="cert-list-item__start">Start</a>
+            </div>
+
+            <!-- Student Benefits -->
+            <div class="cert-list-item reveal" data-category="student">
+              <div class="cert-list-item__icon">
+                <span class="material-symbols-outlined icon-filled">backpack</span>
+              </div>
+              <h3 class="cert-list-item__title">GitHub Student Developer Pack</h3>
+              <span class="chip chip--beginner hide-mobile">Student</span>
+              <a href="https://github.com/education/students" target="_blank" class="cert-list-item__start">Start</a>
             </div>
 
           </div>

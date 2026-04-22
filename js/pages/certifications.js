@@ -17,8 +17,29 @@ function adjustGrid() {
   }
 }
 
+// Category filter logic
+function initCertFilter() {
+  const filterSelect = document.querySelector('.cert-filter');
+  if (!filterSelect) return;
+
+  filterSelect.addEventListener('change', () => {
+    const selected = filterSelect.value;
+    const items = document.querySelectorAll('#cert-index-list .cert-list-item');
+
+    items.forEach(item => {
+      const category = item.getAttribute('data-category') || '';
+      if (selected === 'all' || category === selected) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+}
+
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   adjustGrid();
   window.addEventListener('resize', adjustGrid);
+  initCertFilter();
 });
