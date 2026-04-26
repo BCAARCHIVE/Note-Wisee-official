@@ -146,6 +146,10 @@ html {
   box-shadow: var(--shadow-ambient);
 }
 
+.category-btn:active {
+  transform: scale(0.97);
+}
+
 .category-btn__bg-icon {
   position: absolute;
   top: 0;
@@ -233,6 +237,10 @@ html {
   background: rgba(106, 30, 85, 0.2);
   transform: scale(1.02);
   box-shadow: var(--shadow-crimson-glow);
+}
+
+.concept-card:active {
+  transform: scale(0.98);
 }
 
 .concept-card .material-symbols-outlined {

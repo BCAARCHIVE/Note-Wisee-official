@@ -217,6 +217,13 @@ html {
   position: relative;
   overflow: hidden;
   min-height: 140px;
+  /* GPU-accelerated transitions */
+  will-change: transform;
+}
+
+/* Active press feedback for mobile */
+.sem-card-link:active {
+  transform: scale(0.98);
 }
 
 @media (min-width: 480px) {
@@ -506,6 +513,9 @@ html {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 0.375rem 0.75rem;
+  cursor: default;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+  display: inline-block;
 }
 
 @media (min-width: 768px) {
@@ -517,7 +527,8 @@ html {
 
 .cert-pill:hover {
   border-color: var(--primary);
-  background: rgba(255, 174, 223, 0.16);
+  background: rgba(255, 174, 223, 0.18);
+  transform: scale(1.04);
 }
 
 /* ---- Course Launch Section ---- */

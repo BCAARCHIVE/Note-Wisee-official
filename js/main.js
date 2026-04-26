@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollProgress();
   initScrollToTop();
   initButtonRipple();
+  initCardTiltEffect();
 });
 
 /* ---------- Motion Preference ---------- */
@@ -276,12 +277,11 @@ function initSearchFilter() {
   const targetSelector = searchInput.getAttribute('data-search');
   const items = document.querySelectorAll(targetSelector);
 
-  searchInput.addEventListener('input', (e) => {
-    const query = e.target.value.toLowerCase().trim();
-
+  const doFilter = (query) => {
     items.forEach(item => {
       const text = item.textContent.toLowerCase();
-      if (query === '' || text.includes(query)) {
+      const show = query === '' || text.includes(query);
+      if (show) {
         item.style.display = '';
         item.style.opacity = '1';
         item.style.transform = 'translateY(0)';
@@ -295,7 +295,14 @@ function initSearchFilter() {
         }, 200);
       }
     });
-  });
+  };
+
+  // Debounced for performance — avoids thrashing on every keystroke
+  const debouncedFilter = debounce((e) => {
+    doFilter(e.target.value.toLowerCase().trim());
+  }, 120);
+
+  searchInput.addEventListener('input', debouncedFilter);
 }
 
 /* ---------- Sort Dropdown ---------- */
@@ -335,6 +342,15 @@ function throttle(fn, wait) {
       lastTime = now;
       fn.apply(this, args);
     }
+  };
+}
+
+/* ---------- Utility: Debounce ---------- */
+function debounce(fn, wait = 150) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), wait);
   };
 }
 
@@ -394,5 +410,28 @@ function initButtonRipple() {
       btn.style.setProperty('--ripple-x', `${x}%`);
       btn.style.setProperty('--ripple-y', `${y}%`);
     });
+  });
+}
+
+/* ---------- Subtle Card Tilt on Hover (Desktop Only) ---------- */
+function initCardTiltEffect() {
+  // Only run on pointer:fine devices (mouse), skip touch/mobile
+  if (!window.matchMedia('(pointer: fine)').matches) return;
+  if (getMotionPreference()) return;
+
+  const cards = document.querySelectorAll('.sem-card-link, .concept-card, .cert-stat-card, .course-metric-card');
+
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;  // -0.5 → 0.5
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+      card.style.transform = `perspective(600px) rotateY(${x * 6}deg) rotateX(${-y * 4}deg) translateY(-2px)`;
+    }, { passive: true });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    }, { passive: true });
   });
 }

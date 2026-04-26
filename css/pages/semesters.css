@@ -122,6 +122,16 @@
   overflow: hidden;
   border-radius: var(--radius-2xl);
   transition: all var(--transition-slow);
+  will-change: transform;
+}
+
+.sem-card:hover {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+.sem-card:active {
+  transform: scale(0.98);
 }
 
 .sem-card__arrow {
@@ -157,6 +167,7 @@
 .sem-card:hover .sem-card__bg {
   transform: scale(1.05);
 }
+
 
 /* Bento Grid Layout — Mobile First */
 #bento-grid {

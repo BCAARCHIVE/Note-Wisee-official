@@ -394,6 +394,10 @@
   border-color: rgba(255, 174, 223, 0.2);
 }
 
+.subject-card:active {
+  transform: translateY(0) scale(0.97);
+}
+
 .subject-card.active {
   background: linear-gradient(135deg, var(--primary-container), var(--surface-container-high));
   border-color: var(--primary);
@@ -472,6 +476,10 @@
 
 .subject-section__header:hover {
   background: var(--surface-container-low);
+}
+
+.subject-section__header:active {
+  background: var(--surface-container);
 }
 
 .subject-section__icon {

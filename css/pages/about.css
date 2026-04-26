@@ -194,8 +194,8 @@
 .team-card:hover {
   transform: translateY(-8px);
   background: var(--surface-container);
-  border-color: rgba(255, 174, 223, 0.35);
-  box-shadow: 0 20px 40px rgba(106, 30, 85, 0.15);
+  border-color: rgba(255, 174, 223, 0.4);
+  box-shadow: 0 20px 40px rgba(106, 30, 85, 0.18), 0 0 0 1px rgba(255, 174, 223, 0.15);
 }
 
 .team-card__avatar {
@@ -297,7 +297,12 @@
 
 .team-card__link:hover {
   background: var(--primary-container);
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(106, 30, 85, 0.2);
+}
+
+.team-card__link:active {
+  transform: scale(0.95);
 }
 
 .team-card__link img {

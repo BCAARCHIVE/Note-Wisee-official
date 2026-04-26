@@ -57,6 +57,10 @@
   box-shadow: 0 12px 32px rgba(106, 30, 85, 0.18);
 }
 
+.course-tile:active {
+  transform: translateY(0) scale(0.98);
+}
+
 .course-tile__icon {
   width: 2.5rem;
   height: 2.5rem;
@@ -596,6 +600,12 @@ html {
   padding: 2rem;
   min-height: 100%;
   box-shadow: var(--shadow-ambient);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-spotlight:hover {
+  border-color: rgba(255, 174, 223, 0.4);
+  box-shadow: var(--shadow-ambient), 0 0 40px rgba(106, 30, 85, 0.12);
 }
 
 .course-spotlight__title {
